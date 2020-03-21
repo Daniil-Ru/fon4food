@@ -4,5 +4,11 @@
   "sign-up": "Sign up",
   "name": "Name",
   "password": "Password",
-  "sign-in-error": "Sign in error!"
+  "sign-in-error": "Sign in error!",
+  "id": "ID",
+  "planned-date": "Planned delivery time",
+  "delivery-person": "Delivery person",
+  "status": "Status",
+  "open": "Open",
+  "ready": "Ready"
 }

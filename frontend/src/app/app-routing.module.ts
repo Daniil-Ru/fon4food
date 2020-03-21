@@ -15,22 +15,10 @@ const routes: Routes = [
   { path: 'start', component: StartComponent },
   { path: 'login', component: LoginComponent },
   { path: 'vendors-list', component: VendorsListComponent },
-  {
-    path: 'vendor',
-    component: VendorComponent,
-    canActivate: [VendorGuard],
-    children: [
-      { path: 'order', component: VendorOrderComponent, canActivate: [VendorGuard] },
-    ],
-  },
-  {
-    path: 'delivery',
-    component: DeliveryComponent,
-    canActivate: [DeliveryGuard],
-    children: [
-      { path: 'order', component: DeliveryOrderComponent, canActivate: [DeliveryGuard] },
-    ],
-  },
+  { path: 'vendor', component: VendorComponent, canActivate: [VendorGuard] },
+  { path: 'vendor/order', component: VendorOrderComponent, canActivate: [VendorGuard] },
+  { path: 'delivery', component: DeliveryComponent, canActivate: [DeliveryGuard] },
+  { path: 'delivery/order', component: DeliveryOrderComponent, canActivate: [DeliveryGuard] },
   { path: '**', redirectTo: '/start', pathMatch: 'full' },
 ];
 

@@ -4,5 +4,11 @@
   "sign-up": "Registrieren",
   "name": "Name",
   "password": "Passwort",
-  "sign-in-error": "Fehler bei der Anmeldung!"
+  "sign-in-error": "Fehler bei der Anmeldung!",
+  "id": "ID",
+  "planned-date": "Geplantes Lieferdatum",
+  "delivery-person": "Liferant",
+  "status": "Status",
+  "open": "Offen",
+  "ready": "Bereit"
 }
