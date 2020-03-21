@@ -1,6 +1,6 @@
 # fon4food
 
-## Run in local test environment
+## Run in local test environment (Linux)
 
 * Tested with:
 
@@ -27,6 +27,5 @@
 * Run docker containers:
 
       docker-compose up -d
-      # do testing ...
+      # point your browser to http://localhost:8080 to manually test the application
       docker-compose down
-
