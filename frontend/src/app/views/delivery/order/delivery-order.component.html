@@ -1,1 +1,32 @@
-<p>delivery-order works!</p>
+<div class="page-container">
+  <div class="container">
+    <mat-card class="card">
+      <mat-card-title class="title">
+        {{'customer' | translate}}
+      </mat-card-title>
+
+      <div class="row">
+        <div class="key">{{'id' | translate}}</div>
+        <div class="value">{{id}}</div>
+      </div>
+
+      <div class="row">
+        <div class="key">{{'name' | translate}}</div>
+        <div class="value">{{name}}</div>
+      </div>
+
+      <div class="row">
+        <div class="key">{{'address' | translate}}</div>
+        <div class="value">{{address}}</div>
+      </div>
+    </mat-card>
+
+    <mat-card>
+      <mat-checkbox>{{'delivered' | translate}}</mat-checkbox>
+    </mat-card>
+
+    <div class="button-container">
+      <button mat-raised-button color="accent" (click)="save()">{{'save' | translate}}</button>
+    </div>
+  </div>
+</div>

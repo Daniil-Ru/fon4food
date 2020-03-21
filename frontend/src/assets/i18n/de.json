@@ -2,15 +2,18 @@
   "vendors-list": "Anbieterliste",
   "sign-in": "Anmelden",
   "sign-up": "Registrieren",
+  "save": "Speichern",
   "name": "Name",
   "zipCode": "Postleitzahl",
   "address": "Adresse",
   "password": "Passwort",
+  "customer": "Kunde",
   "sign-in-error": "Fehler bei der Anmeldung!",
   "id": "ID",
   "planned-date": "Geplantes Lieferdatum",
   "delivery-person": "Liferant",
   "status": "Status",
   "open": "Offen",
-  "ready": "Bereit"
+  "ready": "Bereit",
+  "delivered": "Zugestellt"
 }

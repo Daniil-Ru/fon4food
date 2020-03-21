@@ -2,15 +2,18 @@
   "vendors-list": "List of vendors",
   "sign-in": "Sign in",
   "sign-up": "Sign up",
+  "save": "Save",
   "name": "Name",
   "zipCode": "Zip code",
   "address": "Address",
   "password": "Password",
+  "customer": "Customer",
   "sign-in-error": "Sign in error!",
   "id": "ID",
   "planned-date": "Planned delivery time",
   "delivery-person": "Delivery person",
   "status": "Status",
   "open": "Open",
-  "ready": "Ready"
+  "ready": "Ready",
+  "delivered": "Delivered"
 }
