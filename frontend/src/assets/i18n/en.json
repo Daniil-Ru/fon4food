@@ -1,5 +1,8 @@
 {
   "vendors-list": "List of vendors",
   "sign-in": "Sign in",
-  "sign-up": "Sign up"
+  "sign-up": "Sign up",
+  "name": "Name",
+  "password": "Password",
+  "sign-in-error": "Sign in error!"
 }

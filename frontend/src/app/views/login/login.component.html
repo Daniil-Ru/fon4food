@@ -1,1 +1,21 @@
-<p>login works!</p>
+<div class="page-container">
+  <mat-card class="container">
+    <mat-form-field class="full-width">
+      <mat-label>{{'name' | translate}}</mat-label>
+      <input matInput [(ngModel)]="name">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>{{'password' | translate}}</mat-label>
+      <input matInput type="password" [(ngModel)]="password">
+    </mat-form-field>
+
+    <mat-error *ngIf="existError">
+      {{'sign-in-error' | translate}}
+    </mat-error>
+
+    <div class="button-container">
+      <button mat-raised-button color="accent" (click)="signIn()">{{'sign-in' | translate}}</button>
+    </div>
+  </mat-card>
+</div>

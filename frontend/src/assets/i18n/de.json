@@ -1,5 +1,8 @@
 {
   "vendors-list": "Anbieterliste",
   "sign-in": "Anmelden",
-  "sign-up": "Registrieren"
+  "sign-up": "Registrieren",
+  "name": "Name",
+  "password": "Passwort",
+  "sign-in-error": "Fehler bei der Anmeldung!"
 }
