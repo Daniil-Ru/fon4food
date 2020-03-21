@@ -1,0 +1,14 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.language {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+  cursor: pointer;
+
+  &.selected {
+    font-weight: bold;
+  }
+}

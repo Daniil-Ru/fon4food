@@ -1,6 +1,12 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>fon4food</span>
+    <span [routerLink]="['']">fon4food</span>
+
+    <span class="spacer"></span>
+
+    <span class="language" (click)="changeLanguage('de')" [class.selected]="selectedLan === 'de'">de</span>
+    |
+    <span class="language" (click)="changeLanguage('en')" [class.selected]="selectedLan === 'en'">en</span>
   </mat-toolbar-row>
 </mat-toolbar>
 
