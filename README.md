@@ -19,6 +19,7 @@
 * Build angular app and docker image:
 
       cd frontend
+      npm install
       ng build
       docker build -t fon4food_frontend .
       cd ..
