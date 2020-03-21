@@ -3,6 +3,8 @@
   "sign-in": "Anmelden",
   "sign-up": "Registrieren",
   "name": "Name",
+  "zipCode": "Postleitzahl",
+  "address": "Adresse",
   "password": "Passwort",
   "sign-in-error": "Fehler bei der Anmeldung!",
   "id": "ID",

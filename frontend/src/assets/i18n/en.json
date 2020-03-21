@@ -3,6 +3,8 @@
   "sign-in": "Sign in",
   "sign-up": "Sign up",
   "name": "Name",
+  "zipCode": "Zip code",
+  "address": "Address",
   "password": "Password",
   "sign-in-error": "Sign in error!",
   "id": "ID",
