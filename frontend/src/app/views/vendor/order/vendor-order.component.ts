@@ -1,15 +1,40 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-vendor-order',
   templateUrl: './vendor-order.component.html',
-  styleUrls: ['./vendor-order.component.scss']
+  styleUrls: ['./vendor-order.component.scss'],
 })
 export class VendorOrderComponent implements OnInit {
+  id = '';
 
-  constructor() { }
+  customer = {
+    firstName: '',
+    lastName: '',
+    address: '',
+    zipCode: '',
+    city: '',
+    notes: '',
+  };
 
-  ngOnInit(): void {
+  constructor(readonly activatedRoute: ActivatedRoute) {
   }
 
+  ngOnInit() {
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
+
+    if (this.id != null) {
+      this.customer.firstName = 'Kurt';
+      this.customer.lastName = 'Kunde';
+      this.customer.address = 'Am schönen Rain 30, Irgendwo';
+      this.customer.zipCode = '23452';
+      this.customer.city = 'Nordstadt';
+      this.customer.notes = 'Vorsicht Hund!';
+    }
+  }
+
+  save(){
+    console.log(this.customer);
+  }
 }

@@ -9,9 +9,9 @@ export interface Vendor {
 }
 
 const ELEMENT_DATA: Vendor[] = [ // TODO
-  { name: "Rapp Gemüse", zipCode: "73462", address: "Meine Straße 234, Musterstadt"},
-  { name: "Edeka", zipCode: "73461", address: "Kleine Gasse 34731, Musterstadt"},
-  { name: "Rewe", zipCode: "32567", address: "Am schönen Rain 34, Irgendwo"},
+  { name: "Max Gemüse", zipCode: "73462", address: "Meine Straße 234, Musterstadt"},
+  { name: "MusterMarkt", zipCode: "73461", address: "Kleine Gasse 34731, Musterstadt"},
+  { name: "MeinSupermarkt", zipCode: "32567", address: "Am schönen Rain 34, Irgendwo"},
 ];
 
 @Component({

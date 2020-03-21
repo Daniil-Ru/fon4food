@@ -1,1 +1,62 @@
-<p>vendor-order works!</p>
+<div class="page-container">
+  <div class="container">
+    <mat-card class="card">
+      <mat-card-title class="title">
+        {{'customer' | translate}}
+      </mat-card-title>
+
+      <div class="row order" *ngIf="id != null">
+        <div class="key">{{'order-id' | translate}}</div>
+        <div class="value">{{id}}</div>
+      </div>
+
+      <mat-form-field class="full-width">
+        <mat-label>{{'first-name' | translate}}</mat-label>
+        <input matInput [(ngModel)]="customer.firstName">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>{{'last-name' | translate}}</mat-label>
+        <input matInput [(ngModel)]="customer.lastName">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>{{'address' | translate}}</mat-label>
+        <input matInput [(ngModel)]="customer.address">
+      </mat-form-field>
+
+      <mat-form-field class="half-width">
+        <mat-label>{{'zip-code' | translate}}</mat-label>
+        <input matInput [(ngModel)]="customer.zipCode">
+      </mat-form-field>
+
+      <mat-form-field class="half-width">
+        <mat-label>{{'city' | translate}}</mat-label>
+        <input matInput [(ngModel)]="customer.city">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>{{'notes' | translate}}</mat-label>
+        <textarea matInput [(ngModel)]="customer.notes"></textarea>
+      </mat-form-field>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title class="title">
+        {{'delivery' | translate}}
+      </mat-card-title>
+
+      <div class="checks-container">
+        <mat-checkbox>{{'delivered' | translate}}</mat-checkbox>
+        <mat-checkbox>{{'price' | translate}}</mat-checkbox>
+        <mat-checkbox>{{'delivered' | translate}}</mat-checkbox>
+        <mat-checkbox>{{'delivered' | translate}}</mat-checkbox>
+      </div>
+
+    </mat-card>
+
+    <div class="button-container">
+      <button mat-raised-button color="accent" (click)="save()">{{'save' | translate}}</button>
+    </div>
+  </div>
+</div>

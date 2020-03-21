@@ -26,7 +26,20 @@ th.mat-sort-header-sorted {
   width: 100%;
 }
 
+.half-width {
+  width: 50%;
+}
+
 .container {
   max-width: 600px;
   margin: auto;
+}
+
+.row {
+  display: flex;
+
+  .key {
+    font-weight: bold;
+    width: 100px;
+  }
 }

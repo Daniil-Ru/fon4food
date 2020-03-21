@@ -7,13 +7,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./delivery-order.component.scss']
 })
 export class DeliveryOrderComponent implements OnInit {
+  id = '';
   name = "";
   address = "";
-  id = '';
 
   constructor(readonly activatedRoute: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
         this.id = this.activatedRoute.snapshot.paramMap.get('id');
 
         this.name = 'Kurt Kunde';
