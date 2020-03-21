@@ -17,8 +17,9 @@ const routes: Routes = [
   { path: 'vendors-list', component: VendorsListComponent },
   { path: 'vendor', component: VendorComponent, canActivate: [VendorGuard] },
   { path: 'vendor/order', component: VendorOrderComponent, canActivate: [VendorGuard] },
+  { path: 'vendor/order/:id', component: VendorOrderComponent, canActivate: [VendorGuard] },
   { path: 'delivery', component: DeliveryComponent, canActivate: [DeliveryGuard] },
-  { path: 'delivery/order', component: DeliveryOrderComponent, canActivate: [DeliveryGuard] },
+  { path: 'delivery/:id', component: DeliveryOrderComponent, canActivate: [DeliveryGuard] },
   { path: '**', redirectTo: '/start', pathMatch: 'full' },
 ];
 
