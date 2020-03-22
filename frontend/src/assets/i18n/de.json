@@ -26,5 +26,8 @@
   "delivery-date": "Lierfertermin",
   "price": "Preis",
   "shipment-compiled": "Lieferung zusammengestellt",
-  "with-customer-agreed-upon": "Mit Kunden abgestimmt:"
+  "with-customer-agreed-upon": "Mit Kunden abgestimmt:",
+  "phone": "Telefon",
+  "order-times": "Bestellannahme",
+  "delivery-flat-rate": "Lieferpauschale"
 }
