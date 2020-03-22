@@ -26,5 +26,8 @@
   "delivery-date": "Delivery date",
   "price": "Price",
   "shipment-compiled": "Shipment compiled",
-  "with-customer-agreed-upon": "With customer agreed upon:"
+  "with-customer-agreed-upon": "With customer agreed upon:",
+  "phone": "Phone",
+  "order-times": "Order times",
+  "delivery-flat-rate": "Delivery flat rate"
 }
