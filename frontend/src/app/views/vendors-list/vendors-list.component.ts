@@ -6,12 +6,13 @@ export interface Vendor {
   name: string;
   zipCode: string;
   address: string;
+  city: string;
 }
 
 const ELEMENT_DATA: Vendor[] = [ // TODO
-  { name: "Max Gemüse", zipCode: "73462", address: "Meine Straße 234, Musterstadt"},
-  { name: "MusterMarkt", zipCode: "73461", address: "Kleine Gasse 34731, Musterstadt"},
-  { name: "MeinSupermarkt", zipCode: "32567", address: "Am schönen Rain 34, Irgendwo"},
+  { name: "Max Gemüse", zipCode: "73462", address: "Meine Straße 234", city:'Musterstadt'},
+  { name: "MusterMarkt", zipCode: "73461", address: "Kleine Gasse 34731", city:'Musterstadt'},
+  { name: "MeinSupermarkt", zipCode: "32567", address: "Am schönen Rain 34", city:'Irgendwo'},
 ];
 
 @Component({
