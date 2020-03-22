@@ -22,5 +22,9 @@
   "ready": "Bereit",
   "delivered": "Zugestellt",
   "delivery": "Lieferung",
-  "price": "Preis"
+  "delivery-scope": "Lieferungumfang",
+  "delivery-date": "Lierfertermin",
+  "price": "Preis",
+  "shipment-compiled": "Lieferung zusammengestellt",
+  "with-customer-agreed-upon": "Mit Kunden abgestimmt:"
 }

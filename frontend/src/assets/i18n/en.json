@@ -22,5 +22,9 @@
   "ready": "Ready",
   "delivered": "Delivered",
   "delivery": "Delivery",
-  "price": "Price"
+  "delivery-scope": "Scope of delivery",
+  "delivery-date": "Delivery date",
+  "price": "Price",
+  "shipment-compiled": "Shipment compiled",
+  "with-customer-agreed-upon": "With customer agreed upon:"
 }
