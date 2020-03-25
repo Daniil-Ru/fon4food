@@ -1,54 +1,38 @@
 # fon4food
 
-* Created during the Hackathon #WirVsVirusHack in 2020
-* Explanatory video (German): https://youtu.be/BUNZU-Hfax8
+This project was created during the [#WirVsVirus hackathon](https://wirvsvirushackathon.org/) in 2020.
+
+## What is it?
+
+A web platform that helps any vendor or supplier to join forces and deliver essential goods like food under controlled hygienic conditions to customers who are in quarantine during a pandemic.  The basic target process which it enables requires that participating vendors are published in local newspapers and that they accept orders via telephone.
+
+An explanatory video in German can be found at [YouTube](https://youtu.be/BUNZU-Hfax8).
 
 ## Exemplary procedure
 
-* Lists of regional food suppliers etc. are published in regional newspapers and advertising papers, together with times of order acceptance and telephone numbers, source of data is the web platform
-* Customer in quarantine finds his supermarket and calls at the indicated time and places his order
-* Vendor puts together the delivery, determines availability and price and agrees this again with the customer, offers replacement products if necessary
-* Vendor encloses the invoice with the delivery
-* Vendor creates entry for delivery together with a delivery price in the web platform and receives delivery number with which he identifies the delivery (which may consist of several parts)
-* Vendor selects an available supplier in the web platform or activates the delivery for suppliers for a limited time
-* Supplier receives offer and can confirm or reject it, or he selects his own activated deliveries
-* Supplier picks up deliveries from the vendor and delivers them to the customer
-* Supplier places the delivery in front of the house or apartment door and rings the bell, then he marks the success of the delivery via his smartphone in the web platform
-* If a delivery could not be delivered, the supplier returns it to the vendor
-* As soon as the customer has transferred the invoice (should also be possible by telephone), the vendor transfers the agreed delivery fee to the supplier, these actions are confirmed in the web platform
+* Lists of vendors are published in local newspapers and advertising papers, together with times of order acceptance, telephone numbers, and delivery fees.  Source of this data is this web platform.
+* Customer in quarantine finds his supermarket and calls at the indicated time and places his order.
+* Vendor puts together the delivery, determines availability and price and agrees this again with the customer, offers replacement products if necessary.
+* Vendor encloses the invoice with the delivery.
+* Vendor creates an entry for the delivery together with a delivery reward in the web platform and gets a delivery number with which he identifies the delivery, which may consist of several parts.
+* Vendor selects an available supplier in the web platform or publishes the delivery to subscribing suppliers.
+* Supplier receives the offer and accepts it.
+* Supplier picks up deliveries from the vendor and delivers them to the customer.
+* Supplier places the delivery in front of the house or apartment door and rings the bell.  After the customer took it he marks the success of the delivery via his smartphone in the web platform.
+* If a delivery can't be delivered, the supplier returns it to the vendor.
+* As soon as the customer has transferred the invoice by direct debit, the vendor transfers the agreed delivery fee to the supplier.
 
 ## Implementation
 
-* Prototype for the web platform, which enables the collaboration of the different roles
-* Frontend: Angular
-* Backend: Spring Boot
+* Scope: Prototype for the web platform, to experiment with the collaboration of the different roles
+* Frontend: Angular (TypeScript)
+* Backend: Spring Boot (Java)
 
-## Run in local test environment (Linux)
+## Demo
 
-* Tested with:
+* https://www.fon4food.de/prototype/
 
-  * openjdk 11
-  * nodejs 12, npm 6
-  * angular cli 9
-  * docker, docker-compose
+## Documentation
 
-* Build spring boot app and docker image:
+* https://jbeichter.github.io/fon4food/
 
-      cd backend
-      ./gradlew build
-      docker build -t fon4food_backend .
-      cd ..
-
-* Build angular app and docker image:
-
-      cd frontend
-      npm install
-      ng build
-      docker build -t fon4food_frontend .
-      cd ..
-
-* Run docker containers:
-
-      docker-compose up -d
-      # point your browser to http://localhost:8080 to manually test the application
-      docker-compose down
