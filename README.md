@@ -24,7 +24,7 @@ An explanatory video in German can be found at [YouTube](https://youtu.be/BUNZU-
 
 ## Implementation
 
-* Scope: Prototype for the web platform, to experiment with the collaboration of the different roles
+* Scope: Prototype of the web platform, to verify the interactions of the different roles
 * Frontend: Angular (TypeScript)
 * Backend: Spring Boot (Java)
 
