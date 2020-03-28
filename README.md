@@ -11,7 +11,7 @@ An explanatory video in German can be found at [YouTube](https://youtu.be/BUNZU-
 ## Exemplary procedure
 
 * Lists of vendors are published in local newspapers and advertising papers, together with times of order acceptance, telephone numbers, and delivery fees.  Source of this data is this web platform.
-* Customer in quarantine finds his supermarket and calls at the indicated time and places his order.
+* Customer in quarantine finds his supermarket in the newspaper and calls at the indicated time and places his order.
 * Vendor puts together the delivery, determines availability and price and agrees this again with the customer, offers replacement products if necessary.
 * Vendor encloses the invoice with the delivery.
 * Vendor creates an entry for the delivery together with a delivery reward in the web platform and gets a delivery number with which he identifies the delivery, which may consist of several parts.
