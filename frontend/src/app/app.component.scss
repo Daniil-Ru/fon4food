@@ -1,19 +1,17 @@
-.logo {
-  cursor: pointer;
+.logo-container {
   outline: none;
-}
 
-.spacer {
-  flex: 1 1 auto;
-}
-
-.language {
-  margin-right: 10px;
-  margin-left: 10px;
-  font-size: 15px;
-  cursor: pointer;
-
-  &.selected {
-    font-weight: bold;
+  .logo {
+    width: 40px;
+    height: 40px;
   }
+}
+
+.selected {
+  font-weight: bold;
+}
+
+
+.f4f-navbar-icon {
+  margin-right: 8px;
 }
