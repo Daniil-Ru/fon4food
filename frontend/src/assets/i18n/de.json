@@ -3,6 +3,7 @@
   "sign-in": "Anmelden",
   "sign-up": "Registrieren",
   "sign-out": "Abmelden",
+  "home": "Start",
   "save": "Speichern",
   "name": "Name",
   "first-name": "Vorname",
@@ -30,5 +31,27 @@
   "with-customer-agreed-upon": "Mit Kunden abgestimmt:",
   "phone": "Telefon",
   "order-times": "Bestellannahme",
-  "delivery-flat-rate": "Lieferpauschale"
+  "delivery-flat-rate": "Lieferpauschale",
+  "search": "Suchen",
+  "start": {
+    "section1": {
+      "title": "Was ist fon4food?",
+      "subtitle": "fon4food ist eine Plattform, die die Zusammenarbeit von Anbieter und Lieferanten unterstützt, um wichtige, telefonisch bestellte Waren bis vor die Haustür des Kunden zu liefern.",
+      "text1" : "Hier finden Sie die teilnehmenden Anbieter, die diesen Service derzeit in Ihrer Region anbieten:",
+      "find-vendors": "Anbieter finden"
+    },
+    "section2": {
+      "title": "Wie es funktioniert",
+      "step1": "Schritt 1: Anbieter werden in lokalen Zeitungen veröffentlicht",
+      "step1-text1": "Eine Liste der teilnehmenden Anbieter, die diese Dienstleistung in der nächsten Woche anbieten, kann nach der Postleitzahl des Liefergebiets gefiltert und ",
+      "step1-link": "hier",
+      "step1-text2": " heruntergeladen werden.\nZeitungen rufen diese Informationen ab und veröffentlichen die für ihre Region relevanten Anbieter, damit sie auch für Personen zugänglich sind, die nicht das Internet nutzen. \nDas Liefergebiet eines Anbieters ergibt sich aus den Liefergebieten der Lieferanten, mit denen er zusammenarbeitet.",
+      "step2": "Schritt 2: Kunde bestellt telefonisch",
+      "step2-text": "Der Kunde findet in der Zeitung den bevorzugten Anbieter mit dessen Telefonnummer, Zeiten der Auftragsannahme und Liefergebühren. \nDarauf ruft er den Anbieter an, um seine Bestellung aufzugeben.",
+      "step3": "Schritt 3: Anbieter bereitet die Lieferung vor",
+      "step3-text": "Der Anbieter stellt die Lieferung zusammen.\nGegebenenfalls ruft er den Kunden erneut an, um z.B. den Preis, Ersatzprodukte oder die Lieferzeit zu vereinbaren. \nWenn die Lieferung vollständig ist, legt der Lieferant die Rechnung der Lieferung bei.",
+      "step4": "Schritt 4:"
+    },
+      "participating-vendors": "Teilnehmende Anbieter"
+  }
 }

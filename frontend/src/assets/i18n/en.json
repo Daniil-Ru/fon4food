@@ -3,6 +3,7 @@
   "sign-in": "Sign in",
   "sign-up": "Sign up",
   "sign-out": "Sign out",
+  "home": "Home",
   "save": "Save",
   "name": "Name",
   "first-name": "First name",
@@ -30,5 +31,27 @@
   "with-customer-agreed-upon": "With customer agreed upon:",
   "phone": "Phone",
   "order-times": "Order times",
-  "delivery-flat-rate": "Delivery flat rate"
+  "delivery-flat-rate": "Delivery flat rate",
+  "search": "Search",
+  "start": {
+    "section1": {
+      "title": "What is fon4food?",
+      "subtitle": "fon4food is a platform that supports the collaboration of vendors and suppliers to deliver essential goods ordered by phone to the customer's doorstep.",
+      "text1" : "Here you can find participating vendors who are currently offering this service in your area:",
+      "find-vendors": "Find vendors"
+    },
+    "section2": {
+      "title": "How it works",
+      "step1": "Step 1: Vendors are published in local newspapers",
+      "step1-text1": "A list of participating vendors who provide this service during the next week can be filtered by the ZIP code of the delivery area and downloaded ",
+      "step1-link": "here",
+      "step1-text2": ".\nNewspapers retrieve this information and publish the vendors relevant for their region so it is accessible for people who don't use the internet. \nA vendor's delivery area is the union of the delivery areas of the suppliers with whom the vendor collaborates.",
+      "step2": "Step 2: Customer places the order by phone",
+      "step2-text": "The customer finds the preferred vendor in the newspaper along with phone number, times of order acceptance, and delivery fees. \nHe then calls the vendor to place his order.",
+      "step3": "Step 3: Vendor prepares the delivery",
+      "step3-text": "The vendor puts together the delivery.\nIf necessary he calls the customer again to agree e.g. on the price, replacement products, or delivery time. \nWhen the delivery is complete, the vendor encloses the invoice with the delivery.",
+      "step4": "Step 4:"
+    },
+      "participating-vendors": "Participating vendors"
+  }
 }

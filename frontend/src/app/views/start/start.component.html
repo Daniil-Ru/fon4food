@@ -1,7 +1,48 @@
-<div class="page-container">
-  <div class="button-container">
-    <button mat-raised-button color="primary" [routerLink]="['/vendors-list']">{{'vendors-list' | translate}}</button>
-    <button mat-raised-button color="accent" [routerLink]="['/login']">{{'sign-in' | translate}}</button>
-    <button mat-button color="accent">{{'sign-up' | translate}}</button>
-  </div>
+<div class="row">
+<div class="col-12">
+
+<div class="jumbotron">
+  <h1 class="display-4">{{'start.section1.title' | translate}}</h1>
+  <p class="lead">{{'start.section1.subtitle' | translate}}</p>
+  <hr class="my-4">
+  <p> {{'start.section1.text1' | translate}}</p>
+  <a class="btn btn-primary btn-lg" role="button"
+     [routerLink]="['/vendors-list']"> {{'start.section1.find-vendors' | translate}}</a>
 </div>
+
+<div class="jumbotron">
+  <h1 class="display-4">{{'start.section2.title' | translate}}</h1>
+
+  <h2>{{'start.section2.step1' | translate}}</h2>
+  <p class="translated-section">{{'start.section2.step1-text1' | translate}}
+    <a routerLink="/vendors-list">{{'start.section2.step1-link' | translate}}</a>
+    {{'start.section2.step1-text2' | translate}}
+  </p>
+
+  <h2>{{'start.section2.step2' | translate}}</h2>
+  <p class="translated-section">{{'start.section2.step2-text' | translate}}</p>
+
+  <h2>{{'start.section2.step3' | translate}}</h2>
+  <p class="translated-section">{{'start.section2.step3-text' | translate}}</p>
+
+  <h2>{{'start.section2.step4' | translate}}</h2>
+</div>
+
+</div>
+</div>
+
+
+  <div class="row">
+    <div class="col">
+      <h1>{{'start.participating-vendors' | translate}}</h1>
+      <form class="form-inline">
+        <div class="input-group">
+          <input type="text" class="form-control" [placeholder]="'zip-code' | translate" aria-label="Username"
+                 aria-describedby="basic-addon1">
+          <div class="input-group-append">
+            <button class="btn btn-info" type="button">{{'search' | translate}}</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
