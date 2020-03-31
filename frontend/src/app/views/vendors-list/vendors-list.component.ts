@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { environment } from '../../../environments/environment';
 
 export interface Vendor {
   name: string;
@@ -30,7 +31,7 @@ export class VendorsListComponent implements OnInit {
   ngOnInit() {
     this.dataSource.sort = this.sort;
 
-    this.http.get('api/vendors')
+    this.http.get(`${environment.backend_url}/vendors`)
       .subscribe((vendors: Vendor[]) => {
         this.dataSource = new MatTableDataSource(vendors);
       });

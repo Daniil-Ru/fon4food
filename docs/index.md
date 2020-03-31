@@ -1,33 +1,47 @@
 # Documentation
 
-## Run in local test environment (Linux)
+## Development and testing
 
-* Tested with:
-
+* Development requirements:
   * openjdk 11
   * nodejs 12, npm 6
   * angular cli 9
   * docker, docker-compose
 
-* Build spring boot app and docker image:
-
+* Build the backend:
       cd backend
       ./gradlew build
-      docker build -t fon4food_backend .
       cd ..
 
-* Build angular app and docker image:
-
+* Build the frontend:
       cd frontend
       npm install
       ng build
-      docker build -t fon4food_frontend .
       cd ..
 
-* Run docker containers:
+* Create the Docker containers and wait for the database to initialize:
+      docker-compose up --no-start
+      docker-compose start database
+      docker-compose logs database | grep "init process done"
+      docker-compose stop database
 
-      docker-compose up -d
-      # point your browser to http://localhost:8080 to manually test the application
-      docker-compose down
+You can now either...
 
+* ...develop the application with only the database running in Docker:
+      docker-compose start database
+      # develop backend and frontend and run these components from your IDE
+      docker-compose stop database
+
+* ...integration test the build products by running all three containers:
+      docker-compose start
+      # go to http://localhost:8080 and manually test the application
+      docker-compose stop
+
+## Deployment
+
+* Runtime requirements:
+  * web server like apache or nginx
+  * openjdk 11
+
+* TBD
 
