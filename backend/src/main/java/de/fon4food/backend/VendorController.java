@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("vendors")
 public class VendorController {
 
-	@GetMapping("/vendors")
+	@GetMapping
 	public List<VendorInfo> listVendors() {
 		List<VendorInfo> vendors = new ArrayList<>();
 		vendors.add(new VendorInfo(
