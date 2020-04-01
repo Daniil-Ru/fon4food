@@ -27,6 +27,7 @@ import { DeliveryComponent } from './views/delivery/delivery.component';
 import { DeliveryOrderComponent } from './views/delivery/order/delivery-order.component';
 import { VendorOrderComponent } from './views/vendor/order/vendor-order.component';
 import { StartComponent } from './views/start/start.component';
+import { ZipFilterPipe } from './views/vendors-list/zip-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { StartComponent } from './views/start/start.component';
     DeliveryOrderComponent,
     VendorOrderComponent,
     StartComponent,
+    ZipFilterPipe,
   ],
   imports: [
     BrowserModule,

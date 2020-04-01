@@ -41,6 +41,42 @@ public class VendorController {
 			"Mo-Sa 6-25 Uhr",
 			"6,00 €"
 		));
+		vendors.add(new VendorInfo(
+			"MiniMARKT",
+			"Panoramastraße 1",
+			"112242",
+			"Hauptdorf",
+			"0815 8973423",
+			"Mo-Fr 0-24 Uhr",
+			"0,80 €"
+		));
+		vendors.add(new VendorInfo(
+			"Beagle",
+			"Amselweg 12345",
+			"85024",
+			"Neustadt",
+			"0345 8573423",
+			"Mo, Do 5-6 Uhr",
+			"16,04 €"
+		));
+		vendors.add(new VendorInfo(
+			"Pech & Leer",
+			"Weinberggasse 123 A",
+			"71543",
+			"Bruchtal",
+			"0215 897643653323",
+			"Di 6-18 Uhr",
+			"4,50 €"
+		));
+		vendors.add(new VendorInfo(
+			"Gemüse Fröhlich",
+			"Feldweg 42",
+			"34123",
+			"Feld am See",
+			"02343 2340983",
+			"Mo-Sa 9-12 Uhr",
+			"5,00 €"
+		));
 		return vendors;
 	}
 	

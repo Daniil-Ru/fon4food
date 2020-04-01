@@ -29,7 +29,7 @@
   "price": "Price",
   "shipment-compiled": "Shipment compiled",
   "with-customer-agreed-upon": "With customer agreed upon:",
-  "phone": "Phone",
+  "phone": "Phone number",
   "order-times": "Order times",
   "delivery-flat-rate": "Delivery flat rate",
   "search": "Search",
@@ -52,6 +52,6 @@
       "step3-text": "The vendor puts together the delivery.\nIf necessary he calls the customer again to agree e.g. on the price, replacement products, or delivery time. \nWhen the delivery is complete, the vendor encloses the invoice with the delivery.",
       "step4": "Step 4:"
     },
-      "participating-vendors": "Participating vendors"
+      "current-vendors": "Current vendors"
   }
 }
