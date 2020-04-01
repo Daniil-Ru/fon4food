@@ -19,7 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { StartComponent } from './views/start/start.component';
+import { AboutComponent } from './views/about/about.component';
 import { LoginComponent } from './views/login/login.component';
 import { VendorsListComponent } from './views/vendors-list/vendors-list.component';
 import { VendorComponent } from './views/vendor/vendor.component';
@@ -30,7 +30,7 @@ import { VendorOrderComponent } from './views/vendor/order/vendor-order.componen
 @NgModule({
   declarations: [
     AppComponent,
-    StartComponent,
+    AboutComponent,
     LoginComponent,
     VendorsListComponent,
     VendorComponent,

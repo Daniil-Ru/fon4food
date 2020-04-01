@@ -3,7 +3,7 @@
   "sign-in": "Anmelden",
   "sign-up": "Registrieren",
   "sign-out": "Abmelden",
-  "home": "Start",
+  "start": "Start",
   "save": "Speichern",
   "name": "Name",
   "first-name": "Vorname",
@@ -33,10 +33,10 @@
   "order-times": "Bestellannahme",
   "delivery-flat-rate": "Lieferpauschale",
   "search": "Suchen",
-  "start": {
+  "about": {
     "section1": {
       "title": "Was ist fon4food?",
-      "subtitle": "fon4food ist eine Plattform, die die Zusammenarbeit von Anbieter und Lieferanten unterstützt, um wichtige, telefonisch bestellte Waren bis vor die Haustür des Kunden zu liefern.",
+      "subtitle": "fon4food ist eine Plattform, die die Zusammenarbeit von Anbietern und Lieferanten unterstützt, um wichtige, telefonisch bestellte Waren bis vor die Haustür des Kunden zu liefern.",
       "text1" : "Hier finden Sie die teilnehmenden Anbieter, die diesen Service derzeit in Ihrer Region anbieten:",
       "find-vendors": "Anbieter finden"
     },

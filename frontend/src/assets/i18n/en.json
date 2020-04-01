@@ -3,7 +3,7 @@
   "sign-in": "Sign in",
   "sign-up": "Sign up",
   "sign-out": "Sign out",
-  "home": "Home",
+  "start": "Home",
   "save": "Save",
   "name": "Name",
   "first-name": "First name",
@@ -33,7 +33,7 @@
   "order-times": "Order times",
   "delivery-flat-rate": "Delivery flat rate",
   "search": "Search",
-  "start": {
+  "about": {
     "section1": {
       "title": "What is fon4food?",
       "subtitle": "fon4food is a platform that supports the collaboration of vendors and suppliers to deliver essential goods ordered by phone to the customer's doorstep.",
