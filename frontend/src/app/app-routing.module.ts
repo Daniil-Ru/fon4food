@@ -9,13 +9,14 @@ import { VendorOrderComponent } from './views/vendor/order/vendor-order.componen
 import { VendorComponent } from './views/vendor/vendor.component';
 import { VendorGuard } from './views/vendor/vendor.guard';
 import { VendorsListComponent } from './views/vendors-list/vendors-list.component';
+import { StartComponent } from './views/start/start.component';
 
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
-  { path: 'start', component: AboutComponent },
+  { path: 'start', component: StartComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'vendors-list', component: VendorsListComponent },
+  { path: 'vendors', component: VendorsListComponent },
   { path: 'vendor', component: VendorComponent, canActivate: [VendorGuard] },
   { path: 'vendor/order', component: VendorOrderComponent, canActivate: [VendorGuard] },
   { path: 'vendor/order/:id', component: VendorOrderComponent, canActivate: [VendorGuard] },

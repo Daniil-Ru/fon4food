@@ -36,21 +36,34 @@
   "about": {
     "section1": {
       "title": "Was ist fon4food?",
-      "subtitle": "fon4food ist eine Plattform, die die Zusammenarbeit von Anbietern und Lieferanten unterstützt, um wichtige, telefonisch bestellte Waren bis vor die Haustür des Kunden zu liefern.",
-      "text1" : "Hier finden Sie die teilnehmenden Anbieter, die diesen Service derzeit in Ihrer Region anbieten:",
+      "subtitle": "fon4food ist eine Plattform, die Anbieter von Lebensmitteln und Lieferanten zusammenbringt und dabei unterstützt, telefonisch bestellte Waren den Kunden nach Hause zu liefern.",
+      "text1" : "Hier finden Sie teilnehmende Anbieter, die diese Dienstleistung aktuell in Ihrer Region anbieten:",
       "find-vendors": "Anbieter finden"
     },
     "section2": {
       "title": "Wie es funktioniert",
       "step1": "Schritt 1: Anbieter werden in lokalen Zeitungen veröffentlicht",
-      "step1-text1": "Eine Liste der teilnehmenden Anbieter, die diese Dienstleistung in der nächsten Woche anbieten, kann nach der Postleitzahl des Liefergebiets gefiltert und ",
+      "step1-text1": "Eine Liste der teilnehmenden Anbieter, die diese Dienstleistung aktuell anbieten, kann ",
       "step1-link": "hier",
-      "step1-text2": " heruntergeladen werden.\nZeitungen rufen diese Informationen ab und veröffentlichen die für ihre Region relevanten Anbieter, damit sie auch für Personen zugänglich sind, die nicht das Internet nutzen. \nDas Liefergebiet eines Anbieters ergibt sich aus den Liefergebieten der Lieferanten, mit denen er zusammenarbeitet.",
+      "step1-text2": " nach der Postleitzahl des Liefergebiets gefiltert und heruntergeladen werden.  Die Herausgeber von Zeitungen können darauf zugreifen und die für ihre Region relevanten Anbieter veröffentlichen.  Damit sind diese Informationen auch für Personen zugänglich, die nicht das Internet nutzen.  Das Liefergebiet eines Anbieters ergibt sich dabei aus den Liefergebieten der Lieferanten, mit denen er zusammenarbeitet.",
       "step2": "Schritt 2: Kunde bestellt telefonisch",
-      "step2-text": "Der Kunde findet in der Zeitung den bevorzugten Anbieter mit dessen Telefonnummer, Zeiten der Auftragsannahme und Liefergebühren. \nDarauf ruft er den Anbieter an, um seine Bestellung aufzugeben.",
+      "step2-text": "Der Kunde findet in der Zeitung den Anbieter mit Telefonnummer, Zeiten der telefonischen Bestellannahme und Liefergebühren.  So kann er telefonisch mit dem Anbieter in Kontakt treten, um seine Bestellung aufzugeben.",
       "step3": "Schritt 3: Anbieter bereitet die Lieferung vor",
-      "step3-text": "Der Anbieter stellt die Lieferung zusammen.\nGegebenenfalls ruft er den Kunden erneut an, um z.B. den Preis, Ersatzprodukte oder die Lieferzeit zu vereinbaren. \nWenn die Lieferung vollständig ist, legt der Lieferant die Rechnung der Lieferung bei.",
-      "step4": "Schritt 4:"
+      "step3-text": "Anhand der Bestellung stellt der Anbieter die Lieferung zusammen.  Sich ergebende Rückfragen kann er wiederum direkt telefonisch mit dem Kunden klären.   Anschließend legt er der Lieferung die Rechnung bei.",
+      "step4": "Schritt 4: Anbieter erfasst die Lieferung",
+      "step4-text": "Der Anbieter legt in fon4food einen neuen Eintrag für die Lieferung an und gibt dabei die Vergütung des Lieferanten an.  Über fon4food kann er die Lieferung nun einem seiner Lieferanten zuordnen.  Nach der Erfassung der Lieferung erhält der Anbieter außerdem eine eindeutige Liefernummer, mit welcher der Anbieter die Lieferung kennzeichnet.",
+      "step5": "Schritt 5: Lieferant bestätigt die Lieferung",
+      "step5-text": "Der Lieferant wird über die Details zu jeder Lieferung informiert und bestätigt diese.  Falls er nicht in der Lage ist, sie auszuliefern, lehnt er sie ab.  Dadurch hat der Anbieter in fon4food jederzeit die aktuelle Liefersituation im Blick und kann gegebenenfalls zügig reagieren.",
+      "step6": "Schritt 6: Lieferant holt die Ware beim Anbieter ab",
+      "step6-text": "Zu Beginn des vereinbarten Lieferzeitfensters holt der Lieferant die bestätigten Lieferungen beim Anbieter ab.  Er bestätigt die Übernahme der Ware in fon4food.",
+      "step7": "Schritt 7: Lieferant übergibt die Ware an den Kunden",
+      "step7-text": "Der Lieferant stellt dem Kunden die Lieferung vor die Haus- bzw. Wohnungstür und überzeugt sich davon, dass dieser sie übernimmt.  Anschließend markiert er den Erfolg der Zustellung in fon4food.",
+      "step8": "Schritt 8: Lieferant bringt nicht zugestellte Ware zurück",
+      "step8-text": "Zum Abschluss seiner Liefertour bringt der Lieferant die nicht zugestellte Ware dem Anbieter zurück.  Der Anbieter bestätigt die Rücknahme der Lieferungen in fon4food.",
+      "step9": "Schritt 9: Kunde bezahlt Rechnung",
+      "step9-text": "Der Kunde bezahlt seine Rechnung beispielsweise über das Lastschriftverfahren beim Anbieter.",
+      "step10": "Schritt 10: Anbieter bezahlt Lieferant",
+      "step10-text": "Für alle ausgelieferten und bezahlten Sendungen sowie für notwendige Retouren bezahlt der Anbieter regelmäßig und zeitnah die vereinbarten Beträge an den Lieferanten."
     },
       "participating-vendors": "Teilnehmende Anbieter"
   }
