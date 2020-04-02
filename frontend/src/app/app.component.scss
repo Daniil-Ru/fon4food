@@ -7,11 +7,10 @@
   }
 }
 
-.selected {
-  font-weight: bold;
-}
-
-
 .f4f-navbar-icon {
   margin-right: 8px;
+}
+
+.dropdown-toggle, .dropdown-item {
+  cursor: pointer;
 }

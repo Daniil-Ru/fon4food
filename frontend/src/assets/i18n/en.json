@@ -14,6 +14,8 @@
   "address": "Address",
   "password": "Password",
   "customer": "Customer",
+  "remember-me": "Remember me",
+  "forgot-password": "Forgot password?",
   "sign-in-error": "Sign in error!",
   "id": "ID",
   "order-id": "Order ID",
@@ -52,6 +54,6 @@
       "step3-text": "The vendor puts together the delivery.\nIf necessary he calls the customer again to agree e.g. on the price, replacement products, or delivery time. \nWhen the delivery is complete, the vendor encloses the invoice with the delivery.",
       "step4": "Step 4:"
     },
-      "current-vendors": "Current vendors"
+    "current-vendors": "Current vendors"
   }
 }

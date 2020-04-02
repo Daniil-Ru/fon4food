@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ROLES, UserService } from '../../services/user.service';
+import {faKey, faUser} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,8 @@ export class LoginComponent {
   password = '';
 
   existError = false;
+  faUser = faUser;
+  faKey = faKey;
 
   constructor(readonly router: Router, readonly user: UserService) {
   }

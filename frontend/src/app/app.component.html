@@ -13,7 +13,7 @@
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown" [collapse]="isCollapsed">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item active" *ngIf="userRole !== ''">
           <a class="nav-link" [routerLink]="['/start']">{{'start' | translate}}<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
@@ -23,15 +23,13 @@
 
       <ul class="navbar-nav">
         <li class="nav-item dropdown" dropdown>
-          <div class="nav-link dropdown-toggle my-2 f4f-navbar-button" href="#" id="navbarLanguageDropdown" role="button"
+          <div class="nav-link dropdown-toggle my-2 f4f-navbar-button" id="navbarLanguageDropdown" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdownToggle>
             <span>{{selectedLan}}</span>
           </div>
           <div class="dropdown-menu" aria-labelledby="navbarLanguageDropdown" *dropdownMenu>
-            <span class="dropdown-item" [class.selected]="selectedLan === 'de'"
-                  (click)="changeLanguage('de')">Deutsch</span>
-            <span class="dropdown-item" [class.selected]="selectedLan === 'en'"
-                  (click)="changeLanguage('en')">English</span>
+            <span class="dropdown-item" *ngFor="let language of languages" [class.disabled]="selectedLan === language.shortName"
+                  (click)="changeLanguage(language.shortName)">{{language.longName}}</span>
           </div>
         </li>
         <li class="nav-item">
@@ -41,13 +39,13 @@
         <li class="nav-item">
           <button class="btn btn-info my-2 f4f-navbar-button">{{'sign-up' | translate}}</button>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="userRole !== ''">
           <a class="nav-link my-2 f4f-navbar-button" href="#">
             <fa-icon [icon]="faBell"></fa-icon>
           </a>
         </li>
-        <li class="nav-item dropdown" dropdown>
-          <div class="nav-link dropdown-toggle my-2" href="#" id="navbarProfileDropdown" role="button"
+        <li class="nav-item dropdown" dropdown *ngIf="userRole !== ''">
+          <div class="nav-link dropdown-toggle my-2" id="navbarProfileDropdown" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdownToggle>
             <span><fa-icon [icon]="faUser" class="f4f-navbar-icon"></fa-icon>foobar.user@example.com</span>
           </div>
