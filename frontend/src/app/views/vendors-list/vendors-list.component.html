@@ -22,7 +22,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ vendor.name }}</h5>
         <p class="card-text" [title]="'address' | translate"><fa-icon [icon]="faAddress" class="f4f-card-icon"></fa-icon>{{vendor.address + ', ' + vendor.zipCode + ' ' + vendor.city }}</p>
-        <p class="card-text" [title]="'phone' | translate"><fa-icon [icon]="faPhone" class="f4f-card-icon"></fa-icon>{{ vendor.phone }} </p>
+        <p class="card-text" [title]="'phone' | translate"><fa-icon [icon]="faPhone" class="f4f-card-icon"></fa-icon><a href="tel:+491243435634253453245">{{ vendor.phone }}</a></p>
         <p class="card-text" [title]="'order-times' | translate"><fa-icon [icon]="faTime" class="f4f-card-icon"></fa-icon>{{ vendor.orderTimes }} </p>
         <p class="card-text" [title]="'delivery-flat-rate' | translate"><fa-icon [icon]="faRate" class="f4f-card-icon"></fa-icon>{{ vendor.deliveryFlatRate }} </p>
       </div>

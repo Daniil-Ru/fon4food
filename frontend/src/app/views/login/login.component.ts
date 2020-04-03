@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { ROLES, UserService } from '../../services/user.service';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
+import {ROLES, UserService} from '../../services/user.service';
 import {faKey, faUser} from '@fortawesome/free-solid-svg-icons';
+import {environment} from '../../../environments/environment';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -15,22 +17,27 @@ export class LoginComponent {
   existError = false;
   faUser = faUser;
   faKey = faKey;
+  rememberMe = false;
 
-  constructor(readonly router: Router, readonly user: UserService) {
+  constructor(readonly router: Router, readonly user: UserService, readonly http: HttpClient) {
   }
 
   signIn() {
-    // TODO
-    if (this.name === 'anton') {
-      this.existError = false;
-      this.user.role = ROLES.VENDOR;
-      this.router.navigate(['/vendor']);
-    } else if (this.name === 'lisa') {
-      this.existError = false;
-      this.user.role = ROLES.DELIVERY_PERSON;
-      this.router.navigate(['/delivery']);
-    } else {
-      this.existError = true;
-    }
+    this.existError = false;
+
+    const formData = new FormData();
+    formData.append('remember-me', this.rememberMe + '');
+    this.http.post(`${environment.backend_url}/login`, formData, {
+      headers: {Authorization: `Basic ${btoa(`${this.name}:${this.password}`)}`}
+    })
+      .subscribe(
+        (data: any) => {
+          localStorage.setItem('loggedIn', true + '');
+          this.user.updateRole(data.authorities[0].authority);
+          this.router.navigate(['/start']);
+        },
+        () => {
+          this.existError = true;
+        });
   }
 }

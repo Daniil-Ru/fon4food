@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -28,6 +28,7 @@ import { DeliveryOrderComponent } from './views/delivery/order/delivery-order.co
 import { VendorOrderComponent } from './views/vendor/order/vendor-order.component';
 import { StartComponent } from './views/start/start.component';
 import { ZipFilterPipe } from './views/vendors-list/zip-filter.pipe';
+import {XhrInterceptor} from './services/xhr-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,13 @@ import { ZipFilterPipe } from './views/vendors-list/zip-filter.pipe';
     BsDropdownModule.forRoot(),
     FontAwesomeModule,
   ],
-  providers: [],
+providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: XhrInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

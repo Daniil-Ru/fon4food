@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 export const ROLES = {
-  VENDOR: 'vendor',
+  VENDOR: 'ROLE_USER',
   DELIVERY_PERSON: 'delivery-person',
 };
 
@@ -10,8 +11,12 @@ export const ROLES = {
   providedIn: 'root',
 })
 export class UserService {
-  role = '';
+  role$ = new BehaviorSubject<string>('');
 
   constructor() {
+  }
+
+  updateRole(newRole: string) {
+    this.role$.next(newRole);
   }
 }

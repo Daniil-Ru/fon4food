@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
-import { faBell, faUser } from '@fortawesome/free-solid-svg-icons';
-import { TranslateService } from '@ngx-translate/core';
-import { UserService } from './services/user.service';
+import {Component} from '@angular/core';
+import {faBell, faUser} from '@fortawesome/free-solid-svg-icons';
+import {TranslateService} from '@ngx-translate/core';
+import {UserService} from './services/user.service';
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../environments/environment';
 
 @Component({
   selector: 'f4f-root',
@@ -12,7 +15,8 @@ export class AppComponent {
   selectedLan = 'de';
   isCollapsed = true;
 
-  userRole = '';
+  userRole$: Observable<string>;
+
   readonly title = 'fon4food';
   readonly faBell = faBell;
   readonly faUser = faUser;
@@ -24,14 +28,30 @@ export class AppComponent {
     longName: 'English'
   }];
 
-  constructor(readonly translateService: TranslateService, readonly userService: UserService) {
+  constructor(readonly translateService: TranslateService, readonly userService: UserService, readonly http: HttpClient) {
     this.translateService.addLangs(['en', 'de']);
     this.translateService.setDefaultLang(this.selectedLan);
-    this.userRole = userService.role;
+    this.userRole$ = userService.role$;
+
+    if (localStorage.getItem('loggedIn')) {
+      this.http.get(`${environment.backend_url}/user`)
+        .subscribe((data: any) => {
+          this.userService.updateRole(data.authorities[0].authority);
+        });
+    }
   }
 
   changeLanguage(lan: string) {
     this.selectedLan = lan;
     this.translateService.use(lan);
+  }
+
+  logout() {
+    this.http.get(`${environment.backend_url}/logout`, {}).subscribe(
+      () => {
+        this.userService.updateRole('');
+        localStorage.removeItem('loggedIn');
+      }
+    );
   }
 }
