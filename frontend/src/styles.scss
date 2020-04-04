@@ -3,38 +3,6 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-table {
-  width: 100%;
-}
-
-.page-container {
-  padding: 20px;
-}
-
-.button-container {
-  margin-top: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.full-width {
-  width: 100%;
-}
-
-.half-width {
-  width: 50%;
-}
-
-.row {
-  display: flex;
-
-  .key {
-    font-weight: bold;
-    width: 100px;
-  }
-}
-
 .f4f-navbar {
   background-color: #f5f5f5;
 }
