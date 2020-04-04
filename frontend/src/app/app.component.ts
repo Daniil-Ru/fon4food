@@ -52,10 +52,11 @@ export class AppComponent {
   }
 
   logout() {
-    this.http.get(`${environment.backend_url}/logout`, {}).subscribe(
-      () => {
-        this.userService.update(null);
-      }
+    this.http.get(`${environment.backend_url}/logout`, {})
+      .subscribe(
+        () => {
+          this.userService.update(null);
+        }
     );
   }
 }
