@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../environments/environment';
+import { faClock, faCoins, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 export interface Vendor {
   name: string;
@@ -14,30 +14,26 @@ export interface Vendor {
 }
 
 @Component({
-  selector: 'app-vendors-list',
+  selector: 'f4f-vendors-list',
   templateUrl: './vendors-list.component.html',
   styleUrls: ['./vendors-list.component.scss'],
 })
 export class VendorsListComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'address', 'phone', 'orderTimes', 'deliveryFlatRate'];
-  dataSource = new MatTableDataSource([]);
+  vendors: Vendor[] = [];
+  zipExp = '';
 
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  readonly faPhone = faPhoneAlt;
+  readonly faAddress = faMapMarkerAlt;
+  readonly faTime = faClock;
+  readonly faRate = faCoins;
 
   constructor(readonly http: HttpClient) {
   }
 
   ngOnInit() {
-    this.dataSource.sort = this.sort;
-
-    this.http.get('api/vendors')
+    this.http.get(`${environment.backend_url}/vendors`)
       .subscribe((vendors: Vendor[]) => {
-        this.dataSource = new MatTableDataSource(vendors);
+        this.vendors = vendors;
       });
-  }
-
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }

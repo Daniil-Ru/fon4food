@@ -1,1 +1,10 @@
+@import "~bootstrap";
 
+.f4f-login-icon {
+  width: 3rem;
+}
+
+.f4f-invalid-feedback {
+  @extend .invalid-feedback;
+  display: block;
+}

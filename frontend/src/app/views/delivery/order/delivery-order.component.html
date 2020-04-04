@@ -1,32 +1,45 @@
-<div class="page-container">
-  <div class="container">
-    <mat-card class="card">
-      <mat-card-title class="title">
-        {{'customer' | translate}}
-      </mat-card-title>
+<h1>{{ 'delivery' | translate }} #{{ id }}</h1>
 
-      <div class="row">
-        <div class="key">{{'order-id' | translate}}</div>
-        <div class="value">{{id}}</div>
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <h5 class="card-header">{{'customer' | translate}}</h5>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-3">
+            <div class="key">{{'name' | translate}}</div>
+          </div>
+          <div class="col-9">
+            <div class="value">{{name}}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="key">{{'address' | translate}}</div>
+          </div>
+          <div class="col-9">
+            <div class="value">{{address}}</div>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+</div>
 
-      <div class="row">
-        <div class="key">{{'name' | translate}}</div>
-        <div class="value">{{name}}</div>
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <h5 class="card-header">{{ 'handover' | translate }}</h5>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <button class="btn btn-success" (click)="save()">{{ 'delivered' | translate }}</button>
+          </div>
+          <div class="col-6 text-right">
+            <button class="btn btn-danger" (click)="save()">{{ 'delivery-failed' | translate }}</button>
+          </div>
+        </div>
       </div>
-
-      <div class="row">
-        <div class="key">{{'address' | translate}}</div>
-        <div class="value">{{address}}</div>
-      </div>
-    </mat-card>
-
-    <mat-card>
-      <mat-checkbox>{{'delivered' | translate}}</mat-checkbox>
-    </mat-card>
-
-    <div class="button-container">
-      <button mat-raised-button color="accent" (click)="save()">{{'save' | translate}}</button>
     </div>
   </div>
 </div>

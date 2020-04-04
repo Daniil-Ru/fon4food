@@ -1,16 +1,27 @@
 version: "3"
 services:
+  database:
+    container_name: fon4food-database
+    build:
+      context: ./mariadb
+    ports:
+      - "3306:3306"
   backend:
-    container_name: backend
+    container_name: fon4food-backend
     build:
       context: ./backend
     ports:
       - "8081:8080"
       - "9009:9009"
+    depends_on:
+      - database
+    command: ["sleep", "30"]
   frontend:
-    container_name: frontend
+    container_name: fon4food-frontend
     build:
       context: ./frontend
     ports:
       - "8080:8080"
+    depends_on:
+      - backend
 

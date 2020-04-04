@@ -1,11 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { Component } from '@angular/core';
 
 export interface DeliveryPersonOrder {
   id: number;
   date: string;
   status: string;
+  // vendor: Vendor;
 }
 
 export const DELIVERY_PERSON_ORDER_STATE = {
@@ -18,17 +17,10 @@ const ELEMENT_DATA: DeliveryPersonOrder[] = [ // TODO
 ];
 
 @Component({
-  selector: 'app-delivery',
+  selector: 'f4f-delivery',
   templateUrl: './delivery.component.html',
   styleUrls: ['./delivery.component.scss']
 })
-export class DeliveryComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'date', 'status'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
-
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
-
-  ngOnInit() {
-    this.dataSource.sort = this.sort;
-  }
+export class DeliveryComponent {
+  deliveries = ELEMENT_DATA;
 }

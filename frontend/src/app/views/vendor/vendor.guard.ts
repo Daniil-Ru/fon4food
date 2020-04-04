@@ -14,12 +14,11 @@ export class VendorGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    if (this.user.role === ROLES.VENDOR) {
+    if (this.user.roles$.getValue().includes(ROLES.VENDOR)) {
       return true;
     }
 
     this.router.navigate(['']);
     return false;
-
   }
 }

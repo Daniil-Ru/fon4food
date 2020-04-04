@@ -3,43 +3,47 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-table {
-  width: 100%;
+.f4f-navbar {
+  background-color: #f5f5f5;
 }
 
-th.mat-sort-header-sorted {
-  color: black;
+@media(min-width: 992px) {
+  .f4f-navbar-button {
+    margin-left: 10px;
+  }
 }
 
-.page-container {
-  padding: 20px;
-}
-
-.button-container {
-  margin-top: 20px;
-  width: 100%;
+.navbar-brand {
   display: flex;
-  flex-direction: row-reverse;
+  align-items:center;
 }
 
-.full-width {
-  width: 100%;
+.navbar-brand > span {
+  font-size: 1.5rem;
+  margin-left: 5px;
 }
 
-.half-width {
-  width: 50%;
+.nav-link {
+  outline: none;
 }
 
-.container {
-  max-width: 600px;
-  margin: auto;
+.f4f-content {
+  margin-top: 100px;
+  margin-bottom: 30px;
 }
 
-.row {
-  display: flex;
+.translated-section {
+    white-space: pre-wrap;
+}
 
-  .key {
-    font-weight: bold;
-    width: 100px;
+.f4f-pointer {
+  cursor: pointer;
+}
+
+.f4f-card-container {
+   padding: 15px;
+
+  .card {
+    height: 100%;
   }
 }
