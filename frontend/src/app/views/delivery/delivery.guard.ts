@@ -14,7 +14,7 @@ export class DeliveryGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    if (this.user.role$.getValue() === ROLES.DELIVERY_PERSON) {
+    if (this.user.roles$.getValue().includes(ROLES.DELIVERY_PERSON)) {
       return true;
     }
 

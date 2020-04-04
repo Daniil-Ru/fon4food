@@ -13,7 +13,7 @@
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown" [collapse]="isCollapsed">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active" *ngIf="(userRole$ | async) !== ''">
+        <li class="nav-item active" *ngIf="isLoggedIn$ | async">
           <a class="nav-link" [routerLink]="['/start']">{{'start' | translate}}<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
@@ -32,22 +32,22 @@
                   (click)="changeLanguage(language.shortName)">{{language.longName}}</span>
           </div>
         </li>
-        <li class="nav-item" *ngIf="(userRole$ | async) === ''">
+        <li class="nav-item" *ngIf="!(isLoggedIn$ | async)">
           <button class="btn btn-outline-info my-2 f4f-navbar-button"
                   [routerLink]="['/login']">{{'sign-in' | translate}}</button>
         </li>
-        <li class="nav-item" *ngIf="(userRole$ | async) === ''">
+        <li class="nav-item" *ngIf="!(isLoggedIn$ | async)">
           <button class="btn btn-info my-2 f4f-navbar-button">{{'sign-up' | translate}}</button>
         </li>
-        <li class="nav-item" *ngIf="(userRole$ | async) !== ''">
+        <li class="nav-item" *ngIf="isLoggedIn$ | async">
           <a class="nav-link my-2 f4f-navbar-button" href="#">
             <fa-icon [icon]="faBell"></fa-icon>
           </a>
         </li>
-        <li class="nav-item dropdown" dropdown *ngIf="(userRole$ | async) !== ''">
+        <li class="nav-item dropdown" dropdown *ngIf="isLoggedIn$ | async">
           <div class="nav-link dropdown-toggle my-2" id="navbarProfileDropdown" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdownToggle>
-            <span><fa-icon [icon]="faUser" class="f4f-navbar-icon"></fa-icon>foobar.user@example.com</span>
+            <span><fa-icon [icon]="faUser" class="f4f-navbar-icon"></fa-icon>{{ userName$ | async }}</span>
           </div>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarProfileDropdown" *dropdownMenu>
             <!--          <a class="dropdown-item" [routerLink]="['']">Profile</a>-->

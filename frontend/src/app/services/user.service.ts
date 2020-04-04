@@ -1,22 +1,33 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
+import {UserInfo} from './user.service.model';
 
 export const ROLES = {
   VENDOR: 'ROLE_USER',
   DELIVERY_PERSON: 'delivery-person',
 };
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  role$ = new BehaviorSubject<string>('');
+  roles$ = new BehaviorSubject<string[]>([]);
+  userName$ = new BehaviorSubject<string>('');
 
   constructor() {
   }
 
-  updateRole(newRole: string) {
-    this.role$.next(newRole);
+  reset() {
+    this.roles$.next([]);
+    this.userName$.next('');
+  }
+
+  update(userInfo: UserInfo) {
+    if (userInfo == null) {
+      this.reset();
+    } else {
+      this.roles$.next(userInfo.roles);
+      this.userName$.next(userInfo.username);
+    }
   }
 }

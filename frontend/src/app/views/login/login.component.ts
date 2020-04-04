@@ -4,6 +4,7 @@ import {ROLES, UserService} from '../../services/user.service';
 import {faKey, faUser} from '@fortawesome/free-solid-svg-icons';
 import {environment} from '../../../environments/environment';
 import {HttpClient} from '@angular/common/http';
+import {UserInfo} from '../../services/user.service.model';
 
 @Component({
   selector: 'app-login',
@@ -31,9 +32,9 @@ export class LoginComponent {
       headers: {Authorization: `Basic ${btoa(`${this.name}:${this.password}`)}`}
     })
       .subscribe(
-        (data: any) => {
+        (data: UserInfo) => {
           localStorage.setItem('loggedIn', true + '');
-          this.user.updateRole(data.authorities[0].authority);
+          this.user.update(data);
           this.router.navigate(['/start']);
         },
         () => {
