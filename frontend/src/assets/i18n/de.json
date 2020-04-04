@@ -3,7 +3,7 @@
   "sign-in": "Anmelden",
   "sign-up": "Registrieren",
   "sign-out": "Abmelden",
-  "start": "Start",
+  "start": "Übersicht",
   "save": "Speichern",
   "name": "Name",
   "first-name": "Vorname",
@@ -19,13 +19,15 @@
   "sign-in-error": "Fehler bei der Anmeldung!",
   "id": "ID",
   "order-id": "Auftrags-ID",
-  "planned-date": "Geplantes Lieferdatum",
+  "planned-date": "Liefertermin",
   "delivery-person": "Lieferant",
   "status": "Status",
   "open": "Offen",
   "ready": "Bereit",
-  "delivered": "Zugestellt",
+  "delivered": "Erfolgreich zugestellt",
+  "delivery-failed": "Zustellung gescheitert",
   "delivery": "Lieferung",
+  "deliveries-of-today": "Heutige Lieferungen",
   "delivery-scope": "Lieferungumfang",
   "delivery-date": "Lierfertermin",
   "price": "Preis",
@@ -39,7 +41,7 @@
     "section1": {
       "title": "Was ist fon4food?",
       "subtitle": "fon4food ist eine Plattform, die Anbieter von Lebensmitteln und Lieferanten zusammenbringt und dabei unterstützt, telefonisch bestellte Waren den Kunden nach Hause zu liefern.",
-      "text1" : "Hier finden Sie teilnehmende Anbieter, die diese Dienstleistung aktuell in Ihrer Region anbieten:",
+      "text1" : "Hier finden Sie teilnehmende Anbieter, welche diese Dienstleistung aktuell in Ihrer Region anbieten:",
       "find-vendors": "Anbieter finden"
     },
     "section2": {
@@ -68,5 +70,10 @@
       "step10-text": "Für alle ausgelieferten und bezahlten Sendungen sowie für notwendige Retouren bezahlt der Anbieter regelmäßig und zeitnah die vereinbarten Beträge an den Lieferanten."
     },
     "current-vendors": "Aktuelle Anbieter"
-  }
+  },
+  "overview": {
+    "title": "Übersicht"
+  },
+  "new-delivery": "Neue Lieferung",
+  "handover": "Zustellung"
 }

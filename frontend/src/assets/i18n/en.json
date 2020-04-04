@@ -3,7 +3,7 @@
   "sign-in": "Sign in",
   "sign-up": "Sign up",
   "sign-out": "Sign out",
-  "start": "Start",
+  "start": "Overview",
   "save": "Save",
   "name": "Name",
   "first-name": "First name",
@@ -19,13 +19,15 @@
   "sign-in-error": "Sign in error!",
   "id": "ID",
   "order-id": "Order ID",
-  "planned-date": "Planned delivery time",
-  "delivery-person": "Delivery person",
+  "planned-date": "Delivery time",
+  "delivery-person": "Supplier",
   "status": "Status",
   "open": "Open",
   "ready": "Ready",
-  "delivered": "Delivered",
+  "delivered": "Successfully delivered",
+  "delivery-failed": "Delivery failed",
   "delivery": "Delivery",
+  "deliveries-of-today": "Today's deliveries",
   "delivery-scope": "Scope of delivery",
   "delivery-date": "Delivery date",
   "price": "Price",
@@ -55,5 +57,10 @@
       "step4": "Step 4:"
     },
     "current-vendors": "Current vendors"
-  }
+  },
+  "overview": {
+    "title": "Overview"
+  },
+  "new-delivery": "New delivery",
+  "handover": "Handover"
 }

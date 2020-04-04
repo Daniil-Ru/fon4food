@@ -1,38 +1,35 @@
-<div class="page-container">
-  <div class="button-container">
-    <button mat-fab color="primary" [routerLink]="['/vendor/order']">
-      <mat-icon>add</mat-icon>
-    </button>
+<div class="row">
+  <div class="col-7">
+    <h3>{{ 'deliveries-of-today' | translate }}</h3>
   </div>
+  <div class="col-5 text-right">
+    <button class="btn btn-primary" [routerLink]="['/vendor/order']">{{ 'new-delivery' | translate }}</button>
+  </div>
+</div>
 
-  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
-
-    <!-- Id Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'id' | translate}}</th>
-      <td mat-cell *matCellDef="let order"> {{order.id}} </td>
-    </ng-container>
-
-    <!-- Date Column -->
-    <ng-container matColumnDef="date">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'planned-date' | translate}} </th>
-      <td mat-cell *matCellDef="let order"> {{order.date}} </td>
-    </ng-container>
-
-    <!-- Delivery Person Column -->
-    <ng-container matColumnDef="deliveryPerson">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'delivery-person' | translate}} </th>
-      <td mat-cell *matCellDef="let order"> {{order.deliveryPerson}} </td>
-    </ng-container>
-
-    <!-- Status Column -->
-    <ng-container matColumnDef="status">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'status' | translate}} </th>
-      <td mat-cell *matCellDef="let order"> {{order.status | translate}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/vendor/order/' + row.id]"></tr>
-  </table>
-
+<div class="row">
+  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 f4f-card-container"  *ngFor="let delivery of deliveries">
+    <div class="card f4f-pointer" [routerLink]="['/vendor/order/' + delivery.id]">
+      <!--<img src="..." class="card-img-top" alt="...">-->
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h5 class="card-title">#{{ delivery.id }}</h5>
+          </div>
+          <div class="col text-right">
+            <span class="badge badge-info" [ngClass]="{'badge-info': delivery.status === 'open', 'badge-success': delivery.status === 'ready'}">{{ delivery.status }}</span>
+<!--            <span class="badge badge-success" *ngIf="delivery.status === 'ready'">{{ delivery.status }}</span>-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">{{ 'planned-date' | translate }}</div>
+          <div class="col-6 card-text">{{ delivery.date }}</div>
+        </div>
+        <div class="row">
+          <div class="col-6">{{ 'delivery-person' | translate }}</div>
+          <div class="col-6 card-text">{{ delivery.deliveryPerson }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

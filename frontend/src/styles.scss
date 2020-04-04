@@ -7,10 +7,6 @@ table {
   width: 100%;
 }
 
-th.mat-sort-header-sorted {
-  color: black;
-}
-
 .page-container {
   padding: 20px;
 }
@@ -70,4 +66,16 @@ th.mat-sort-header-sorted {
 
 .translated-section {
     white-space: pre-wrap;
+}
+
+.f4f-pointer {
+  cursor: pointer;
+}
+
+.f4f-card-container {
+   padding: 15px;
+
+  .card {
+    height: 100%;
+  }
 }

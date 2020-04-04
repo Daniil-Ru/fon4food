@@ -1,12 +1,5 @@
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatSortModule } from '@angular/material/sort';
-import { MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -18,7 +11,6 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { AboutComponent } from './views/about/about.component';
 import { LoginComponent } from './views/login/login.component';
 import { VendorsListComponent } from './views/vendors-list/vendors-list.component';
@@ -47,8 +39,6 @@ import {XhrInterceptor} from './services/xhr-interceptor.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -57,13 +47,7 @@ import {XhrInterceptor} from './services/xhr-interceptor.service';
         deps: [HttpClient],
       },
     }),
-    MatCardModule,
-    MatInputModule,
     FormsModule,
-    MatIconModule,
-    MatTableModule,
-    MatSortModule,
-    MatCheckboxModule,
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),
     FontAwesomeModule,

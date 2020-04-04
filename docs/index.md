@@ -20,6 +20,7 @@
       cd ..
 
 * Create the Docker containers and wait for the database to initialize:
+      docker-compose down --rmi all
       docker-compose up --no-start
       docker-compose start database
       docker-compose logs database | grep "init process done"

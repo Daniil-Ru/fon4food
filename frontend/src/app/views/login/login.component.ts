@@ -33,7 +33,6 @@ export class LoginComponent {
     })
       .subscribe(
         (data: UserInfo) => {
-          localStorage.setItem('loggedIn', true + '');
           this.user.update(data);
           this.router.navigate(['/start']);
         },

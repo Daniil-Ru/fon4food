@@ -13,11 +13,11 @@
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown" [collapse]="isCollapsed">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active" *ngIf="isLoggedIn$ | async">
-          <a class="nav-link" [routerLink]="['/start']">{{'start' | translate}}<span class="sr-only">(current)</span></a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/vendors']">{{'vendors-list' | translate}}</a>
+        </li>
+        <li class="nav-item active" *ngIf="isLoggedIn$ | async">
+          <a class="nav-link" [routerLink]="['/start']">{{'start' | translate}}<span class="sr-only">(current)</span></a>
         </li>
       </ul>
 
@@ -45,7 +45,7 @@
           </a>
         </li>
         <li class="nav-item dropdown" dropdown *ngIf="isLoggedIn$ | async">
-          <div class="nav-link dropdown-toggle my-2" id="navbarProfileDropdown" role="button"
+          <div class="nav-link dropdown-toggle my-2 f4f-navbar-button" id="navbarProfileDropdown" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" dropdownToggle>
             <span><fa-icon [icon]="faUser" class="f4f-navbar-icon"></fa-icon>{{ userName$ | async }}</span>
           </div>

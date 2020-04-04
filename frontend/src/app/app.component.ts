@@ -18,7 +18,6 @@ export class AppComponent {
   isCollapsed = true;
 
   userName$: Observable<string>;
-  userRoles$: Observable<string[]>;
   isLoggedIn$: Observable<boolean>;
 
   readonly title = 'fon4food';
@@ -35,18 +34,16 @@ export class AppComponent {
   constructor(readonly translateService: TranslateService, readonly userService: UserService, readonly http: HttpClient) {
     this.translateService.addLangs(['en', 'de']);
     this.translateService.setDefaultLang(this.selectedLan);
-    this.userRoles$ = userService.roles$;
     this.userName$ = userService.userName$;
     this.isLoggedIn$ = userService.roles$.pipe(
       map(roles => roles.length > 0),
     );
 
-    if (localStorage.getItem('loggedIn')) {
-      this.http.get(`${environment.backend_url}/user`)
-        .subscribe((data: UserInfo) => {
-          this.userService.update(data);
-        });
-    }
+    this.http.get(`${environment.backend_url}/user`)
+      .subscribe((data: UserInfo) => {
+        this.userService.update(data);
+      }, () => {}
+    );
   }
 
   changeLanguage(lan: string) {
@@ -58,7 +55,6 @@ export class AppComponent {
     this.http.get(`${environment.backend_url}/logout`, {}).subscribe(
       () => {
         this.userService.update(null);
-        localStorage.removeItem('loggedIn');
       }
     );
   }

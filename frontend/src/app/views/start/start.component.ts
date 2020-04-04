@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ROLES, UserService} from '../../services/user.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'f4f-start',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
 
-  constructor() { }
+  userRoles$: Observable<string[]>;
+  readonly ROLES = ROLES;
+
+  constructor(readonly userService: UserService) {
+    this.userRoles$ = userService.roles$;
+  }
 
   ngOnInit(): void {
   }

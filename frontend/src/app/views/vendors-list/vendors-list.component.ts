@@ -14,7 +14,7 @@ export interface Vendor {
 }
 
 @Component({
-  selector: 'app-vendors-list',
+  selector: 'f4f-vendors-list',
   templateUrl: './vendors-list.component.html',
   styleUrls: ['./vendors-list.component.scss'],
 })
