@@ -3,6 +3,8 @@ package de.fon4food.backend.security;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,9 +16,16 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import de.fon4food.backend.CustomConfiguration;
+
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
+	Logger logger = LoggerFactory.getLogger(SecurityConfiguration.class);
+	
+	@Autowired
+    private CustomConfiguration customConfiguration;
+	
 	@Autowired
     private DataSource dataSource;
 	
@@ -37,13 +46,18 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.rememberMe()
 				.key("uniqueAndSecret")
 				.and()
-			.cors()
-				.and()
 			.csrf()
 				.disable();
 //		        .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+		
+		if (customConfiguration.getEnableCors()) {
+			http.cors();
+			logger.warn("CORS is enabled");
+		} else {
+			http.cors().disable();
+		}
 	}
-
+	
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {

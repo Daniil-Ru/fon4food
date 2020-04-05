@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "fon4food.enable-cors",
+  "type": "java.lang.Boolean",
+  "description": "Enable CORS"
+}]}
