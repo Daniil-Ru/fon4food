@@ -22,7 +22,7 @@ export class StartGuard implements CanActivate {
           if (roles.length > 0) {
             return true;
           } else {
-            this.router.navigate(['']);
+            this.router.navigate(['about']);
             return false;
           }
         }),

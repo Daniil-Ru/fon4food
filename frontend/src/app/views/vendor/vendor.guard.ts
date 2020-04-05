@@ -22,7 +22,7 @@ export class VendorGuard implements CanActivate {
           if (roles.includes(ROLES.VENDOR)) {
             return true;
           } else {
-            this.router.navigate(['']);
+            this.router.navigate(['about']);
             return false;
           }
         }),

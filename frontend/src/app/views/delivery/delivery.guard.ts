@@ -22,7 +22,7 @@ export class DeliveryGuard implements CanActivate {
           if (roles.includes(ROLES.SUPPLIER)) {
             return true;
           } else {
-            this.router.navigate(['']);
+            this.router.navigate(['about']);
             return false;
           }
         }),

@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'vendor/order', component: VendorOrderComponent, canActivate: [VendorGuard] },
   { path: 'vendor/order/:id', component: VendorOrderComponent, canActivate: [VendorGuard] },
   { path: 'delivery/:id', component: DeliveryOrderComponent, canActivate: [DeliveryGuard] },
-  { path: '**', redirectTo: '/about', pathMatch: 'full' },
+  { path: '**', redirectTo: '/start', pathMatch: 'full' },
 ];
 
 @NgModule({
