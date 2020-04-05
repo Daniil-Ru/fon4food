@@ -1,12 +1,12 @@
-import {Component} from '@angular/core';
-import {faBell, faUser} from '@fortawesome/free-solid-svg-icons';
-import {TranslateService} from '@ngx-translate/core';
-import {UserService} from './services/user.service';
-import {Observable} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
-import {environment} from '../environments/environment';
-import {UserInfo} from './services/user.service.model';
-import {map} from 'rxjs/operators';
+import { Component } from '@angular/core';
+import { faBell, faUser } from '@fortawesome/free-solid-svg-icons';
+import { TranslateService } from '@ngx-translate/core';
+import { UserService } from './services/user.service';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../environments/environment';
+import { UserInfo } from './services/user.service.model';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'f4f-root',
@@ -25,25 +25,33 @@ export class AppComponent {
   readonly faUser = faUser;
   readonly languages = [{
     shortName: 'de',
-    longName: 'Deutsch'
+    longName: 'Deutsch',
   }, {
     shortName: 'en',
-    longName: 'English'
+    longName: 'English',
   }];
 
-  constructor(readonly translateService: TranslateService, readonly userService: UserService, readonly http: HttpClient) {
+  constructor(readonly translateService: TranslateService, readonly userService: UserService,
+              readonly http: HttpClient) {
     this.translateService.addLangs(['en', 'de']);
     this.translateService.setDefaultLang(this.selectedLan);
+
     this.userName$ = userService.userName$;
-    this.isLoggedIn$ = userService.roles$.pipe(
-      map(roles => roles.length > 0),
-    );
+    this.isLoggedIn$ = userService.roles$
+      .pipe(
+        filter(roles => roles != null),
+        map(roles => roles.length > 0),
+      );
 
     this.http.get(`${environment.backend_url}/user`)
-      .subscribe((data: UserInfo) => {
-        this.userService.update(data);
-      }, () => {}
-    );
+      .subscribe(
+        (data: UserInfo) => {
+          this.userService.update(data);
+        },
+        () => {
+          this.userService.update(null);
+        },
+      );
   }
 
   changeLanguage(lan: string) {
@@ -56,7 +64,7 @@ export class AppComponent {
       .subscribe(
         () => {
           this.userService.update(null);
-        }
-    );
+        },
+      );
   }
 }

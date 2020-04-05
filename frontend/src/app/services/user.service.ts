@@ -11,7 +11,7 @@ export const ROLES = {
   providedIn: 'root',
 })
 export class UserService {
-  roles$ = new BehaviorSubject<string[]>([]);
+  roles$ = new BehaviorSubject<string[]>(null);
   userName$ = new BehaviorSubject<string>('');
 
   constructor() {
