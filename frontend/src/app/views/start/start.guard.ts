@@ -7,7 +7,7 @@ import { ROLES, UserService } from '../../services/user.service';
 @Injectable({
   providedIn: 'root',
 })
-export class DeliveryGuard implements CanActivate {
+export class StartGuard implements CanActivate {
   constructor(readonly user: UserService, readonly router: Router) {
   }
 
@@ -19,7 +19,7 @@ export class DeliveryGuard implements CanActivate {
       .pipe(
         filter(roles => roles != null),
         map(roles => {
-          if (roles.includes(ROLES.SUPPLIER)) {
+          if (roles.length > 0) {
             return true;
           } else {
             this.router.navigate(['']);
