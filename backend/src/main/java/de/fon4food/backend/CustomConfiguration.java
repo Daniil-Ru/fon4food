@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class CustomConfiguration {
 
 	private boolean enableCors = false;
+	private String rememberMeKey = "uniqueAndSecret";
 
 	public boolean getEnableCors() {
 		return enableCors;
@@ -15,6 +16,14 @@ public class CustomConfiguration {
 
 	public void setEnableCors(boolean enableCors) {
 		this.enableCors = enableCors;
+	}
+
+	public String getRememberMeKey() {
+		return rememberMeKey;
+	}
+
+	public void setRememberMeKey(String rememberMeKey) {
+		this.rememberMeKey = rememberMeKey;
 	}
 	
 }

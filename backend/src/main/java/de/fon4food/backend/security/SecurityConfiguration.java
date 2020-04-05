@@ -44,7 +44,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.deleteCookies("JSESSIONID")
 				.and()
 			.rememberMe()
-				.key("uniqueAndSecret")
+				.key(customConfiguration.getRememberMeKey())
 				.and()
 			.csrf()
 				.disable();
