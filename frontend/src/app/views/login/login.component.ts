@@ -1,13 +1,13 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
-import {ROLES, UserService} from '../../services/user.service';
+import { UserService} from '../../services/user.service';
 import {faKey, faUser} from '@fortawesome/free-solid-svg-icons';
 import {environment} from '../../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {UserInfo} from '../../services/user.service.model';
 
 @Component({
-  selector: 'app-login',
+  selector: 'f4f-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })

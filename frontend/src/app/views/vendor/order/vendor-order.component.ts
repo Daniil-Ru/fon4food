@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-vendor-order',
+  selector: 'f4f-vendor-order',
   templateUrl: './vendor-order.component.html',
   styleUrls: ['./vendor-order.component.scss'],
 })
