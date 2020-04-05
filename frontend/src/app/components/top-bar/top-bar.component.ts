@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { faBell, faUser } from '@fortawesome/free-solid-svg-icons';
 import { filter, map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
+import { PATHS } from '../../app-routing.model';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -20,6 +21,7 @@ export class TopBarComponent implements OnInit {
   userName$: Observable<string>;
   isLoggedIn$: Observable<boolean>;
 
+  readonly PATHS = PATHS;
   readonly title = 'fon4food';
   readonly faBell = faBell;
   readonly faUser = faUser;
