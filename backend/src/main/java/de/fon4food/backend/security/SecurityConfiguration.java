@@ -46,16 +46,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.rememberMe()
 				.key(customConfiguration.getRememberMeKey())
 				.and()
+			.cors()
+				.and()
 			.csrf()
 				.disable();
 //		        .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
-		
-		if (customConfiguration.getEnableCors()) {
-			http.cors();
-			logger.warn("CORS is enabled");
-		} else {
-			http.cors().disable();
-		}
 	}
 	
     @Bean
@@ -63,9 +58,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
+            	var corsOrigins = customConfiguration.getCorsFrontends();
             	registry.addMapping("/**")
-            	.allowedOrigins("http://localhost:4200")
-            	.allowCredentials(true);
+            		.allowedOrigins(corsOrigins.toArray(new String[0]))
+            		.allowCredentials(true);
             }
         };
     }
