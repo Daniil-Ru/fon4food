@@ -1,4 +1,4 @@
-import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -20,7 +20,7 @@ import { DeliveryOrderComponent } from './views/delivery/order/delivery-order.co
 import { VendorOrderComponent } from './views/vendor/order/vendor-order.component';
 import { StartComponent } from './views/start/start.component';
 import { ZipFilterPipe } from './views/vendors-list/zip-filter.pipe';
-import {XhrInterceptor} from './services/xhr-interceptor.service';
+import { XhrInterceptor } from './services/xhr-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -40,6 +40,10 @@ import {XhrInterceptor} from './services/xhr-interceptor.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    HttpClientXsrfModule.withOptions({
+      cookieName: 'fon4food-Xsrf-Cookie',
+      headerName: 'fon4food-Xsrf-Header',
+    }),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
