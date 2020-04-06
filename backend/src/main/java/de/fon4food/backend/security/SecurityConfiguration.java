@@ -62,7 +62,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	class NewCsrfCookieLogoutHandler implements LogoutSuccessHandler {
 
 		private CookieCsrfTokenRepository tokenRepository;
-
 		
 		public NewCsrfCookieLogoutHandler(CookieCsrfTokenRepository tokenRepository) {
 			this.tokenRepository = tokenRepository;
@@ -87,7 +86,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		return repo;
 	}
 
-	@Bean
+    @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
