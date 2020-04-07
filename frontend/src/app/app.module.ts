@@ -22,6 +22,7 @@ import { StartComponent } from './views/start/start.component';
 import { ZipFilterPipe } from './views/vendors-list/zip-filter.pipe';
 import { XhrInterceptor } from './services/xhr-interceptor.service';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { DeliveryBadgeComponent } from './components/delivery-badge/delivery-badge.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
     StartComponent,
     ZipFilterPipe,
     TopBarComponent,
+    DeliveryBadgeComponent,
   ],
   imports: [
     BrowserModule,

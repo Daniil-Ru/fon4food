@@ -17,8 +17,7 @@
             <h5 class="card-title">#{{ delivery.id }}</h5>
           </div>
           <div class="col text-right">
-            <span class="badge badge-info" [ngClass]="{'badge-info': delivery.status === 'open', 'badge-success': delivery.status === 'ready'}">{{ delivery.status }}</span>
-<!--            <span class="badge badge-success" *ngIf="delivery.status === 'ready'">{{ delivery.status }}</span>-->
+            <f4f-delivery-badge [status]="delivery.status"></f4f-delivery-badge>
           </div>
         </div>
         <div class="row">
