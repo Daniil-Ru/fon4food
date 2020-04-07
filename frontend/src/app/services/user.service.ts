@@ -3,8 +3,8 @@ import { BehaviorSubject, Subject } from 'rxjs';
 import {UserInfo} from './user.service.model';
 
 export const ROLES = {
-  VENDOR: 'VENDOR',
-  SUPPLIER: 'SUPPLIER',
+  VENDOR: 'ROLE_VENDOR',
+  SUPPLIER: 'ROLE_SUPPLIER',
 };
 
 @Injectable({
