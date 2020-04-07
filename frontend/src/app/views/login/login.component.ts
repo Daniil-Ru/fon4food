@@ -1,10 +1,10 @@
-import {Component} from '@angular/core';
-import {Router} from '@angular/router';
-import { UserService} from '../../services/user.service';
-import {faKey, faUser} from '@fortawesome/free-solid-svg-icons';
-import {environment} from '../../../environments/environment';
-import {HttpClient} from '@angular/common/http';
-import {UserInfo} from '../../services/user.service.model';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from '../../services/user.service';
+import { faKey, faUser } from '@fortawesome/free-solid-svg-icons';
+import { environment } from '../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
+import { UserInfo } from '../../services/user.service.model';
 
 @Component({
   selector: 'f4f-login',
