@@ -17,16 +17,28 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 f4f-card-container"
+  <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 f4f-card-container"
        *ngFor="let vendor of vendors | zipFilter:zipExp">
     <div class="card">
       <!--<img src="..." class="card-img-top" alt="...">-->
       <div class="card-body">
         <h5 class="card-title">{{ vendor.name }}</h5>
-        <p class="card-text" [title]="'address' | translate"><fa-icon [icon]="faAddress" class="f4f-card-icon"></fa-icon>{{vendor.address + ', ' + vendor.zipCode + ' ' + vendor.city }}</p>
-        <p class="card-text" [title]="'phone' | translate"><fa-icon [icon]="faPhone" class="f4f-card-icon"></fa-icon><a href="tel:+491243435634253453245">{{ vendor.phone }}</a></p>
-        <p class="card-text" [title]="'order-times' | translate"><fa-icon [icon]="faTime" class="f4f-card-icon"></fa-icon>{{ vendor.orderTimes }} </p>
-        <p class="card-text" [title]="'delivery-flat-rate' | translate"><fa-icon [icon]="faRate" class="f4f-card-icon"></fa-icon>{{ vendor.deliveryFlatRate }} </p>
+
+        <p class="card-text f4f-car-address" [title]="'address' | translate">
+          <fa-icon [icon]="faAddress" class="f4f-card-icon"></fa-icon>
+          <span [innerHTML]="vendor.address + '\n' + vendor.zipCode + ' ' + vendor.city"></span></p>
+
+        <p class="card-text" [title]="'phone' | translate">
+          <fa-icon [icon]="faPhone" class="f4f-card-icon"></fa-icon>
+          <a href="tel:+491243435634253453245">{{ vendor.phone }}</a></p>
+
+        <p class="card-text" [title]="'order-times' | translate">
+          <fa-icon [icon]="faTime" class="f4f-card-icon"></fa-icon>
+          {{ vendor.orderTimes }} </p>
+
+        <p class="card-text" [title]="'delivery-flat-rate' | translate">
+          <fa-icon [icon]="faRate" class="f4f-card-icon"></fa-icon>
+          {{ vendor.deliveryFlatRate }} </p>
       </div>
     </div>
   </div>
