@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
+import { PATHS } from '../../app-routing.model';
 import { ROLES, UserService } from '../../services/user.service';
 
 @Injectable({
@@ -22,7 +23,7 @@ export class DeliveryGuard implements CanActivate {
           if (roles.includes(ROLES.SUPPLIER)) {
             return true;
           } else {
-            this.router.navigate(['about']);
+            this.router.navigate([PATHS.ABOUT]);
             return false;
           }
         }),

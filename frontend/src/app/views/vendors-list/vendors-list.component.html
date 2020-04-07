@@ -4,19 +4,21 @@
 
     <form class="form-inline f4f-filter-form">
       <div class="input-group">
-        <input type="text" class="form-control" [placeholder]="'zip-code' | translate" aria-label="zipCode"
-               [(ngModel)]="zipExp" name="zipExp"
-               aria-describedby="basic-addon1">
-<!--        <div class="input-group-append">-->
-<!--          <button class="btn btn-info" type="button" (click)="applyFilter($event)">{{'search' | translate}}</button>-->
-<!--        </div>-->
+        <input type="text" class="form-control"
+               [placeholder]="'zip-code' | translate"
+               aria-label="zipCode"
+               [(ngModel)]="zipExp" name="zipExp">
+        <!--        <div class="input-group-append">-->
+        <!--          <button class="btn btn-info" type="button" (click)="applyFilter($event)">{{'search' | translate}}</button>-->
+        <!--        </div>-->
       </div>
     </form>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 f4f-card-container"  *ngFor="let vendor of vendors | zipFilter:zipExp">
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 f4f-card-container"
+       *ngFor="let vendor of vendors | zipFilter:zipExp">
     <div class="card">
       <!--<img src="..." class="card-img-top" alt="...">-->
       <div class="card-body">
