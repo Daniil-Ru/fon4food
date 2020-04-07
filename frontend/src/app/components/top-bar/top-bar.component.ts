@@ -61,7 +61,7 @@ export class TopBarComponent implements OnInit {
   }
 
   logout() {
-    this.http.get(`${environment.backend_url}/logout`, {})
+    this.http.post(`${environment.backend_url}/logout`, {})
       .subscribe(
         () => {
           this.userService.update(null);
