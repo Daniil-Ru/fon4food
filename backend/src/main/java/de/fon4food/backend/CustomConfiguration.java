@@ -1,5 +1,8 @@
 package de.fon4food.backend;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
@@ -7,15 +10,19 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties("fon4food")
 public class CustomConfiguration {
 
-	private boolean enableCors = false;
+	private List<String> corsOrigins = new ArrayList<>();
 	private String rememberMeKey = "uniqueAndSecret";
 
-	public boolean getEnableCors() {
-		return enableCors;
+	public CustomConfiguration() {
+		this.corsOrigins.add("*");
+	}
+	
+	public List<String> getCorsFrontends() {
+		return corsOrigins;
 	}
 
-	public void setEnableCors(boolean enableCors) {
-		this.enableCors = enableCors;
+	public void setCorsOrigins(List<String> corsOrigins) {
+		this.corsOrigins = corsOrigins;
 	}
 
 	public String getRememberMeKey() {

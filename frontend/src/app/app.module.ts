@@ -1,4 +1,4 @@
-import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule , HttpClientXsrfModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -44,6 +44,10 @@ import { DeliveryBadgeComponent } from './components/delivery-badge/delivery-bad
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    HttpClientXsrfModule.withOptions({
+      cookieName: 'fon4food-Xsrf-Cookie',
+      headerName: 'fon4food-Xsrf-Header',
+    }),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
