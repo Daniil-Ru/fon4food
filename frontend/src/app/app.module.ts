@@ -1,4 +1,4 @@
-import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule , HttpClientXsrfModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -21,6 +21,8 @@ import { VendorOrderComponent } from './views/vendor/order/vendor-order.componen
 import { StartComponent } from './views/start/start.component';
 import { ZipFilterPipe } from './views/vendors-list/zip-filter.pipe';
 import { XhrInterceptor } from './services/xhr-interceptor.service';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { DeliveryBadgeComponent } from './components/delivery-badge/delivery-badge.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { XhrInterceptor } from './services/xhr-interceptor.service';
     VendorOrderComponent,
     StartComponent,
     ZipFilterPipe,
+    TopBarComponent,
+    DeliveryBadgeComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,12 +60,12 @@ import { XhrInterceptor } from './services/xhr-interceptor.service';
     BsDropdownModule.forRoot(),
     FontAwesomeModule,
   ],
-providers: [
+  providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: XhrInterceptor,
-      multi: true
-    }
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent],
 })

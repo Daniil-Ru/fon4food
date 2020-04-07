@@ -24,6 +24,7 @@
   "status": "Status",
   "open": "Open",
   "ready": "Ready",
+  "done": "Done",
   "delivered": "Successfully delivered",
   "delivery-failed": "Delivery failed",
   "delivery": "Delivery",

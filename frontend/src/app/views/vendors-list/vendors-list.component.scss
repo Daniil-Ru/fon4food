@@ -5,3 +5,11 @@
 .f4f-card-icon {
   margin-right: 10px;
 }
+
+.f4f-card-address {
+  display: flex;
+
+  > span {
+    white-space: pre-wrap;
+  }
+}

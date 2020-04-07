@@ -7,19 +7,17 @@
 <div class="row">
   <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 f4f-card-container"  *ngFor="let delivery of deliveries">
     <div class="card f4f-pointer" [routerLink]="['/delivery/' + delivery.id]">
-      <!--<img src="..." class="card-img-top" alt="...">-->
       <div class="card-body">
         <div class="row">
           <div class="col">
             <h5 class="card-title">#{{ delivery.id }}</h5>
           </div>
           <div class="col text-right">
-            <span class="badge badge-info" [ngClass]="{'badge-info': delivery.status === 'open', 'badge-success': delivery.status === 'ready'}">{{ delivery.status }}</span>
-<!--            <span class="badge badge-success" *ngIf="delivery.status === 'ready'">{{ delivery.status }}</span>-->
+            <f4f-delivery-badge [status]="delivery.status"></f4f-delivery-badge>
           </div>
         </div>
         <div class="row">
-          <div class="col-6">{{ 'date' | translate }}</div>
+          <div class="col-6">{{ 'delivery-date' | translate }}</div>
           <div class="col-6 card-text">{{ delivery.date }}</div>
         </div>
 <!--        <div class="row">-->

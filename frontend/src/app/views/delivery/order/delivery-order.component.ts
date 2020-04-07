@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-delivery-order',
+  selector: 'f4f-delivery-order',
   templateUrl: './delivery-order.component.html',
   styleUrls: ['./delivery-order.component.scss']
 })
