@@ -1,0 +1,63 @@
+databaseChangeLog:
+- changeSet:
+    id: 2-spring-security-auth-test-data__users
+    author: jo
+    changes:
+    - insert:
+        tableName: users
+        columns:
+        - column:
+            name: id
+            value: 1
+        - column:
+            name: username
+            value: lisa
+        - column:
+            name: email
+            value: lisa@example.com
+        - column:
+            name: password
+            value: $2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.AQubh4a
+        - column:
+            name: enabled
+            valueBoolean: true
+    - insert:
+        tableName: users
+        columns:
+        - column:
+            name: id
+            value: 2
+        - column:
+            name: username
+            value: anton
+        - column:
+            name: email
+            value: anton@example.com
+        - column:
+            name: password
+            value: $2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.AQubh4a
+        - column:
+            name: enabled
+            valueBoolean: true
+- changeSet:
+    id: 2-spring-security-auth-test-data__roles
+    author: jo
+    changes:
+    - insert:
+        tableName: user_roles
+        columns:
+        - column:
+            name: user_id
+            value: 1
+        - column:
+            name: role
+            value: ROLE_SUPPLIER
+    - insert:
+        tableName: user_roles
+        columns:
+        - column:
+            name: user_id
+            value: 2
+        - column:
+            name: role
+            value: ROLE_VENDOR
