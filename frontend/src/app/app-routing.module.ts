@@ -10,10 +10,12 @@ import { VendorOrderComponent } from './views/vendor/order/vendor-order.componen
 import { VendorGuard } from './views/vendor/vendor.guard';
 import { VendorsListComponent } from './views/vendors-list/vendors-list.component';
 import { StartComponent } from './views/start/start.component';
+import { LegalComponent } from './views/legal/legal.component';
 
 
 const routes: Routes = [
   { path: PATHS.ABOUT, component: AboutComponent },
+  { path: PATHS.LEGAL, component: LegalComponent },
   { path: PATHS.VENDORS, component: VendorsListComponent },
   { path: PATHS.LOGIN, component: LoginComponent },
   { path: PATHS.START, component: StartComponent, canActivate: [StartGuard] },
