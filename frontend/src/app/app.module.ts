@@ -23,6 +23,8 @@ import { ZipFilterPipe } from './views/vendors-list/zip-filter.pipe';
 import { XhrInterceptor } from './services/xhr-interceptor.service';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { DeliveryBadgeComponent } from './components/delivery-badge/delivery-badge.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LegalComponent } from './views/legal/legal.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { DeliveryBadgeComponent } from './components/delivery-badge/delivery-bad
     ZipFilterPipe,
     TopBarComponent,
     DeliveryBadgeComponent,
+    FooterComponent,
+    LegalComponent,
   ],
   imports: [
     BrowserModule,
