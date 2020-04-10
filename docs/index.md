@@ -21,12 +21,11 @@
       ng build
       cd ..
 
-* Create the Docker containers and wait for the database to initialize:
+* Set up the Docker images and containers:
 
-      docker-compose down --rmi all
+      docker-compose down --rmi all  # to remove already existing docker images
       docker-compose up --no-start
       docker-compose start database
-      docker-compose logs database | grep "init process done"
       docker-compose stop database
 
 You can now either...
@@ -34,7 +33,7 @@ You can now either...
 * ...develop the application with only the database running in Docker:
 
       docker-compose start database
-      # develop backend and frontend and run these components from your IDE
+      # develop and run both backend and frontend in your IDE
       docker-compose stop database
 
 * ...integration test the build products by running all three containers:
