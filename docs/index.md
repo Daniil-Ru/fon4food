@@ -47,6 +47,7 @@ You can now either...
 * Runtime requirements:
   * web server like apache or nginx
   * openjdk 11
+  * mariadb 10
 
 * TBD
 
