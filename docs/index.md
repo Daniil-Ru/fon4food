@@ -26,6 +26,8 @@
       docker-compose down --rmi all  # to remove already existing docker images
       docker-compose up --no-start
       docker-compose start database
+      # wait until the following command finds "ready for connections" TWICE in the logs:
+      docker-compose logs database | grep "ready for connections"
       docker-compose stop database
 
 You can now either...
