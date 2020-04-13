@@ -25,6 +25,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { DeliveryBadgeComponent } from './components/delivery-badge/delivery-badge.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LegalComponent } from './views/legal/legal.component';
+import { SignUpComponent } from './views/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { LegalComponent } from './views/legal/legal.component';
     DeliveryBadgeComponent,
     FooterComponent,
     LegalComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
