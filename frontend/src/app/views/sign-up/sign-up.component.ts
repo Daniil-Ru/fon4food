@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faEnvelope, faMailBulk, faUser } from '@fortawesome/free-solid-svg-icons';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'f4f-sign-up',
@@ -7,22 +7,25 @@ import { faEnvelope, faMailBulk, faUser } from '@fortawesome/free-solid-svg-icon
   styleUrls: ['./sign-up.component.scss'],
 })
 export class SignUpComponent implements OnInit {
-  firstName: string;
-  lastName: string;
-  address: string;
-  zipCode: string;
-  city: string;
-  phone: string;
-  email: string;
-  acceptedPrivacy: boolean;
+  signUpForm = this.formBuilder.group({
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    phone: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    acceptedPrivacy: [false, Validators.requiredTrue],
+  });
 
-  faUser = faUser;
-  faEmail = faEnvelope;
+  // vendorForm = this.formBuilder.group({
+  //   name: ['', Validators.required],
+  //   address: ['', Validators.required],
+  //   zipCode: ['', Validators.required, Validators.minLength(5), Validators.maxLength(5)],
+  //   city: ['', Validators.required],
+  // });
 
-  constructor() {
+  constructor(readonly formBuilder: FormBuilder) {
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   signUp() {

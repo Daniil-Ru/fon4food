@@ -1,5 +1,5 @@
-import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule , HttpClientXsrfModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -62,6 +62,7 @@ import { SignUpComponent } from './views/sign-up/sign-up.component';
       },
     }),
     FormsModule,
+    ReactiveFormsModule,
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),
     FontAwesomeModule,
