@@ -14,7 +14,7 @@ databaseChangeLog:
             value: lisa
         - column:
             name: email
-            value: lisa@example.com
+            value: lisa@mail.fon4food
         - column:
             name: password
             value: $2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.AQubh4a
@@ -32,7 +32,7 @@ databaseChangeLog:
             value: anton
         - column:
             name: email
-            value: anton@example.com
+            value: anton@mail.fon4food
         - column:
             name: password
             value: $2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.AQubh4a
