@@ -1,1 +1,93 @@
-<p>sign-up works!</p>
+<h1>{{'registration' | translate}}</h1>
+
+<div class="row">
+  <div class="col-sm-10 col-md-9 col-lg-8 col-xl-7">
+    <form class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="first-name">{{ 'first-name' | translate }}</label>
+          <input type="text"
+                 class="form-control"
+                 name="firstName"
+                 id="first-name"
+                 [(ngModel)]="firstName">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="first-name">{{ 'last-name' | translate }}</label>
+          <input type="text"
+                 class="form-control"
+                 name="lastName"
+                 id="lastName"
+                 [(ngModel)]="lastName">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="address">{{ 'address' | translate }}</label>
+          <input type="text"
+                 class="form-control"
+                 name="address"
+                 id="address"
+                 [(ngModel)]="address">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-sm-3">
+          <label for="zip-code">{{ 'zip-code' | translate }}</label>
+          <input type="text"
+                 class="form-control"
+                 name="zipCode"
+                 id="zip-code"
+                 [(ngModel)]="zipCode">
+        </div>
+        <div class="form-group col-sm-9">
+          <label for="city">{{ 'city' | translate }}</label>
+          <input type="text"
+                 class="form-control"
+                 name="city"
+                 id="city"
+                 [(ngModel)]="city">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="phone">{{ 'phone' | translate }}</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">+49 (0)</span>
+            </div>
+            <input type="text"
+                   class="form-control"
+                   name="phone"
+                   id="phone"
+                   [(ngModel)]="phone">
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="email">{{ 'email' | translate }}</label>
+          <input type="email"
+                 class="form-control"
+                 name="email"
+                 id="email"
+                 [(ngModel)]="email">
+        </div>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="accepted-privacy" name="accepted-privacy" [(ngModel)]="acceptedPrivacy">
+        <label class="form-check-label" for="accepted-privacy">{{'accept-privacy-statement' | translate}}</label>
+      </div>
+      <div class="form-row">
+        <div class="col-sm-6 mb-3">
+          <button type="submit" class="btn btn-primary" (click)="signUp()">{{'sign-up' | translate}}</button>
+        </div>
+      </div>
+    </form>
+
+<!--    <div class="f4f-invalid-feedback" *ngIf="existError">-->
+<!--      {{'sign-in-error' | translate}}-->
+<!--    </div>-->
+
+  </div>
+</div>
