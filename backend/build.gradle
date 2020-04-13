@@ -24,6 +24,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.liquibase:liquibase-core:3.8.8'
 	compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
 	compileOnly 'org.projectlombok:lombok'

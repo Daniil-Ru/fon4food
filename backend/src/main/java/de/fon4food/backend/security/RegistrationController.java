@@ -1,0 +1,51 @@
+package de.fon4food.backend.security;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.thymeleaf.context.Context;
+
+import de.fon4food.backend.CustomConfiguration;
+import de.fon4food.backend.mail.EmailService;
+import de.fon4food.backend.model.auth.User;
+import de.fon4food.backend.model.auth.UserRepository;
+
+@RestController
+@RequestMapping("signup")
+public class RegistrationController {
+
+	@Autowired
+	CustomConfiguration config;
+
+	@Autowired
+	UserRepository userRepository;
+
+	@Autowired
+	EmailService emailService;
+
+	@PostMapping
+	public void register(RegistrationInfo regInfo) {
+		User user = new User();
+		user.setEmail(regInfo.getEmail());
+		user.setUsername(regInfo.getUsername());
+		userRepository.save(user);
+		
+		Context context = new Context();
+		context.setVariable("name", user.getUsername());
+		Map<String, String> embeddedImages = new HashMap<>();
+		embeddedImages.put("logo", "logo.svg");
+		emailService.sendMail(user, config.getEmailFromNoReply(), "Please confirm your registration at fon4food", "registration-please-confirm", context,
+				embeddedImages, null);
+	}
+
+	@GetMapping("activate")
+	public void activate() {
+		
+	}
+	
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <img width="150" height="150" src="logo.svg" th:src="|cid:${logo}|">
+        <p th:text="#{greeting(${name})}">
+			Hello, Example User!
+        </p>
+	
+		[( ${content} )]
+		
+        <p>
+			[( #{closing} )]<br>
+			&emsp;<em>[( #{theTeam} )]</em>
+        </p>		
+    </body>
+</html>

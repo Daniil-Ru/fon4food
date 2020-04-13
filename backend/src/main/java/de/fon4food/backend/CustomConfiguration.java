@@ -12,12 +12,14 @@ public class CustomConfiguration {
 
 	private List<String> corsOrigins = new ArrayList<>();
 	private String rememberMeKey = "uniqueAndSecret";
+	private String emailFrom = "info@localhost";
+	private String emailFromNoReply = "noreply@localhost";
 
 	public CustomConfiguration() {
 		this.corsOrigins.add("*");
 	}
-	
-	public List<String> getCorsFrontends() {
+
+	public List<String> getCorsOrigins() {
 		return corsOrigins;
 	}
 
@@ -32,5 +34,21 @@ public class CustomConfiguration {
 	public void setRememberMeKey(String rememberMeKey) {
 		this.rememberMeKey = rememberMeKey;
 	}
-	
+
+	public String getEmailFrom() {
+		return emailFrom;
+	}
+
+	public void setEmailFrom(String emailFrom) {
+		this.emailFrom = emailFrom;
+	}
+
+	public String getEmailFromNoReply() {
+		return emailFromNoReply;
+	}
+
+	public void setEmailFromNoReply(String emailFromNoReply) {
+		this.emailFromNoReply = emailFromNoReply;
+	}
+
 }
