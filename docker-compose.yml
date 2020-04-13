@@ -1,5 +1,35 @@
 version: "3"
 services:
+  mail:
+    container_name: fon4food-mail
+    domainname: mail.fon4food
+    build:
+      context: ./mail
+    ports:
+      - "25:25"
+      - "143:143"
+      - "587:587"
+      - "993:993"
+    environment:
+      - ENABLE_SPAMASSASSIN=0
+      - ENABLE_CLAMAV=0
+      - ENABLE_FAIL2BAN=0
+      - ENABLE_POSTGREY=0
+      - ONE_DIR=1
+      - DMS_DEBUG=0
+    cap_add:
+      - NET_ADMIN
+      - SYS_PTRACE
+  webmail:
+    container_name: fon4food-webmail
+    image: roundcube/roundcubemail
+    ports:
+      - "8081:80"
+    environment:
+      - ROUNDCUBEMAIL_DEFAULT_HOST=mail
+      - ROUNDCUBEMAIL_SMTP_SERVER=mail
+    depends_on:
+      - mail
   database:
     container_name: fon4food-database
     build:
@@ -14,6 +44,7 @@ services:
       - "8081:8080"
       - "9009:9009"
     depends_on:
+      - mail
       - database
   frontend:
     container_name: fon4food-frontend
