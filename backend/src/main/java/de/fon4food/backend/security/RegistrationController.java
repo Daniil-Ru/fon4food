@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.thymeleaf.context.Context;
@@ -29,21 +30,21 @@ public class RegistrationController {
 	EmailService emailService;
 
 	@PostMapping
-	public void register(RegistrationInfo regInfo) {
+	public void register(@RequestBody RegistrationInfo regInfo) {
 		User user = new User();
 		user.setEmail(regInfo.getEmail());
-		user.setUsername(regInfo.getUsername());
 		userRepository.save(user);
 		
 		Context context = new Context();
-		context.setVariable("name", user.getUsername());
+		context.setVariable("name", user.getEmail());
 		Map<String, String> embeddedImages = new HashMap<>();
 		embeddedImages.put("logo", "logo.svg");
 		emailService.sendMail(user, config.getEmailFromNoReply(), "Please confirm your registration at fon4food", "registration-please-confirm", context,
 				embeddedImages, null);
 	}
 
-	@GetMapping("activate")
+	@GetMapping
+	@RequestMapping("activate")
 	public void activate() {
 		
 	}
