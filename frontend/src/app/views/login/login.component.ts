@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
-import { faKey, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faAt, faKey, faUser } from '@fortawesome/free-solid-svg-icons';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { UserInfo } from '../../services/user.service.model';
@@ -18,7 +18,7 @@ export class LoginComponent {
   existError = false;
   rememberMe = false;
 
-  readonly faUser = faUser;
+  readonly faUser = faAt;
   readonly faKey = faKey;
 
   constructor(readonly router: Router, readonly user: UserService, readonly http: HttpClient) {
