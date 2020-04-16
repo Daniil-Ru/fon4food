@@ -3,6 +3,25 @@
 <div class="row">
   <div class="col-sm-10 col-md-9 col-lg-8 col-xl-7">
     <form class="needs-validation" [formGroup]="signUpForm">
+
+      <div class="form-row">
+        <div class="form-group col-12" id="role">
+          <label for="role">{{ 'sign-up-view.sign-up-as' | translate }}</label>
+          <ng-container *ngFor="let option of rolesKeys">
+            <div class="form-check">
+              <input type="radio" formControlName="role"
+                     class="form-check-input"
+                     [id]="option"
+                     [checked]="signUpForm.get('role').value === option"
+                     [value]="option"/>
+              <label class="form-check-label"
+                     [for]="option">{{option | lowercase | translate}}
+              </label>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="first-name">{{ 'first-name' | translate }}</label>
@@ -24,9 +43,21 @@
 
       <div class="form-row">
         <div class="form-group col-12">
+          <label for="company">{{ 'company' | translate }}</label>
+          <input type="text"
+                 class="form-control"
+                 formControlName="company"
+                 name="company"
+                 id="company">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-12">
           <label for="address">{{ 'address' | translate }}</label>
           <input type="text"
                  class="form-control"
+                 formControlName="address"
                  name="address"
                  id="address">
         </div>
@@ -35,16 +66,23 @@
       <div class="form-row">
         <div class="form-group col-sm-3">
           <label for="zip-code">{{ 'zip-code' | translate }}</label>
-          <input type="text"
-                 class="form-control"
-                 name="zipCode"
-                 id="zip-code">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">D -</span>
+            </div>
+            <input type="text"
+                   class="form-control"
+                   name="zipCode"
+                   formControlName="zipCode"
+                   id="zip-code">
+          </div>
         </div>
         <div class="form-group col-sm-9">
           <label for="city">{{ 'city' | translate }}</label>
           <input type="text"
                  class="form-control"
                  name="city"
+                 formControlName="city"
                  id="city">
         </div>
       </div>
@@ -82,7 +120,7 @@
                id="accepted-privacy"
                name="accepted-privacy"
                formControlName="acceptedPrivacy">
-        <label class="form-check-label" for="accepted-privacy">{{'accept-privacy-statement' | translate}}</label>
+        <label class="form-check-label" for="accepted-privacy">{{'sign-up-view.accept-privacy-statement' | translate}}</label>
       </div>
       <div class="form-row">
         <div class="col-sm-6 mb-3">

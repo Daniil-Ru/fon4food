@@ -37,7 +37,9 @@
   "with-customer-agreed-upon": "With customer agreed upon:",
   "phone": "Phone number",
   "email": "Email",
-  "accept-privacy-statement": "I accept the privacy statement.",
+  "company": "Company",
+  "vendor": "Vendor",
+  "supplier": "Supplier",
   "order-times": "Order times",
   "delivery-flat-rate": "Delivery flat rate",
   "search": "Search",
@@ -45,7 +47,7 @@
     "section1": {
       "title": "What is fon4food?",
       "subtitle": "fon4food is a platform that supports the collaboration of vendors and suppliers to deliver essential goods ordered by phone to the customer's doorstep.",
-      "text1" : "Here you can find participating vendors who are currently offering this service in your area:",
+      "text1": "Here you can find participating vendors who are currently offering this service in your area:",
       "find-vendors": "Find vendors"
     },
     "section2": {
@@ -74,6 +76,10 @@
       "step10-text": "For all delivered and paid shipments as well as for necessary returns, the vendor pays the amounts agreed upon via the platform to the supplier."
     },
     "current-vendors": "Current vendors"
+  },
+  "sign-up-view": {
+    "sign-up-as": "Sign up as",
+    "accept-privacy-statement": "I accept the privacy statement."
   },
   "overview": {
     "title": "Overview"

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ROLES } from '../../services/user.service';
 
 @Component({
   selector: 'f4f-sign-up',
@@ -10,17 +11,17 @@ export class SignUpComponent implements OnInit {
   signUpForm = this.formBuilder.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
+    company: '',
+    address: ['', Validators.required],
+    zipCode: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(5)]],
+    city: ['', Validators.required],
     phone: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
+    role: ['', Validators.required],
     acceptedPrivacy: [false, Validators.requiredTrue],
   });
 
-  // vendorForm = this.formBuilder.group({
-  //   name: ['', Validators.required],
-  //   address: ['', Validators.required],
-  //   zipCode: ['', Validators.required, Validators.minLength(5), Validators.maxLength(5)],
-  //   city: ['', Validators.required],
-  // });
+  readonly rolesKeys = Object.keys(ROLES);
 
   constructor(readonly formBuilder: FormBuilder) {
   }
@@ -29,7 +30,7 @@ export class SignUpComponent implements OnInit {
   }
 
   signUp() {
-
+    console.log(this.signUpForm.value);
   }
 
 }

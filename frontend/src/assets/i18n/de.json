@@ -37,7 +37,9 @@
   "with-customer-agreed-upon": "Mit Kunden abgestimmt:",
   "phone": "Telefonnummer",
   "email": "E-Mail",
-  "accept-privacy-statement": "Ich stimme der Datenschutzerklärung zu.",
+  "company": "Firma",
+  "vendor": "Anbieter",
+  "supplier": "Lieferant",
   "order-times": "Bestellannahme",
   "delivery-flat-rate": "Lieferpauschale",
   "search": "Suchen",
@@ -45,7 +47,7 @@
     "section1": {
       "title": "Was ist fon4food?",
       "subtitle": "fon4food ist eine Plattform, die Anbieter von Lebensmitteln und Lieferanten zusammenbringt und dabei unterstützt, telefonisch bestellte Waren den Kunden nach Hause zu liefern.",
-      "text1" : "Hier finden Sie teilnehmende Anbieter, welche diese Dienstleistung aktuell in Ihrer Region anbieten:",
+      "text1": "Hier finden Sie teilnehmende Anbieter, welche diese Dienstleistung aktuell in Ihrer Region anbieten:",
       "find-vendors": "Anbieter finden"
     },
     "section2": {
@@ -74,6 +76,10 @@
       "step10-text": "Für alle ausgelieferten und bezahlten Sendungen sowie für notwendige Retouren bezahlt der Anbieter die über die Plattform vereinbarten Beträge an den Lieferanten."
     },
     "current-vendors": "Aktuelle Anbieter"
+  },
+  "sign-up-view": {
+    "sign-up-as": "Registrieren als",
+    "accept-privacy-statement": "Ich stimme der Datenschutzerklärung zu."
   },
   "overview": {
     "title": "Übersicht"
