@@ -1,0 +1,5 @@
+@import 'src/styles/helpers';
+
+.f4f-invalid-feedback {
+  @extend %error-message;
+}

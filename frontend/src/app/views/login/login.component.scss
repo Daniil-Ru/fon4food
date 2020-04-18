@@ -1,10 +1,10 @@
+@import 'src/styles/helpers';
+
 .f4f-login-icon {
   width: 3rem;
 }
 
 .f4f-invalid-feedback {
   width: 100%;
-  margin-top: 0.25rem;
-  font-size: 80%;
-  color: #dc3545;
+  @extend %error-message;
 }

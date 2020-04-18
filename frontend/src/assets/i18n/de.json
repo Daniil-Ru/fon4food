@@ -17,7 +17,6 @@
   "customer": "Kunde",
   "remember-me": "Angemeldet bleiben",
   "forgot-password": "Passwort vergessen?",
-  "sign-in-error": "Fehler bei der Anmeldung!",
   "id": "ID",
   "order-id": "Auftrags-ID",
   "planned-date": "Liefertermin",
@@ -43,6 +42,8 @@
   "order-times": "Bestellannahme",
   "delivery-flat-rate": "Lieferpauschale",
   "search": "Suchen",
+  "new-delivery": "Neue Lieferung",
+  "handover": "Zustellung",
   "about": {
     "section1": {
       "title": "Was ist fon4food?",
@@ -84,6 +85,13 @@
   "overview": {
     "title": "Übersicht"
   },
-  "new-delivery": "Neue Lieferung",
-  "handover": "Zustellung"
+  "errors": {
+    "sign-in-error": "Fehler bei der Anmeldung!",
+    "sign-up-error": "Fehler bei der Registrierung!",
+    "required-field": "Pflichtfeld",
+    "consent-required": "Zustimmung erforderlich",
+    "invalid-email": "Ungültige E-Mail-Adresse",
+    "invalid-zip": "Ungültige Postleitzahl",
+    "invalid-form" : "Bitte überprüfem Sie Ihre Eingaben"
+  }
 }

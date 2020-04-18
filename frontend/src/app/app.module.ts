@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TooltipModule } from 'ngx-bootstrap';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
@@ -65,6 +66,7 @@ import { SignUpComponent } from './views/sign-up/sign-up.component';
     ReactiveFormsModule,
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
     FontAwesomeModule,
   ],
   providers: [

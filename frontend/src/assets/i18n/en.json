@@ -17,7 +17,6 @@
   "customer": "Customer",
   "remember-me": "Remember me",
   "forgot-password": "Forgot password?",
-  "sign-in-error": "Sign in error!",
   "id": "ID",
   "order-id": "Order ID",
   "planned-date": "Delivery time",
@@ -43,6 +42,8 @@
   "order-times": "Order times",
   "delivery-flat-rate": "Delivery flat rate",
   "search": "Search",
+  "new-delivery": "New delivery",
+  "handover": "Handover",
   "about": {
     "section1": {
       "title": "What is fon4food?",
@@ -84,6 +85,13 @@
   "overview": {
     "title": "Overview"
   },
-  "new-delivery": "New delivery",
-  "handover": "Handover"
+  "errors": {
+    "sign-in-error": "Sign in error!",
+    "sign-up-error": "Sign up error!",
+    "required-field": "Required",
+    "consent-required": "Consent required",
+    "invalid-email": "Invalid email",
+    "invalid-zip": "Invalid ZIP code",
+    "invalid-form" : "Please check your entries"
+  }
 }
