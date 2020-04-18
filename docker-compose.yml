@@ -24,7 +24,7 @@ services:
     container_name: fon4food-webmail
     image: roundcube/roundcubemail
     ports:
-      - "8081:80"
+      - "8082:80"
     environment:
       - ROUNDCUBEMAIL_DEFAULT_HOST=mail
       - ROUNDCUBEMAIL_SMTP_SERVER=mail

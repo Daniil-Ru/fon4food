@@ -1,6 +1,6 @@
 databaseChangeLog:
 - changeSet:
-    id: 1586290485653-1
+    id: 1587228699817-1
     author: jo (generated)
     changes:
     - createTable:
@@ -15,7 +15,7 @@ databaseChangeLog:
             type: VARCHAR(255)
         tableName: user_roles
 - changeSet:
-    id: 1586290485653-2
+    id: 1587228699817-2
     author: jo (generated)
     changes:
     - createTable:
@@ -39,13 +39,11 @@ databaseChangeLog:
             name: enabled
             type: BIT
         - column:
-            constraints:
-              nullable: false
             name: password
             type: VARCHAR(255)
         tableName: users
 - changeSet:
-    id: 1586290485653-3
+    id: 1587228699817-3
     author: jo (generated)
     changes:
     - addUniqueConstraint:
@@ -53,7 +51,7 @@ databaseChangeLog:
         constraintName: UC_USERSEMAIL_COL
         tableName: users
 - changeSet:
-    id: 1586290485653-5
+    id: 1587228699817-4
     author: jo (generated)
     changes:
     - addForeignKeyConstraint:
@@ -65,3 +63,4 @@ databaseChangeLog:
         referencedColumnNames: id
         referencedTableName: users
         validate: true
+

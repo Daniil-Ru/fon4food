@@ -14,6 +14,8 @@ public class CustomConfiguration {
 	private String rememberMeKey = "uniqueAndSecret";
 	private String emailFrom = "info@localhost";
 	private String emailFromNoReply = "noreply@localhost";
+	private List<String> createTestVendors;
+	private List<String> createTestSuppliers;
 
 	public CustomConfiguration() {
 		this.corsOrigins.add("*");
@@ -49,6 +51,22 @@ public class CustomConfiguration {
 
 	public void setEmailFromNoReply(String emailFromNoReply) {
 		this.emailFromNoReply = emailFromNoReply;
+	}
+
+	public List<String> getCreateTestVendors() {
+		return createTestVendors;
+	}
+
+	public void setCreateTestVendors(List<String> createTestVendors) {
+		this.createTestVendors = createTestVendors;
+	}
+
+	public List<String> getCreateTestSuppliers() {
+		return createTestSuppliers;
+	}
+
+	public void setCreateTestSuppliers(List<String> createTestSuppliers) {
+		this.createTestSuppliers = createTestSuppliers;
 	}
 
 }
