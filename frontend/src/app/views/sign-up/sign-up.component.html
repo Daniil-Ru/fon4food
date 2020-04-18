@@ -38,12 +38,12 @@
           </div>
         </div>
         <div class="form-group col-md-6">
-          <label for="first-name">{{ 'last-name' | translate }}</label>
+          <label for="last-name">{{ 'last-name' | translate }}</label>
           <input type="text"
                  class="form-control"
                  formControlName="lastName"
                  name="lastName"
-                 id="lastName">
+                 id="last-name">
           <div class="f4f-invalid-feedback" *ngIf="signUpForm.get('lastName').errors?.required">
             {{'errors.required-field' | translate}}
           </div>
@@ -149,7 +149,7 @@
         <input type="checkbox"
                class="form-check-input"
                id="accepted-privacy"
-               name="accepted-privacy"
+               name="acceptedPrivacy"
                formControlName="acceptedPrivacy">
         <label class="form-check-label"
                for="accepted-privacy">{{'sign-up-view.accept-privacy-statement' | translate}}</label>
