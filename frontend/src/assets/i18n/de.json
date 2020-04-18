@@ -80,14 +80,21 @@
   },
   "sign-up-view": {
     "sign-up-as": "Registrieren als",
-    "accept-privacy-statement": "Ich stimme der Datenschutzerklärung zu."
+    "accept-privacy-statement": "Ich stimme der Datenschutzerklärung zu.",
+    "success": {
+      "title": "Bestätigungs-E-Mail an {{email}} versandt",
+      "text": "Bitte aktivieren Sie Ihr Benutzerkonto über den Link in Ihrer Bestätigungs-E-Mail."
+    },
+    "error": {
+      "title": "Verarbeitung fehlgeschlagen",
+      "text": "Bei der Verarbeitung ist ein Fehler aufgetreten."
+    }
   },
   "overview": {
     "title": "Übersicht"
   },
   "errors": {
     "sign-in-error": "Fehler bei der Anmeldung!",
-    "sign-up-error": "Fehler bei der Registrierung!",
     "required-field": "Pflichtfeld",
     "consent-required": "Zustimmung erforderlich",
     "invalid-email": "Ungültige E-Mail-Adresse",

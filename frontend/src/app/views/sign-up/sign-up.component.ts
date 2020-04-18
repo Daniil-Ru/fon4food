@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { faCheckCircle, faClock, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import { ROLES } from '../../services/user.service';
 
 @Component({
@@ -8,6 +9,12 @@ import { ROLES } from '../../services/user.service';
   styleUrls: ['./sign-up.component.scss'],
 })
 export class SignUpComponent implements OnInit {
+  success = false;
+  error = false;
+
+  readonly faSuccess = faCheckCircle;
+  readonly faError = faTimesCircle;
+
   signUpForm = this.formBuilder.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
@@ -30,7 +37,7 @@ export class SignUpComponent implements OnInit {
   }
 
   signUp() {
-    console.log(this.signUpForm.value);
+    this.success = true;
   }
 
 }

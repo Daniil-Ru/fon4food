@@ -80,14 +80,21 @@
   },
   "sign-up-view": {
     "sign-up-as": "Sign up as",
-    "accept-privacy-statement": "I accept the privacy statement."
+    "accept-privacy-statement": "I accept the privacy statement.",
+    "success": {
+      "title": "Confirmation email sent to {{email}}",
+      "text": "Please activate your user account via the link in your confirmation email."
+    },
+    "error": {
+      "title": "Processing failed",
+      "text": "An error has occurred during processing."
+    }
   },
   "overview": {
     "title": "Overview"
   },
   "errors": {
     "sign-in-error": "Sign in error!",
-    "sign-up-error": "Sign up error!",
     "required-field": "Required",
     "consent-required": "Consent required",
     "invalid-email": "Invalid email",
