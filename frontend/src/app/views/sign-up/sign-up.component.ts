@@ -38,6 +38,7 @@ export class SignUpComponent implements OnInit {
 
   signUp() {
     this.success = true;
+    // this.error = true;
   }
 
 }
