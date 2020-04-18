@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'f4f-set-pw',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./set-pw.component.scss'],
 })
 export class SetPwComponent implements OnInit {
+  readonly faError = faTimesCircle;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

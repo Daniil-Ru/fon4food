@@ -2,7 +2,6 @@
   "vendors-list": "Anbieter",
   "sign-in": "Anmelden",
   "sign-up": "Registrieren",
-  "registration": "Registrierung",
   "sign-out": "Abmelden",
   "start": "Übersicht",
   "save": "Speichern",
@@ -79,6 +78,7 @@
     "current-vendors": "Aktuelle Anbieter"
   },
   "sign-up-view": {
+    "registration": "Registrierung",
     "sign-up-as": "Registrieren als",
     "accept-privacy-statement": "Ich stimme der Datenschutzerklärung zu.",
     "success": {
@@ -90,6 +90,9 @@
       "text": "Bei der Verarbeitung ist ein Fehler aufgetreten."
     }
   },
+  "set-password":{
+  "title": "Passwort setzen"
+},
   "overview": {
     "title": "Übersicht"
   },
@@ -99,6 +102,6 @@
     "consent-required": "Zustimmung erforderlich",
     "invalid-email": "Ungültige E-Mail-Adresse",
     "invalid-zip": "Ungültige Postleitzahl",
-    "invalid-form" : "Bitte überprüfem Sie Ihre Eingaben"
+    "invalid-form": "Bitte überprüfem Sie Ihre Eingaben"
   }
 }
