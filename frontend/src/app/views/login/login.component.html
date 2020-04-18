@@ -12,7 +12,7 @@
                  class="form-control"
                  name="name"
                  [(ngModel)]="name"
-                 [placeholder]="'name' | translate">
+                 [placeholder]="'email' | translate">
 <!--          <div class="invalid-feedback">-->
 <!--            Please enter your username.-->
 <!--          </div>-->
@@ -48,7 +48,7 @@
     </form>
 
     <div class="f4f-invalid-feedback" *ngIf="existError">
-      {{'sign-in-error' | translate}}
+      {{'errors.sign-in-error' | translate}}
     </div>
 
   </div>

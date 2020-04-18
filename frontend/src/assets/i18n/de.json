@@ -2,6 +2,7 @@
   "vendors-list": "Anbieter",
   "sign-in": "Anmelden",
   "sign-up": "Registrieren",
+  "registration": "Registrierung",
   "sign-out": "Abmelden",
   "start": "Übersicht",
   "save": "Speichern",
@@ -16,7 +17,6 @@
   "customer": "Kunde",
   "remember-me": "Angemeldet bleiben",
   "forgot-password": "Passwort vergessen?",
-  "sign-in-error": "Fehler bei der Anmeldung!",
   "id": "ID",
   "order-id": "Auftrags-ID",
   "planned-date": "Liefertermin",
@@ -35,14 +35,20 @@
   "shipment-compiled": "Lieferung zusammengestellt",
   "with-customer-agreed-upon": "Mit Kunden abgestimmt:",
   "phone": "Telefonnummer",
+  "email": "E-Mail",
+  "company": "Firma",
+  "vendor": "Anbieter",
+  "supplier": "Lieferant",
   "order-times": "Bestellannahme",
   "delivery-flat-rate": "Lieferpauschale",
   "search": "Suchen",
+  "new-delivery": "Neue Lieferung",
+  "handover": "Zustellung",
   "about": {
     "section1": {
       "title": "Was ist fon4food?",
       "subtitle": "fon4food ist eine Plattform, die Anbieter von Lebensmitteln und Lieferanten zusammenbringt und dabei unterstützt, telefonisch bestellte Waren den Kunden nach Hause zu liefern.",
-      "text1" : "Hier finden Sie teilnehmende Anbieter, welche diese Dienstleistung aktuell in Ihrer Region anbieten:",
+      "text1": "Hier finden Sie teilnehmende Anbieter, welche diese Dienstleistung aktuell in Ihrer Region anbieten:",
       "find-vendors": "Anbieter finden"
     },
     "section2": {
@@ -72,9 +78,20 @@
     },
     "current-vendors": "Aktuelle Anbieter"
   },
+  "sign-up-view": {
+    "sign-up-as": "Registrieren als",
+    "accept-privacy-statement": "Ich stimme der Datenschutzerklärung zu."
+  },
   "overview": {
     "title": "Übersicht"
   },
-  "new-delivery": "Neue Lieferung",
-  "handover": "Zustellung"
+  "errors": {
+    "sign-in-error": "Fehler bei der Anmeldung!",
+    "sign-up-error": "Fehler bei der Registrierung!",
+    "required-field": "Pflichtfeld",
+    "consent-required": "Zustimmung erforderlich",
+    "invalid-email": "Ungültige E-Mail-Adresse",
+    "invalid-zip": "Ungültige Postleitzahl",
+    "invalid-form" : "Bitte überprüfem Sie Ihre Eingaben"
+  }
 }

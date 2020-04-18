@@ -10,9 +10,6 @@ databaseChangeLog:
             name: id
             value: 1
         - column:
-            name: username
-            value: lisa
-        - column:
             name: email
             value: lisa@mail.fon4food
         - column:
@@ -27,9 +24,6 @@ databaseChangeLog:
         - column:
             name: id
             value: 2
-        - column:
-            name: username
-            value: anton
         - column:
             name: email
             value: anton@mail.fon4food

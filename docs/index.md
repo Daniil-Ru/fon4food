@@ -24,11 +24,14 @@
 * Set up the Docker images and containers:
 
       docker-compose down --rmi all  # to remove already existing docker images
-      docker-compose up --no-start
-      docker-compose start database
-      # wait until the following command finds "ready for connections" TWICE in the logs:
+      
+      docker-compose up -d
+
+      # wait until the following command finds "ready for connections" TWICE in the db logs:
       docker-compose logs database | grep "ready for connections"
-      docker-compose stop database
+      
+      # wait until the following command finds "ready for work" in the mail logs:
+      docker-compose logs mail | grep "ready for work"
 
 You can now either...
 

@@ -1,10 +1,11 @@
-import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule , HttpClientXsrfModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TooltipModule } from 'ngx-bootstrap';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
@@ -25,6 +26,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { DeliveryBadgeComponent } from './components/delivery-badge/delivery-badge.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LegalComponent } from './views/legal/legal.component';
+import { SignUpComponent } from './views/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import { LegalComponent } from './views/legal/legal.component';
     DeliveryBadgeComponent,
     FooterComponent,
     LegalComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,8 +63,10 @@ import { LegalComponent } from './views/legal/legal.component';
       },
     }),
     FormsModule,
+    ReactiveFormsModule,
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
     FontAwesomeModule,
   ],
   providers: [

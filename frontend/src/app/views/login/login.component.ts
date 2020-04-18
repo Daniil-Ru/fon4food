@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
-import { faKey, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faAt, faKey } from '@fortawesome/free-solid-svg-icons';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { UserInfo } from '../../services/user.service.model';
@@ -16,9 +16,10 @@ export class LoginComponent {
   password = '';
 
   existError = false;
-  faUser = faUser;
-  faKey = faKey;
   rememberMe = false;
+
+  readonly faUser = faAt;
+  readonly faKey = faKey;
 
   constructor(readonly router: Router, readonly user: UserService, readonly http: HttpClient) {
   }
@@ -29,8 +30,8 @@ export class LoginComponent {
     const formData = new FormData();
     formData.append('remember-me', this.rememberMe + '');
     this.http.post(`${environment.backend_url}/login`, formData, {
-      headers: {Authorization: `Basic ${btoa(`${this.name}:${this.password}`)}`}
-    })
+        headers: { Authorization: `Basic ${btoa(`${this.name}:${this.password}`)}` },
+      })
       .subscribe(
         (data: UserInfo) => {
           this.user.update(data);

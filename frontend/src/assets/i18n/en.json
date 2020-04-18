@@ -2,6 +2,7 @@
   "vendors-list": "Vendors",
   "sign-in": "Sign in",
   "sign-up": "Sign up",
+  "registration": "Sign up",
   "sign-out": "Sign out",
   "start": "Overview",
   "save": "Save",
@@ -16,7 +17,6 @@
   "customer": "Customer",
   "remember-me": "Remember me",
   "forgot-password": "Forgot password?",
-  "sign-in-error": "Sign in error!",
   "id": "ID",
   "order-id": "Order ID",
   "planned-date": "Delivery time",
@@ -35,14 +35,20 @@
   "shipment-compiled": "Shipment compiled",
   "with-customer-agreed-upon": "With customer agreed upon:",
   "phone": "Phone number",
+  "email": "Email",
+  "company": "Company",
+  "vendor": "Vendor",
+  "supplier": "Supplier",
   "order-times": "Order times",
   "delivery-flat-rate": "Delivery flat rate",
   "search": "Search",
+  "new-delivery": "New delivery",
+  "handover": "Handover",
   "about": {
     "section1": {
       "title": "What is fon4food?",
       "subtitle": "fon4food is a platform that supports the collaboration of vendors and suppliers to deliver essential goods ordered by phone to the customer's doorstep.",
-      "text1" : "Here you can find participating vendors who are currently offering this service in your area:",
+      "text1": "Here you can find participating vendors who are currently offering this service in your area:",
       "find-vendors": "Find vendors"
     },
     "section2": {
@@ -72,9 +78,20 @@
     },
     "current-vendors": "Current vendors"
   },
+  "sign-up-view": {
+    "sign-up-as": "Sign up as",
+    "accept-privacy-statement": "I accept the privacy statement."
+  },
   "overview": {
     "title": "Overview"
   },
-  "new-delivery": "New delivery",
-  "handover": "Handover"
+  "errors": {
+    "sign-in-error": "Sign in error!",
+    "sign-up-error": "Sign up error!",
+    "required-field": "Required",
+    "consent-required": "Consent required",
+    "invalid-email": "Invalid email",
+    "invalid-zip": "Invalid ZIP code",
+    "invalid-form" : "Please check your entries"
+  }
 }

@@ -39,7 +39,8 @@
         </li>
 
         <li class="nav-item" *ngIf="!(isLoggedIn$ | async)">
-          <button class="btn btn-info my-2 f4f-navbar-button">{{'sign-up' | translate}}</button>
+          <button class="btn btn-info my-2 f4f-navbar-button"
+                  [routerLink]="['/' + PATHS.SIGN_UP]">{{'sign-up' | translate}}</button>
         </li>
 
         <li class="nav-item" *ngIf="isLoggedIn$ | async">

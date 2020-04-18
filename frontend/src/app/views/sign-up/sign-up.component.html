@@ -1,0 +1,176 @@
+<h1>{{'registration' | translate}}</h1>
+
+<div class="row">
+  <div class="col-sm-10 col-md-9 col-lg-8 col-xl-7">
+    <form class="needs-validation" [formGroup]="signUpForm">
+
+      <div class="form-row">
+        <div class="form-group col-12" id="role">
+          <label for="role">{{ 'sign-up-view.sign-up-as' | translate }}</label>
+          <ng-container *ngFor="let option of rolesKeys">
+            <div class="form-check">
+              <input type="radio" formControlName="role"
+                     class="form-check-input"
+                     [id]="option"
+                     [checked]="signUpForm.get('role').value === option"
+                     [value]="option"/>
+              <label class="form-check-label"
+                     [for]="option">{{option | lowercase | translate}}
+              </label>
+            </div>
+          </ng-container>
+          <div class="f4f-invalid-feedback" *ngIf="signUpForm.get('role').errors?.required">
+            {{'errors.required-field' | translate}}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="first-name">{{ 'first-name' | translate }}</label>
+          <input type="text"
+                 class="form-control"
+                 formControlName="firstName"
+                 name="firstName"
+                 id="first-name">
+          <div class="f4f-invalid-feedback" *ngIf="signUpForm.get('firstName').errors?.required">
+            {{'errors.required-field' | translate}}
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="last-name">{{ 'last-name' | translate }}</label>
+          <input type="text"
+                 class="form-control"
+                 formControlName="lastName"
+                 name="lastName"
+                 id="last-name">
+          <div class="f4f-invalid-feedback" *ngIf="signUpForm.get('lastName').errors?.required">
+            {{'errors.required-field' | translate}}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="company">{{ 'company' | translate }}</label>
+          <input type="text"
+                 class="form-control"
+                 formControlName="company"
+                 name="company"
+                 id="company">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="address">{{ 'address' | translate }}</label>
+          <input type="text"
+                 class="form-control"
+                 formControlName="address"
+                 name="address"
+                 id="address">
+          <div class="f4f-invalid-feedback" *ngIf="signUpForm.get('address').errors?.required">
+            {{'errors.required-field' | translate}}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-sm-3">
+          <label for="zip-code">{{ 'zip-code' | translate }}</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">D -</span>
+            </div>
+            <input type="text"
+                   class="form-control"
+                   name="zipCode"
+                   formControlName="zipCode"
+                   id="zip-code">
+          </div>
+          <div class="f4f-invalid-feedback" *ngIf="signUpForm.get('zipCode').errors?.required">
+            {{'errors.required-field' | translate}}
+          </div>
+          <div class="f4f-invalid-feedback"
+               *ngIf="signUpForm.get('zipCode').errors?.minlength || signUpForm.get('zipCode').errors?.maxlength">
+            {{'errors.invalid-zip' | translate}}
+          </div>
+        </div>
+        <div class="form-group col-sm-9">
+          <label for="city">{{ 'city' | translate }}</label>
+          <input type="text"
+                 class="form-control"
+                 name="city"
+                 formControlName="city"
+                 id="city">
+          <div class="f4f-invalid-feedback" *ngIf="signUpForm.get('city').errors?.required">
+            {{'errors.required-field' | translate}}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="phone">{{ 'phone' | translate }}</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">+49 (0)</span>
+            </div>
+            <input type="text"
+                   class="form-control"
+                   formControlName="phone"
+                   name="phone"
+                   id="phone">
+          </div>
+          <div class="f4f-invalid-feedback" *ngIf="signUpForm.get('phone').errors?.required">
+            {{'errors.required-field' | translate}}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="email">{{ 'email' | translate }}</label>
+          <input type="email"
+                 class="form-control"
+                 formControlName="email"
+                 name="email"
+                 id="email">
+          <div class="f4f-invalid-feedback" *ngIf="signUpForm.get('email').errors?.required">
+            {{'errors.required-field' | translate}}
+          </div>
+          <div class="f4f-invalid-feedback" *ngIf="signUpForm.get('email').errors?.email">
+            {{'errors.invalid-email' | translate}}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox"
+               class="form-check-input"
+               id="accepted-privacy"
+               name="acceptedPrivacy"
+               formControlName="acceptedPrivacy">
+        <label class="form-check-label"
+               for="accepted-privacy">{{'sign-up-view.accept-privacy-statement' | translate}}</label>
+        <div class="f4f-invalid-feedback" *ngIf="signUpForm.get('acceptedPrivacy').errors?.required">
+          {{'errors.consent-required' | translate}}
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-sm-6 mb-3">
+          <button type="submit"
+                  class="btn btn-primary"
+                  (click)="signUp()"
+                  tooltip="{{ signUpForm.valid ? '' : 'errors.invalid-form' | translate  }}"
+                  [disabled]="!signUpForm.valid">{{'sign-up' | translate}}</button>
+        </div>
+      </div>
+    </form>
+
+    <!--    <div class="f4f-invalid-feedback" *ngIf="existError">-->
+    <!--      {{'errors.sign-up-error' | translate}}-->
+    <!--    </div>-->
+
+  </div>
+</div>
