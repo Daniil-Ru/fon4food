@@ -23,29 +23,44 @@
 
 * Set up the Docker images and containers:
 
-      docker-compose down --rmi all  # to remove already existing docker images
+      docker-compose down --rmi all  # to remove existing docker images
       
-      docker-compose up -d
+      docker-compose up -d database
 
       # wait until the following command finds "ready for connections" TWICE in the db logs:
       docker-compose logs database | grep "ready for connections"
       
+      docker-compose up -d mail
+
       # wait until the following command finds "ready for work" in the mail logs:
       docker-compose logs mail | grep "ready for work"
 
-You can now either...
+      # start webmailer at port 8082
+      docker-compose up -d webmail
 
-* ...develop the application with only the database running in Docker:
+* You can now either...
 
-      docker-compose start database
-      # develop and run both backend and frontend in your IDE
-      docker-compose stop database
+  * ...develop the application, i.e. backend and frontend:
 
-* ...integration test the build products by running all three containers:
+        docker-compose start database
+        # develop and run both backend and frontend in your IDE
+        # the frontend (ng serve) will be at http://localhost:4200 and the backend at http://localhost:8080/api
+        docker-compose stop database
 
-      docker-compose start
-      # go to http://localhost:8080 and manually test the application
-      docker-compose stop
+  * ...test the whole stack:
+
+        docker-compose start
+        # the frontend will be at http://localhost:8080 and the backend at http://localhost:8080/api
+        docker-compose stop
+
+* The following test accounts are available (Password: pass) in backend and mail server:
+  * lisa@mail.fon4food (supplier)
+  * anton@mail.fon4food (vendor)
+
+* The following test accounts are available (Password: pass) only in mail server so you can test signing up new users:
+  * user1@mail.fon4food
+  * user2@mail.fon4food
+  * user3@mail.fon4food
 
 ## Deployment
 
