@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
-import { faAt, faKey, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faAt, faKey } from '@fortawesome/free-solid-svg-icons';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { UserInfo } from '../../services/user.service.model';
