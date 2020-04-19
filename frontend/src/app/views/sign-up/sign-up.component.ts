@@ -38,7 +38,6 @@ export class SignUpComponent implements OnInit {
   signUp() {
     this.success = true;
     window.scroll(0,0);
-    // this.error = true;
   }
 
 }
