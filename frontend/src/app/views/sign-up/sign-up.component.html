@@ -168,20 +168,16 @@
       </div>
     </form>
 
-    <div *ngIf="success" class="alert alert-success f4f-alert" role="alert">
-      <h4 class="alert-heading">
-        <fa-icon [icon]="faSuccess" class="f4f-card-icon f4f-success"></fa-icon>
+    <f4f-alert *ngIf="success" [alertType]="AlertType.Success">
+      <ng-template #header>
         {{'sign-up-view.success.title' | translate: {email: signUpForm.get('email').value} }}
-      </h4>
-      {{'sign-up-view.success.text' | translate}}
-    </div>
+      </ng-template>
+      <ng-template #body>{{'sign-up-view.success.text' | translate}}</ng-template>
+    </f4f-alert>
 
-    <div *ngIf="error" class="alert alert-danger f4f-alert" role="alert">
-      <h4 class="alert-heading">
-        <fa-icon [icon]="faError" class="f4f-card-icon f4f-error"></fa-icon>
-        {{'sign-up-view.error.title' | translate}}
-      </h4>
-      {{'sign-up-view.error.text' | translate}}
-    </div>
+    <f4f-alert *ngIf="error" [alertType]="AlertType.Error">
+      <ng-template #header>{{'sign-up-view.error.title' | translate}}</ng-template>
+      <ng-template #body>{{'sign-up-view.error.text' | translate}}</ng-template>
+    </f4f-alert>
   </div>
 </div>

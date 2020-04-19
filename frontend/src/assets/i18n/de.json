@@ -91,8 +91,16 @@
     }
   },
   "set-password":{
-  "title": "Passwort setzen"
-},
+  "title": "Passwort setzen",
+    "wrong-token": {
+      "title": "Der Link ist abgelaufen",
+      "text": "Bitte stellen Sie Ihre Anfrage erneut."
+    },
+    "error": {
+      "title": "Verarbeitung fehlgeschlagen",
+      "text": "Bei der Verarbeitung ist ein Fehler aufgetreten."
+    }
+  },
   "overview": {
     "title": "Übersicht"
   },

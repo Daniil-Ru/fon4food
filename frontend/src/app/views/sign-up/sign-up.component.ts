@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { faCheckCircle, faClock, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { AlertType } from '../../components/alert/alert.model';
 import { ROLES } from '../../services/user.service';
 
 @Component({
@@ -12,8 +12,7 @@ export class SignUpComponent implements OnInit {
   success = false;
   error = false;
 
-  readonly faSuccess = faCheckCircle;
-  readonly faError = faTimesCircle;
+  readonly AlertType = AlertType;
 
   signUpForm = this.formBuilder.group({
     firstName: ['', Validators.required],

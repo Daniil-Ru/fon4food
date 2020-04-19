@@ -3,11 +3,3 @@
 .f4f-invalid-feedback {
   @extend %error-message;
 }
-
-.f4f-success {
-  @extend %icon-success;
-}
-
-.f4f-error {
-  @extend %icon-error;
-}

@@ -28,6 +28,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LegalComponent } from './views/legal/legal.component';
 import { SignUpComponent } from './views/sign-up/sign-up.component';
 import { SetPwComponent } from './views/set-pw/set-pw.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { SetPwComponent } from './views/set-pw/set-pw.component';
     LegalComponent,
     SignUpComponent,
     SetPwComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
