@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ROLES } from '../../services/user.service';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'f4f-sign-up',
@@ -26,13 +28,23 @@ export class SignUpComponent implements OnInit {
 
   readonly rolesKeys = Object.keys(ROLES);
 
-  constructor(readonly formBuilder: FormBuilder) {
+  constructor(readonly formBuilder: FormBuilder, readonly http: HttpClient) {
   }
 
   ngOnInit() {
   }
 
   signUp() {
+/*    this.http.post(`${environment.backend_url}/signup`, {
+     // email: this.signUpForm.get('email')
+    })*/
+
+    this.http.post(`${environment.backend_url}/signup`, this.signUpForm.value)
+    .subscribe(() => {
+      console.log(this.signUpForm.value);
+      this.success = true;
+    });
+
     this.success = true;
     window.scroll(0,0);
   }

@@ -1,0 +1,9 @@
+databaseChangeLog:
+- include:
+    file: migrations/1-spring-security-auth.yaml
+    relativeToChangelogFile: true
+- include:
+    file: migrations/2-user-first-name.yaml
+    relativeToChangelogFile: true
+
+    

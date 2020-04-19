@@ -33,7 +33,8 @@ public class RegistrationController {
 	public void register(@RequestBody RegistrationInfo regInfo) {
 		User user = new User();
 		user.setEmail(regInfo.getEmail());
-		userRepository.save(user);
+		user.setFirstName(regInfo.getFirstName());
+		//userRepository.save(user);
 		
 		Context context = new Context();
 		context.setVariable("name", user.getEmail());

@@ -1,0 +1,28 @@
+databaseChangeLog:
+- changeSet:
+    id: 1587330441793-3
+    author: anwender (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: firstName
+            type: varchar(255)
+        tableName: users
+- changeSet:
+    id: 1587330441793-1
+    author: anwender (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: password
+        tableName: users
+- changeSet:
+    id: 1587330441793-2
+    author: anwender (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: role
+        tableName: user_roles
+

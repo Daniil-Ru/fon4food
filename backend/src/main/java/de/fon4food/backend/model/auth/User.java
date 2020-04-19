@@ -31,6 +31,7 @@ public class User {
 	private String password;
 
 	private boolean enabled = true;
+	private String firstName;
 
 	@ElementCollection(fetch = FetchType.EAGER)
 	@CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
@@ -76,6 +77,13 @@ public class User {
 
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 }

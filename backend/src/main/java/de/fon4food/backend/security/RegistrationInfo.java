@@ -3,14 +3,14 @@ package de.fon4food.backend.security;
 public class RegistrationInfo {
 
 	private String email;
-	private String username;
+	private String firstName;
 
-	public String getUsername() {
-		return username;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 	public String getEmail() {
