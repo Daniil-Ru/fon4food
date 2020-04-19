@@ -14,4 +14,12 @@
   "name": "fon4food.email-from-noreply",
   "type": "java.lang.String",
   "description": "Mail sender if no replies wanted"
+},{
+  "name": "fon4food.create-test-vendors",
+  "type": "java.lang.String",
+  "description": "Comma-separated list of test users (email addresses) to create with vendor role"
+},{
+  "name": "fon4food.create-test-suppliers",
+  "type": "java.lang.String",
+  "description": "Comma-separated list of test users (email addresses) to create with supplier role"
 }]}

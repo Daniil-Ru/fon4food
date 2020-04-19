@@ -1,5 +1,6 @@
 package de.fon4food.backend.model.auth;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CollectionTable;
@@ -35,7 +36,7 @@ public class User {
 	@CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
 	@Column(name = "role")
 	@Enumerated(EnumType.STRING)
-	private Set<Role> roles;
+	private Set<Role> roles = new HashSet<>();
 
 	public Long getId() {
 		return id;
