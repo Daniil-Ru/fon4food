@@ -90,8 +90,11 @@
       "text": "An error has occurred during processing."
     }
   },
-  "set-password":{
-  "title": "Set password",
+  "set-password": {
+    "title": "Set new password",
+    "password1": "New password",
+    "password2": "Repeat password",
+    "button": "Save",
     "wrong-token": {
       "title": "This link has expired",
       "text": "Please repeat your request."
@@ -100,7 +103,7 @@
       "title": "Processing failed",
       "text": "An error has occurred during processing."
     }
-},
+  },
   "overview": {
     "title": "Overview"
   },
@@ -110,6 +113,15 @@
     "consent-required": "Consent required",
     "invalid-email": "Invalid email",
     "invalid-zip": "Invalid ZIP code",
-    "invalid-form" : "Please check your entries"
+    "invalid-form": "Please check your entries",
+    "password-match": "Password do not match",
+    "validation": {
+      "min-length": "It must have at least {{number}} characters",
+      "max-length": "It must have at most {{number}} characters",
+      "numbers": "It must contain numbers",
+      "majuscules": "It must contain capital letters",
+      "minuscules": "It must contain minuscules",
+      "special-characters": "It must contain special characters"
+    }
   }
 }

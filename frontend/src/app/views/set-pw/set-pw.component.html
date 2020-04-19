@@ -3,9 +3,75 @@
 <div class="row">
   <div class="col-sm-10 col-md-9 col-lg-8 col-xl-7">
 
-    <f4f-alert [alertType]="AlertType.Error">
+    <f4f-alert class="f4f-wrong-token" [alertType]="AlertType.Error" *ngIf="tokenError">
       <ng-template #header>{{'set-password.wrong-token.title' | translate}}</ng-template>
       <ng-template #body>{{'set-password.wrong-token.text' | translate}}</ng-template>
+    </f4f-alert>
+
+    <form [formGroup]="setPwForm" *ngIf="!tokenError">
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="password1">{{ 'set-password.password1' | translate }}</label>
+          <input type="password"
+                 class="form-control"
+                 formControlName="password1"
+                 name="password1"
+                 id="password1">
+          <div class="f4f-invalid-feedback" *ngIf="setPwForm.get('password1').errors?.required">
+            {{'errors.required-field' | translate}}
+          </div>
+          <div class="f4f-invalid-feedback" *ngIf="setPwForm.get('password1').errors?.minlength">
+            {{'errors.validation.min-length' | translate: {number: 10} }}
+          </div>
+          <div class="f4f-invalid-feedback" *ngIf="setPwForm.get('password1').errors?.maxlength">
+            {{'errors.validation.max-length' | translate: {number: 100} }}
+          </div>
+          <div class="f4f-invalid-feedback" *ngIf="setPwForm.get('password1').errors?.numbers">
+            {{'errors.validation.numbers' | translate }}
+          </div>
+          <div class="f4f-invalid-feedback" *ngIf="setPwForm.get('password1').errors?.majuscules">
+            {{'errors.validation.majuscules' | translate }}
+          </div>
+          <div class="f4f-invalid-feedback" *ngIf="setPwForm.get('password1').errors?.minuscules">
+            {{'errors.validation.minuscules' | translate }}
+          </div>
+          <div class="f4f-invalid-feedback" *ngIf="setPwForm.get('password1').errors?.specialCharacters">
+            {{'errors.validation.special-characters' | translate }}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="password2">{{ 'set-password.password2' | translate }}</label>
+          <input type="password"
+                 class="form-control"
+                 formControlName="password2"
+                 name="password2"
+                 id="password2">
+          <div class="f4f-invalid-feedback" *ngIf="setPwForm.get('password2').errors?.required">
+            {{'errors.required-field' | translate}}
+          </div>
+          <div class="f4f-invalid-feedback" *ngIf="setPwForm.errors?.same">
+            {{'errors.password-match' | translate}}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-sm-6 mb-3">
+          <button type="submit"
+                  class="btn btn-primary"
+                  (click)="sendPw()"
+                  tooltip="{{ setPwForm.valid ? '' : 'errors.invalid-form' | translate  }}"
+                  [disabled]="!setPwForm.valid">{{'set-password.button' | translate}}</button>
+        </div>
+      </div>
+    </form>
+
+    <f4f-alert [alertType]="AlertType.Error" *ngIf="error">
+      <ng-template #header>{{'set-password.error.title' | translate}}</ng-template>
+      <ng-template #body>{{'set-password.error.text' | translate}}</ng-template>
     </f4f-alert>
 
   </div>
