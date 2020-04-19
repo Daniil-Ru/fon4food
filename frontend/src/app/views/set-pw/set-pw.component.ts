@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AlertType } from 'src/app/components/alert/alert.model';
+import { PATHS } from '../../app-routing.model';
 import { hasMajusculesValidator } from '../../form-validators/has-majuscules.validator';
 import { hasMinusculesValidator } from '../../form-validators/has-minuscules.validator';
 import { hasNumbersValidator } from '../../form-validators/has-numbers.validator';
@@ -33,14 +35,15 @@ export class SetPwComponent implements OnInit {
     { validators: sameValidator() },
   );
 
-  constructor(readonly formBuilder: FormBuilder) {
+  constructor(readonly formBuilder: FormBuilder, readonly router: Router) {
   }
 
   ngOnInit() {
   }
 
   sendPw() {
-
+    // if success
+    this.router.navigate([PATHS.LOGIN]);
   }
 
 }
