@@ -7,6 +7,7 @@
 * Development requirements:
   * openjdk 11
   * nodejs 12, npm 6
+  ** Win 10 installation: https://www.techomoro.com/install-and-set-up-angular-on-windows/
   * angular cli 9
   * docker, docker-compose
 
