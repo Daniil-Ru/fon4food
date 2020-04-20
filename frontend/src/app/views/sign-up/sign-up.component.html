@@ -1,8 +1,8 @@
-<h1>{{'registration' | translate}}</h1>
+<h1>{{'sign-up-view.registration' | translate}}</h1>
 
 <div class="row">
   <div class="col-sm-10 col-md-9 col-lg-8 col-xl-7">
-    <form class="needs-validation" [formGroup]="signUpForm">
+    <form *ngIf="!success" [formGroup]="signUpForm">
 
       <div class="form-row">
         <div class="form-group col-12" id="role">
@@ -157,6 +157,7 @@
           {{'errors.consent-required' | translate}}
         </div>
       </div>
+
       <div class="form-row">
         <div class="col-sm-6 mb-3">
           <button type="submit"
@@ -168,5 +169,16 @@
       </div>
     </form>
 
+    <f4f-alert *ngIf="success" [alertType]="AlertType.Success">
+      <ng-template #header>
+        {{'sign-up-view.success.title' | translate: {email: signUpForm.get('email').value} }}
+      </ng-template>
+      <ng-template #body>{{'sign-up-view.success.text' | translate}}</ng-template>
+    </f4f-alert>
+
+    <f4f-alert *ngIf="error" [alertType]="AlertType.Error">
+      <ng-template #header>{{'sign-up-view.error.title' | translate}}</ng-template>
+      <ng-template #body>{{'sign-up-view.error.text' | translate}}</ng-template>
+    </f4f-alert>
   </div>
 </div>

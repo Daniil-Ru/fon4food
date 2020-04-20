@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { AlertType } from '../../components/alert/alert.model';
 import { ROLES } from '../../services/user.service';
 
 @Component({
@@ -10,7 +11,9 @@ import { ROLES } from '../../services/user.service';
 export class SignUpComponent implements OnInit {
   success = false;
   error = false;
-  
+
+  readonly AlertType = AlertType;
+
   signUpForm = this.formBuilder.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
