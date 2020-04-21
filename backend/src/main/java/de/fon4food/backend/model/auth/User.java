@@ -31,6 +31,7 @@ public class User {
 	private String password;
 
 	private boolean enabled = true;
+
 	private String firstName;
 
 	@ElementCollection(fetch = FetchType.EAGER)
@@ -78,6 +79,7 @@ public class User {
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
+
 	public String getFirstName() {
 		return firstName;
 	}

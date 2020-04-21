@@ -34,7 +34,7 @@ public class RegistrationController {
 		User user = new User();
 		user.setEmail(regInfo.getEmail());
 		user.setFirstName(regInfo.getFirstName());
-		//userRepository.save(user);
+		userRepository.save(user);
 		
 		Context context = new Context();
 		context.setVariable("name", user.getEmail());
