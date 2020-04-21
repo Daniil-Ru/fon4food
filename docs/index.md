@@ -112,13 +112,30 @@ Say you're working on issue #123 "Do this and that". Your development process wo
 6. When you're done developing on the branch you delete the master migration backup file `db.changelog-master.yaml.bak`.
 7. After you pushed your commits to GitHub you then create a new Pull Request so someone reviews your code and merges it to the master branch.
 
-#### Examine database
+### Examine database
 
-You can examine the resulting database structure by connecting to the running `database` docker container with this command (Password is `pass`):
+You can examine the database structure and content by connecting to the running `database` docker container with this command (Password is `pass`):
 
     docker exec -it fon4food-database mysql -u root -p -D fon4food
 
 Then you can run mysql commands like `show tables;`, `describe <table_name>;`, `select * from <table_name>;`, and `quit`.
+
+### Reset database
+
+1. Shut down the backend
+2. Shut down and remove the database container:
+
+       docker ps
+       docker stop fon4food-database
+       docker ps -a
+       docker rm fon4food-database
+       
+3. Create a new database container:
+
+       docker-compose up -d database
+       docker-compose logs -f database  # wait for 2nd "ready for connections"
+
+4. Start the backend
 
 ## Deployment
 
