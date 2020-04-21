@@ -1,5 +1,10 @@
 # Documentation
 
+## System components and their dependencies:
+
+Apart from the `frontend` and `backend` components you also need a `database` and a `mail` server to run `fon4food`. We prepared a docker-compose configuration to easily setup the parts you're not developing but need as a dependency or for testing. These are the components and their dependencies:
+![System components](system-components.svg)
+
 ## Development and testing
 
 ### Setup
