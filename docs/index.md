@@ -12,7 +12,7 @@ Apart from the `frontend` and `backend` components you also need a `database` an
 * Development requirements:
   * openjdk 11
   * nodejs 12, npm 6
-   * Win 10 installation: https://www.techomoro.com/install-and-set-up-angular-on-windows/
+    * Win 10 installation: https://www.techomoro.com/install-and-set-up-angular-on-windows/
   * angular cli 9
   * docker, docker-compose
 
@@ -111,6 +111,14 @@ Say you're working on issue #123 "Do this and that". Your development process wo
 5. For any commit you `git add`, `git commit`, and eventually `git push` your changes including the master migration file and the new migration file named after the branch. Don't add the master migration backup file to the repository.
 6. When you're done developing on the branch you delete the master migration backup file `db.changelog-master.yaml.bak`.
 7. After you pushed your commits to GitHub you then create a new Pull Request so someone reviews your code and merges it to the master branch.
+
+#### Examine database
+
+You can examine the resulting database structure by connecting to the running `database` docker container with this command (Password is `pass`):
+
+    docker exec -it fon4food-database mysql -u root -p -D fon4food
+
+Then you can run mysql commands like `show tables;`, `describe <table_name>;`, `select * from <table_name>;`, and `quit`.
 
 ## Deployment
 
