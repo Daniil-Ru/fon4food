@@ -34,6 +34,12 @@ public class RegistrationController {
 		User user = new User();
 		user.setEmail(regInfo.getEmail());
 		user.setFirstName(regInfo.getFirstName());
+		user.setLastName(regInfo.getLastName());
+		user.setCompany(regInfo.getCompany());
+		user.setAdress(regInfo.getAdress());
+		user.setZipCode(regInfo.getZipCode());
+		user.setCity(regInfo.getCity());
+		user.setPhone(regInfo.getPhone());
 		userRepository.save(user);
 		
 		Context context = new Context();

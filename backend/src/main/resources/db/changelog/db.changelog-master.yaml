@@ -5,3 +5,6 @@ databaseChangeLog:
 - include:
     file: migrations/2-user-first-name.yaml
     relativeToChangelogFile: true
+- include:
+    file: migrations/3-reg-data-to-backend.yaml
+    relativeToChangelogFile: true
