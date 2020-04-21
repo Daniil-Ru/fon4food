@@ -84,7 +84,14 @@ Say you're working on issue #123 "Do this and that". Your development process wo
    2. Make your changes to the @Entities.
    3. (1st time only) Copy the master migration file `src/main/resources/db/changelog/db.changelog-master.yaml` to a temporary backup file `src/main/resources/db/changelog/db.changelog-master.yaml.bak`.
    4. Remove all the content from the master migration file `db.changelog-master.yaml` and save it.
-   5. From the `backend` directory run `./gradlew diffChangeLog`. You will then find the delta migration in the master migration file you emptied before.
+   5. From the `backend` directory run `./gradlew diffChangeLog`. You will then find the delta migration in the master migration file you emptied before which looks like this:
+   
+          databaseChangeLog:
+          - changeSet:
+              ...
+          - changeSet:
+              ...
+   
    6. (1st time only) Copy the master migration file `src/main/resources/db/changelog/db.changelog-master.yaml` into the subdirectory `migrations` and name it after the branch, i.e. like `src/main/resources/db/changelog/migrations/123-this-that.yaml`.
    7. (1st time only) Append another `include` block to the backup of the master migration file, i.e. to `db.changelog-master.yaml.bak`. You would append something like this:
        
