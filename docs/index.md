@@ -93,7 +93,7 @@ Say you're working on issue #123 "Do this and that". Your development process wo
               relativeToChangelogFile: true
 
    8. (from 2nd time) Copy all but the first line from the master migration file's content and append it to the included migration file `src/main/resources/db/changelog/migrations/123-this-that.yaml`.
-   9. Replace the master migration file's content with the content of the backup file.
+   9. Replace the master migration file's content with the content copied from the backup file.
    10. Now you can start the backend again and it should apply the migration to the database. Then you can go on developing using the changed model.
 
 5. For any commit you `git add`, `git commit`, and eventually `git push` your changes including the master migration file and the new migration file named after the branch. Don't add the master migration backup file to the repository.
