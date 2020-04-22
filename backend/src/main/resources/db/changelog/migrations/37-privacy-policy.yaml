@@ -1,6 +1,6 @@
 databaseChangeLog:
 - changeSet:
-    id: 1587491214941-3
+    id: 1587546037201-7
     author: jo (generated)
     changes:
     - createTable:
@@ -21,23 +21,7 @@ databaseChangeLog:
             type: datetime
         tableName: privacy_policy
 - changeSet:
-    id: 1587491214941-1
-    author: jo (generated)
-    changes:
-    - dropDefaultValue:
-        columnDataType: varchar(255)
-        columnName: password
-        tableName: users
-- changeSet:
-    id: 1587491214941-2
-    author: jo (generated)
-    changes:
-    - dropDefaultValue:
-        columnDataType: varchar(255)
-        columnName: role
-        tableName: user_roles
-- changeSet:
-    id: 1587495172404-2
+    id: 1587546037201-8
     author: jo (generated)
     changes:
     - createTable:
@@ -60,7 +44,7 @@ databaseChangeLog:
             type: BIGINT
         tableName: privacy_policy_consent
 - changeSet:
-    id: 1587495172404-3
+    id: 1587546037201-9
     author: jo (generated)
     changes:
     - addForeignKeyConstraint:
@@ -73,7 +57,7 @@ databaseChangeLog:
         referencedTableName: privacy_policy
         validate: true
 - changeSet:
-    id: 1587495172404-4
+    id: 1587546037201-10
     author: jo (generated)
     changes:
     - addForeignKeyConstraint:
@@ -86,11 +70,50 @@ databaseChangeLog:
         referencedTableName: users
         validate: true
 - changeSet:
-    id: 1587495172404-1
+    id: 1587546037201-1
     author: jo (generated)
     changes:
     - dropDefaultValue:
-        columnDataType: clob
-        columnName: content
-        tableName: privacy_policy
-
+        columnDataType: varchar(255)
+        columnName: adress
+        tableName: users
+- changeSet:
+    id: 1587546037201-2
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: city
+        tableName: users
+- changeSet:
+    id: 1587546037201-3
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: company
+        tableName: users
+- changeSet:
+    id: 1587546037201-4
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: first_name
+        tableName: users
+- changeSet:
+    id: 1587546037201-5
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: last_name
+        tableName: users
+- changeSet:
+    id: 1587546037201-6
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: phone
+        tableName: users
