@@ -28,9 +28,6 @@ export class LegalComponent extends ObservableCleanup {
       .subscribe(
         (content: string) => {
           this.legalNotice = content;
-        },
-        error2 => {
-          console.log(error2)
         }
       );
   }
