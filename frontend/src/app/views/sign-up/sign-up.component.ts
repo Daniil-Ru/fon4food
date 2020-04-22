@@ -35,14 +35,13 @@ export class SignUpComponent implements OnInit {
   }
 
   signUp() {
-/*    this.http.post(`${environment.backend_url}/signup`, {
-     // email: this.signUpForm.get('email')
-    })*/
-
     this.http.post(`${environment.backend_url}/signup`, this.signUpForm.value)
     .subscribe(() => {
       console.log(this.signUpForm.value);
       this.success = true;
+    },
+    () => {
+      this.error = true
     });
 
     this.success = true;
