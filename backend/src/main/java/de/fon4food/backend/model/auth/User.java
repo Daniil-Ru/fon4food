@@ -35,7 +35,7 @@ public class User {
 	@Column
 	private String password;
 	
-	@Type(type="true_false")
+	@Type(type="yes_no")
 	private Boolean enabled = true;
 	
 	private String firstName;
