@@ -99,6 +99,7 @@ public class User {
 	public void setLastName(String lastName) {
 		this.firstName = lastName;
 	}
+	
 	public String getCompany() {
 		return company;
 	}
@@ -106,6 +107,7 @@ public class User {
 	public void setCompany(String company) {
 		this.company = company;
 	}
+	
 	public String getAdress() {
 		return adress;
 	}
@@ -113,6 +115,7 @@ public class User {
 	public void setAdress(String adress) {
 		this.adress = adress;
 	}
+	
 	public Integer getZipCode() {
 		return zipCode;
 	}
@@ -120,6 +123,7 @@ public class User {
 	public void setZipCode(Integer zipCode) {
 		this.zipCode = zipCode;
 	}
+	
 	public String getCity() {
 		return city;
 	}
@@ -127,6 +131,7 @@ public class User {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	
 	public String getPhone() {
 		return phone;
 	}
