@@ -58,7 +58,6 @@ public class RegistrationInfo {
 		this.city = city;
 	}	
 
-
 	public String getPhone() {
 		return phone;
 	}
