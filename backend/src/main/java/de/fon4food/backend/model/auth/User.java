@@ -14,7 +14,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
+
+import de.fon4food.backend.model.policy.PrivacyPolicyConsent;
 
 @Entity
 @Table(name = "users")
@@ -29,11 +34,14 @@ public class User {
 
 	@Column
 	private String password;
-	private boolean enabled = true;
+	
+	@Type(type="yes_no")
+	private Boolean enabled = true;
+	
 	private String firstName;
 	private String lastName;
 	private String company;
-	private String adress;
+	private String address;
 	private Integer zipCode;
 	private String city;
 	private String phone;
@@ -43,6 +51,9 @@ public class User {
 	@Column(name = "role")
 	@Enumerated(EnumType.STRING)
 	private Set<Role> roles = new HashSet<>();
+
+	@OneToMany(mappedBy = "user")
+	private Set<PrivacyPolicyConsent> privacyPolicyConsents;
 
 	public Long getId() {
 		return id;
@@ -68,11 +79,11 @@ public class User {
 		this.password = password;
 	}
 
-	public boolean isEnabled() {
+	public Boolean isEnabled() {
 		return enabled;
 	}
 
-	public void setEnabled(boolean enabled) {
+	public void setEnabled(Boolean enabled) {
 		this.enabled = enabled;
 	}
 
@@ -97,7 +108,7 @@ public class User {
 	}
 
 	public void setLastName(String lastName) {
-		this.firstName = lastName;
+		this.lastName = lastName;
 	}
 	
 	public String getCompany() {
@@ -108,12 +119,12 @@ public class User {
 		this.company = company;
 	}
 	
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	
 	public Integer getZipCode() {

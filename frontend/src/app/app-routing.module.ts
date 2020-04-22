@@ -17,7 +17,7 @@ import { LegalComponent } from './views/legal/legal.component';
 
 const routes: Routes = [
   { path: PATHS.ABOUT, component: AboutComponent },
-  { path: PATHS.LEGAL, component: LegalComponent },
+  { path: `${PATHS.LEGAL}/:doc`, component: LegalComponent },
   { path: PATHS.VENDORS, component: VendorsListComponent },
   { path: PATHS.LOGIN, component: LoginComponent },
   { path: PATHS.SIGN_UP, component: SignUpComponent },

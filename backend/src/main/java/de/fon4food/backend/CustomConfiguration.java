@@ -16,6 +16,7 @@ public class CustomConfiguration {
 	private String emailFromNoReply = "noreply@localhost";
 	private List<String> createTestVendors;
 	private List<String> createTestSuppliers;
+	private String privacyPolicy;
 
 	public CustomConfiguration() {
 		this.corsOrigins.add("*");
@@ -67,6 +68,14 @@ public class CustomConfiguration {
 
 	public void setCreateTestSuppliers(List<String> createTestSuppliers) {
 		this.createTestSuppliers = createTestSuppliers;
+	}
+
+	public String getPrivacyPolicy() {
+		return privacyPolicy;
+	}
+
+	public void setPrivacyPolicy(String privacyPolicy) {
+		this.privacyPolicy = privacyPolicy;
 	}
 
 }

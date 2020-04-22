@@ -8,3 +8,7 @@ databaseChangeLog:
 - include:
     file: migrations/3-reg-data-to-backend.yaml
     relativeToChangelogFile: true
+- include:
+    file: migrations/37-privacy-policy.yaml
+    relativeToChangelogFile: true
+

@@ -1,25 +1,37 @@
-{"properties": [{
-  "name": "fon4food.cors-origins",
-  "type": "java.lang.List<java.lang.String>",
-  "description": "CORS origins, e.g. https://example.com"
-},{
-  "name": "fon4food.remember-me-key",
-  "type": "java.lang.String",
-  "description": "Key for 'remember me' functionality"
-},{
-  "name": "fon4food.email-from",
-  "type": "java.lang.String",
-  "description": "Mail sender"
-},{
-  "name": "fon4food.email-from-noreply",
-  "type": "java.lang.String",
-  "description": "Mail sender if no replies wanted"
-},{
-  "name": "fon4food.create-test-vendors",
-  "type": "java.lang.String",
-  "description": "Comma-separated list of test users (email addresses) to create with vendor role"
-},{
-  "name": "fon4food.create-test-suppliers",
-  "type": "java.lang.String",
-  "description": "Comma-separated list of test users (email addresses) to create with supplier role"
-}]}
+{"properties": [
+  {
+    "name": "fon4food.cors-origins",
+    "type": "java.lang.List<java.lang.String>",
+    "description": "CORS origins, e.g. https://example.com"
+  },
+  {
+    "name": "fon4food.remember-me-key",
+    "type": "java.lang.String",
+    "description": "Key for 'remember me' functionality"
+  },
+  {
+    "name": "fon4food.email-from",
+    "type": "java.lang.String",
+    "description": "Mail sender"
+  },
+  {
+    "name": "fon4food.email-from-noreply",
+    "type": "java.lang.String",
+    "description": "Mail sender if no replies wanted"
+  },
+  {
+    "name": "fon4food.create-test-vendors",
+    "type": "java.lang.String",
+    "description": "Comma-separated list of test users (email addresses) to create with vendor role"
+  },
+  {
+    "name": "fon4food.create-test-suppliers",
+    "type": "java.lang.String",
+    "description": "Comma-separated list of test users (email addresses) to create with supplier role"
+  },
+  {
+    "name": "fon4food.privacy-policy",
+    "type": "java.lang.String",
+    "description": "Path to the file containing the privacy policy"
+  }
+]}

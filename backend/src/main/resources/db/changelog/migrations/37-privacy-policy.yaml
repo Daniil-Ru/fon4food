@@ -1,0 +1,144 @@
+databaseChangeLog:
+- changeSet:
+    id: 1587549228697-7
+    author: jo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: privacy_policyPK
+            name: id
+            type: BIGINT
+        - column:
+            name: content
+            type: LONGTEXT
+        - column:
+            name: import_date
+            type: datetime
+        tableName: privacy_policy
+- changeSet:
+    id: 1587549228697-8
+    author: jo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: privacy_policy_consentPK
+            name: id
+            type: BIGINT
+        - column:
+            name: consent_date
+            type: datetime
+        - column:
+            name: privacy_policy_id
+            type: BIGINT
+        - column:
+            name: user_id
+            type: BIGINT
+        tableName: privacy_policy_consent
+- changeSet:
+    id: 1587549228697-9
+    author: jo (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: address
+            type: varchar(255)
+        tableName: users
+- changeSet:
+    id: 1587549228697-10
+    author: jo (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: privacy_policy_id
+        baseTableName: privacy_policy_consent
+        constraintName: FK4v8nkcxnrnmsyqunq1qast3vm
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: privacy_policy
+        validate: true
+- changeSet:
+    id: 1587549228697-11
+    author: jo (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: user_id
+        baseTableName: privacy_policy_consent
+        constraintName: FKmlqd58hicy7f52swq6x2ynjrs
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: users
+        validate: true
+- changeSet:
+    id: 1587549228697-12
+    author: jo (generated)
+    changes:
+    - dropColumn:
+        columnName: adress
+        tableName: users
+- changeSet:
+    id: 1587549228697-1
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: city
+        tableName: users
+- changeSet:
+    id: 1587549228697-2
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: company
+        tableName: users
+- changeSet:
+    id: 20200422-jo-user-enabled-to-chartype
+    author: jo
+    changes:
+    - modifyDataType:
+        columnName: enabled
+        newDataType: char(1)
+        tableName: users
+- changeSet:
+    id: 1587549228697-3
+    author: jo (generated)
+    changes:
+    - dropNotNullConstraint:
+        columnDataType: char(1)
+        columnName: enabled
+        tableName: users
+- changeSet:
+    id: 1587549228697-4
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: first_name
+        tableName: users
+- changeSet:
+    id: 1587549228697-5
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: last_name
+        tableName: users
+- changeSet:
+    id: 1587549228697-6
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: phone
+        tableName: users

@@ -26,7 +26,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/.htaccess"
+              "src/.htaccess",
+	      {"glob": "**/*", "input": "../legal/", "output": "./assets/legal/"}
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
