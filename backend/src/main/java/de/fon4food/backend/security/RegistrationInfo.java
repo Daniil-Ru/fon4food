@@ -4,7 +4,7 @@ public class RegistrationInfo {
 	private String firstName;
 	private String lastName;
 	private String company;
-	private String adress;
+	private String address;
 	private Integer zipCode;
 	private String city;
 	private String phone;
@@ -34,12 +34,12 @@ public class RegistrationInfo {
 		this.company = company;
 	}	
 
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}	
 
 	public Integer getZipCode() {

@@ -36,7 +36,7 @@ public class RegistrationController {
 		user.setFirstName(regInfo.getFirstName());
 		user.setLastName(regInfo.getLastName());
 		user.setCompany(regInfo.getCompany());
-		user.setAdress(regInfo.getAdress());
+		user.setAddress(regInfo.getAddress());
 		user.setZipCode(regInfo.getZipCode());
 		user.setCity(regInfo.getCity());
 		user.setPhone(regInfo.getPhone());
