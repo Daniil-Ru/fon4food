@@ -1,0 +1,96 @@
+databaseChangeLog:
+- changeSet:
+    id: 1587491214941-3
+    author: jo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: privacy_policyPK
+            name: id
+            type: BIGINT
+        - column:
+            name: content
+            type: LONGTEXT
+        - column:
+            name: import_date
+            type: datetime
+        tableName: privacy_policy
+- changeSet:
+    id: 1587491214941-1
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: password
+        tableName: users
+- changeSet:
+    id: 1587491214941-2
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: role
+        tableName: user_roles
+- changeSet:
+    id: 1587495172404-2
+    author: jo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: privacy_policy_consentPK
+            name: id
+            type: BIGINT
+        - column:
+            name: consent_date
+            type: datetime
+        - column:
+            name: privacy_policy_id
+            type: BIGINT
+        - column:
+            name: user_id
+            type: BIGINT
+        tableName: privacy_policy_consent
+- changeSet:
+    id: 1587495172404-3
+    author: jo (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: privacy_policy_id
+        baseTableName: privacy_policy_consent
+        constraintName: FK4v8nkcxnrnmsyqunq1qast3vm
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: privacy_policy
+        validate: true
+- changeSet:
+    id: 1587495172404-4
+    author: jo (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: user_id
+        baseTableName: privacy_policy_consent
+        constraintName: FKmlqd58hicy7f52swq6x2ynjrs
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: users
+        validate: true
+- changeSet:
+    id: 1587495172404-1
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: clob
+        columnName: content
+        tableName: privacy_policy
+

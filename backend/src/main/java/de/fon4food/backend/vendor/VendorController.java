@@ -1,4 +1,4 @@
-package de.fon4food.backend;
+package de.fon4food.backend.vendor;
 
 import java.util.ArrayList;
 import java.util.List;

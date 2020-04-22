@@ -1,4 +1,4 @@
-package de.fon4food.backend;
+package de.fon4food.backend.vendor;
 
 public class VendorInfo {
 

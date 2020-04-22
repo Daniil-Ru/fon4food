@@ -14,7 +14,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import de.fon4food.backend.model.policy.PrivacyPolicyConsent;
 
 @Entity
 @Table(name = "users")
@@ -37,6 +40,9 @@ public class User {
 	@Column(name = "role")
 	@Enumerated(EnumType.STRING)
 	private Set<Role> roles = new HashSet<>();
+
+	@OneToMany(mappedBy = "user")
+	private Set<PrivacyPolicyConsent> privacyPolicyConsents;
 
 	public Long getId() {
 		return id;
