@@ -98,7 +98,7 @@
     "password2": "Passwort wiederholen",
     "button": "Speichern",
     "wrong-token": {
-      "title": "Der Link ist abgelaufen",
+      "title": "Der Link ist ungültig oder abgelaufen",
       "text": "Bitte stellen Sie Ihre Anfrage erneut."
     },
     "error": {

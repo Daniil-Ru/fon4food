@@ -11,4 +11,6 @@ databaseChangeLog:
 - include:
     file: migrations/37-privacy-policy.yaml
     relativeToChangelogFile: true
-
+- include:
+    file: migrations/20-sign-up.yaml
+    relativeToChangelogFile: true

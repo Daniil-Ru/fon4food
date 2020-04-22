@@ -31,19 +31,28 @@ export class SignUpComponent implements OnInit {
 
   readonly rolesKeys = Object.keys(ROLES);
 
+  privacyPolicy = '';
+
   constructor(readonly formBuilder: FormBuilder, readonly http: HttpClient) {
   }
 
   ngOnInit() {
+    this.http.get(`assets/legal/privacy-policy.html`, {responseType: 'text'})
+      .subscribe(content => {
+        this.privacyPolicy = content;
+      });
   }
 
   signUp() {
     this.error = false;
-    
-    this.http.post(`${environment.backend_url}/signup`, this.signUpForm.value)
+
+    this.http.post(
+      `${environment.backend_url}/signup`,
+      {...this.signUpForm.value, privacyPolicyBase64: btoa(this.privacyPolicy)}
+      )
     .subscribe(() => {
       this.success = true;
-      window.scroll(0,0);
+      window.scroll(0, 0);
     },
     () => {
       this.error = true;

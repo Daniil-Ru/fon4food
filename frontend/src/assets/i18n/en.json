@@ -98,7 +98,7 @@
     "password2": "Repeat password",
     "button": "Save",
     "wrong-token": {
-      "title": "This link has expired",
+      "title": "This link is invalid or has expired",
       "text": "Please repeat your request."
     },
     "error": {
