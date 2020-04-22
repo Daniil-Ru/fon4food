@@ -1,5 +1,10 @@
 # Documentation
 
+## System components and their dependencies:
+
+Apart from the `frontend` and `backend` components you also need a `database` and a `mail` server to run `fon4food`. We prepared a docker-compose configuration to easily setup the parts you're not developing but need as a dependency or for testing. These are the components and their dependencies:
+![System components](system-components.svg)
+
 ## Development and testing
 
 ### Setup
@@ -7,6 +12,7 @@
 * Development requirements:
   * openjdk 11
   * nodejs 12, npm 6
+    * Win 10 installation: https://www.techomoro.com/install-and-set-up-angular-on-windows/
   * angular cli 9
   * docker, docker-compose
 
@@ -66,17 +72,70 @@
 
 ### Data model changes
 
-* The data model is changed by adding, modifying, or removing JPA @Entities.
-* From the difference between the data model represented by the JPA @Entities and the current schema in the database, a database migration file is derived.
-* This migration is added to the code and will be applied upon backend startup on the database if it has not been applied before.
+* The data model is changed by adding, modifying, or removing JPA @Entities and NOT by manually changing the database schema.
+* From the difference between the data model represented by the entity classes and the current schema in the database, a database migration file is derived.
+* This migration is added to the code and will be applied to the database when the backend is started, and only if it has not been applied before.
 
-To derive a migration file and add it to the code change into the `backend/` directory and follow this procedure:
+#### Development process involving model changes
 
-1. rename the file `src/main/resources/db/changelog/db.changelog-master.yaml` by appending `.bak` to its filename
-2. run `./gradlew diffChangeLog` which creates the migration file as `src/main/resources/db/changelog/db.changelog-master.yaml`
-3. move and rename the migration file to `src/main/resources/db/changelog/migrations/`
-4. undo step 1 by removing `.bak` from the filename
-5. open the file `src/main/resources/db/changelog/db.changelog-master.yaml` and append another `- insert` block for the new migration file
+Say you're working on issue #123 "Do this and that". Your development process would look like this:
+
+1. Make sure that your working copy is on the `master` branch, that there are no local changes, and that it is in sync with the `master` branch at GitHub.
+2. Create and checkout a new local branch for your feature, say `123-this-that`, e.g. by running `git checkout -b 123-this-that`.
+3. Then do your development until at some point you need to make changes to the JPA @Entities in the backend.
+4. Whenever you change the model follow this procedure:
+
+   1. Stop the backend.
+   2. Make your changes to the @Entities.
+   3. (1st time only) Copy the master migration file `src/main/resources/db/changelog/db.changelog-master.yaml` to a temporary backup file `src/main/resources/db/changelog/db.changelog-master.yaml.bak`.
+   4. Remove all the content from the master migration file `db.changelog-master.yaml` and save it.
+   5. From the `backend` directory run `./gradlew diffChangeLog`. You will then find the delta migration in the master migration file you emptied before which looks like this:
+   
+          databaseChangeLog:
+          - changeSet:
+              ...
+          - changeSet:
+              ...
+   
+   6. (1st time only) Copy the master migration file `src/main/resources/db/changelog/db.changelog-master.yaml` into the subdirectory `migrations` and name it after the branch, i.e. like `src/main/resources/db/changelog/migrations/123-this-that.yaml`.
+   7. (1st time only) Append another `include` block to the backup of the master migration file, i.e. to `db.changelog-master.yaml.bak`. You would append something like this:
+       
+          - include:
+              file: migrations/123-this-that.yaml
+              relativeToChangelogFile: true
+
+   8. (from 2nd time) Copy all but the first line from the master migration file's content and append it to the included migration file `src/main/resources/db/changelog/migrations/123-this-that.yaml`.
+   9. Replace the master migration file's content with the content copied from the backup file.
+   10. Now you can start the backend again and it should apply the migration to the database. Then you can go on developing using the changed model.
+
+5. For any commit you `git add`, `git commit`, and eventually `git push` your changes including the master migration file and the new migration file named after the branch. Don't add the master migration backup file to the repository.
+6. When you're done developing on the branch you delete the master migration backup file `db.changelog-master.yaml.bak`.
+7. After you pushed your commits to GitHub you then create a new Pull Request so someone reviews your code and merges it to the master branch.
+
+### Examine database
+
+You can examine the database structure and content by connecting to the running `database` docker container with this command (Password is `pass`):
+
+    docker exec -it fon4food-database mysql -u root -p -D fon4food
+
+Then you can run mysql commands like `show tables;`, `describe <table_name>;`, `select * from <table_name>;`, and `quit`.
+
+### Reset database
+
+1. Shut down the backend
+2. Shut down and remove the database container:
+
+       docker ps
+       docker stop fon4food-database
+       docker ps -a
+       docker rm fon4food-database
+       
+3. Create a new database container:
+
+       docker-compose up -d database
+       docker-compose logs -f database  # wait for 2nd "ready for connections"
+
+4. Start the backend
 
 ## Deployment
 

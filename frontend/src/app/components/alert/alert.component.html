@@ -1,0 +1,12 @@
+<div class="alert f4f-alert" [ngClass]="CONFIG[alertType].cls" role="alert">
+
+  <h4 class="alert-heading">
+    <fa-icon [icon]="CONFIG[alertType].icon"
+             class="f4f-alert-icon"
+             [ngClass]="CONFIG[alertType].iconCls"></fa-icon>
+    <ng-container *ngTemplateOutlet="header"></ng-container>
+  </h4>
+
+  <ng-container *ngTemplateOutlet="body"></ng-container>
+
+</div>

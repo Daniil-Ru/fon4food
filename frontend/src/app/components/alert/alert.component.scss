@@ -1,0 +1,17 @@
+@import 'src/styles/helpers';
+
+.f4f-alert-icon {
+  margin-right: 10px;
+}
+
+.f4f-success {
+  @extend %icon-success;
+}
+
+.f4f-error {
+  @extend %icon-error;
+}
+
+.f4f-alert {
+  overflow-wrap: break-word;
+}

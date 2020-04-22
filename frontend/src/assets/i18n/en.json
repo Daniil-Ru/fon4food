@@ -4,7 +4,6 @@
   "vendors-list": "Vendors",
   "sign-in": "Sign in",
   "sign-up": "Sign up",
-  "registration": "Sign up",
   "sign-out": "Sign out",
   "start": "Overview",
   "save": "Save",
@@ -81,19 +80,50 @@
     "current-vendors": "Current vendors"
   },
   "sign-up-view": {
+    "registration": "Sign up",
     "sign-up-as": "Sign up as",
-    "accept-privacy-statement": "I accept the privacy statement."
+    "accept-privacy-statement": "I accept the privacy statement.",
+    "success": {
+      "title": "Confirmation email sent to {{email}}",
+      "text": "Please activate your user account via the link in your confirmation email."
+    },
+    "error": {
+      "title": "Processing failed",
+      "text": "An error has occurred during processing."
+    }
+  },
+  "set-password": {
+    "title": "Set new password",
+    "password1": "New password",
+    "password2": "Repeat password",
+    "button": "Save",
+    "wrong-token": {
+      "title": "This link has expired",
+      "text": "Please repeat your request."
+    },
+    "error": {
+      "title": "Processing failed",
+      "text": "An error has occurred during processing."
+    }
   },
   "overview": {
     "title": "Overview"
   },
   "errors": {
     "sign-in-error": "Sign in error!",
-    "sign-up-error": "Sign up error!",
     "required-field": "Required",
     "consent-required": "Consent required",
     "invalid-email": "Invalid email",
     "invalid-zip": "Invalid ZIP code",
-    "invalid-form" : "Please check your entries"
+    "invalid-form": "Please check your entries",
+    "password-match": "Password do not match",
+    "validation": {
+      "min-length": "It must have at least {{number}} characters",
+      "max-length": "It must have at most {{number}} characters",
+      "numbers": "It must contain numbers",
+      "majuscules": "It must contain capital letters",
+      "minuscules": "It must contain minuscules",
+      "special-characters": "It must contain special characters"
+    }
   }
 }

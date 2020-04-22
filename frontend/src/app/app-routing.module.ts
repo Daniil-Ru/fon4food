@@ -5,6 +5,7 @@ import { DeliveryGuard } from './views/delivery/delivery.guard';
 import { DeliveryOrderComponent } from './views/delivery/order/delivery-order.component';
 import { LoginComponent } from './views/login/login.component';
 import { AboutComponent } from './views/about/about.component';
+import { SetPwComponent } from './views/set-pw/set-pw.component';
 import { SignUpComponent } from './views/sign-up/sign-up.component';
 import { StartGuard } from './views/start/start.guard';
 import { VendorOrderComponent } from './views/vendor/order/vendor-order.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: PATHS.VENDORS, component: VendorsListComponent },
   { path: PATHS.LOGIN, component: LoginComponent },
   { path: PATHS.SIGN_UP, component: SignUpComponent },
+  { path: `${PATHS.SET_PW}/:token`, component: SetPwComponent },
   { path: PATHS.START, component: StartComponent, canActivate: [StartGuard] },
   { path: 'vendor/order', component: VendorOrderComponent, canActivate: [VendorGuard] },
   { path: 'vendor/order/:id', component: VendorOrderComponent, canActivate: [VendorGuard] },

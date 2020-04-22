@@ -4,7 +4,6 @@
   "vendors-list": "Anbieter",
   "sign-in": "Anmelden",
   "sign-up": "Registrieren",
-  "registration": "Registrierung",
   "sign-out": "Abmelden",
   "start": "Übersicht",
   "save": "Speichern",
@@ -81,19 +80,50 @@
     "current-vendors": "Aktuelle Anbieter"
   },
   "sign-up-view": {
+    "registration": "Registrierung",
     "sign-up-as": "Registrieren als",
-    "accept-privacy-statement": "Ich stimme der Datenschutzerklärung zu."
+    "accept-privacy-statement": "Ich stimme der Datenschutzerklärung zu.",
+    "success": {
+      "title": "Bestätigungs-E-Mail an {{email}} versandt",
+      "text": "Bitte aktivieren Sie Ihr Benutzerkonto über den Link in Ihrer Bestätigungs-E-Mail."
+    },
+    "error": {
+      "title": "Verarbeitung fehlgeschlagen",
+      "text": "Bei der Verarbeitung ist ein Fehler aufgetreten."
+    }
+  },
+  "set-password":{
+  "title": "Neues Passwort festlegen",
+    "password1": "Neues Passwort",
+    "password2": "Passwort wiederholen",
+    "button": "Speichern",
+    "wrong-token": {
+      "title": "Der Link ist abgelaufen",
+      "text": "Bitte stellen Sie Ihre Anfrage erneut."
+    },
+    "error": {
+      "title": "Verarbeitung fehlgeschlagen",
+      "text": "Bei der Verarbeitung ist ein Fehler aufgetreten."
+    }
   },
   "overview": {
     "title": "Übersicht"
   },
   "errors": {
     "sign-in-error": "Fehler bei der Anmeldung!",
-    "sign-up-error": "Fehler bei der Registrierung!",
     "required-field": "Pflichtfeld",
     "consent-required": "Zustimmung erforderlich",
     "invalid-email": "Ungültige E-Mail-Adresse",
     "invalid-zip": "Ungültige Postleitzahl",
-    "invalid-form" : "Bitte überprüfem Sie Ihre Eingaben"
+    "invalid-form": "Bitte überprüfem Sie Ihre Eingaben",
+    "password-match": "Passwörter stimmen nicht überein",
+    "validation": {
+      "min-length": "Es muss mindestens {{number}} Zeichen haben",
+      "max-length": "Es muss höchstens {{number}} Zeichen haben",
+      "numbers": "Es muss Zahlen enthalten",
+      "majuscules": "Es muss Großbuchstaben enthalten",
+      "minuscules": "Es muss Kleinbuchstaben enthalten",
+      "special-characters": "Es muss Sonderzeichen enthalten"
+    }
   }
 }

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { AlertType } from '../../components/alert/alert.model';
 import { ROLES } from '../../services/user.service';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'f4f-sign-up',
@@ -8,6 +11,11 @@ import { ROLES } from '../../services/user.service';
   styleUrls: ['./sign-up.component.scss'],
 })
 export class SignUpComponent implements OnInit {
+  success = false;
+  error = false;
+
+  readonly AlertType = AlertType;
+
   signUpForm = this.formBuilder.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
@@ -23,14 +31,23 @@ export class SignUpComponent implements OnInit {
 
   readonly rolesKeys = Object.keys(ROLES);
 
-  constructor(readonly formBuilder: FormBuilder) {
+  constructor(readonly formBuilder: FormBuilder, readonly http: HttpClient) {
   }
 
   ngOnInit() {
   }
 
   signUp() {
-    console.log(this.signUpForm.value);
+    this.error = false;
+    
+    this.http.post(`${environment.backend_url}/signup`, this.signUpForm.value)
+    .subscribe(() => {
+      this.success = true;
+      window.scroll(0,0);
+    },
+    () => {
+      this.error = true;
+    });
   }
 
 }
