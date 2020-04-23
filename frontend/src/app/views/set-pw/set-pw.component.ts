@@ -20,6 +20,7 @@ import {ValidityResponse} from './set-pw.model';
 export class SetPwComponent implements OnInit {
   tokenError = false;
   error = false;
+  
   private token = '';
 
   readonly AlertType = AlertType;
@@ -62,7 +63,8 @@ export class SetPwComponent implements OnInit {
     this.http.post(`${environment.backend_url}/signup/activate`, {
       token: this.token,
       password: btoa(this.setPwForm.value.password1)
-    }).subscribe(() => {
+    })
+    .subscribe(() => {
       this.router.navigate([PATHS.LOGIN]);
     }, () => {
       this.error = true;
