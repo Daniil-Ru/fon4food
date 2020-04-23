@@ -17,6 +17,8 @@ public class CustomConfiguration {
 	private List<String> createTestVendors;
 	private List<String> createTestSuppliers;
 	private String privacyPolicy;
+	private String frontendUrl;
+	private int tokenExpireDays;
 
 	public CustomConfiguration() {
 		this.corsOrigins.add("*");
@@ -76,6 +78,22 @@ public class CustomConfiguration {
 
 	public void setPrivacyPolicy(String privacyPolicy) {
 		this.privacyPolicy = privacyPolicy;
+	}
+
+	public String getFrontendUrl() {
+		return frontendUrl;
+	}
+
+	public void setFrontendUrl(String frontendUrl) {
+		this.frontendUrl = frontendUrl;
+	}
+
+	public int getTokenExpireDays() {
+		return tokenExpireDays;
+	}
+
+	public void setTokenExpireDays(int tokenExpireDays) {
+		this.tokenExpireDays = tokenExpireDays;
 	}
 
 }

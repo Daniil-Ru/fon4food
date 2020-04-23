@@ -9,6 +9,7 @@ public class RegistrationInfo {
 	private String city;
 	private String phone;
 	private String email;
+	private String privacyPolicyBase64;
 
 	public String getFirstName() {
 		return firstName;
@@ -73,5 +74,13 @@ public class RegistrationInfo {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
+	public String getPrivacyPolicyBase64() {
+		return privacyPolicyBase64;
+	}
+
+	public void setPrivacyPolicyBase64(String privacyPolicyBase64) {
+		this.privacyPolicyBase64 = privacyPolicyBase64;
+	}
+
 }

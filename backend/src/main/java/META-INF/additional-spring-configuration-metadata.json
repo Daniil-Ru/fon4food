@@ -33,5 +33,15 @@
     "name": "fon4food.privacy-policy",
     "type": "java.lang.String",
     "description": "Path to the file containing the privacy policy"
+  },
+  {
+    "name": "fon4food.frontend-url",
+    "type": "java.lang.String",
+    "description": "URL of the frontend"
+  },
+  {
+    "name": "fon4food.token-expire-days",
+    "type": "java.lang.Integer",
+    "description": "Days after which a confirmation token expires"
   }
 ]}

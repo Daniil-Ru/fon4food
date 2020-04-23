@@ -1,0 +1,114 @@
+databaseChangeLog:
+- changeSet:
+    id: 1587569968446-4
+    author: jo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: confirmation_tokenPK
+            name: id
+            type: BIGINT
+        - column:
+            name: expire_date
+            type: datetime
+        - column:
+            name: token
+            type: VARCHAR(255)
+        - column:
+            name: user_id
+            type: BIGINT
+        tableName: confirmation_token
+- changeSet:
+    id: 1587569968446-5
+    author: jo (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: activated
+            type: char(1)
+        tableName: users
+- changeSet:
+    id: 1587569968446-6
+    author: jo (generated)
+    changes:
+    - addUniqueConstraint:
+        columnNames: token
+        constraintName: UC_CONFIRMATION_TOKENTOKEN_COL
+        tableName: confirmation_token
+- changeSet:
+    id: 1587569968446-7
+    author: jo (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: user_id
+        baseTableName: confirmation_token
+        constraintName: FKah4p1rycwibwm6s9bsyeckq51
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: users
+        validate: true
+- changeSet:
+    id: 1587569968446-1
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: address
+        tableName: users
+- changeSet:
+    id: 1587569968446-2
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: clob
+        columnName: content
+        tableName: privacy_policy
+- changeSet:
+    id: 1587569968446-3
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: char(1)
+        columnName: enabled
+        tableName: users
+- changeSet:
+    id: 20200422-jo-consent-id-add-autoincrement
+    author: jo
+    changes:
+    - addAutoIncrement:
+        columnName: id
+        columnDataType: BIGINT
+        tableName: privacy_policy_consent
+- changeSet:
+    id: 1587579177133-3
+    author: jo (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            name: role
+            type: varchar(255)
+        tableName: confirmation_token
+- changeSet:
+    id: 1587579177133-1
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: char(1)
+        columnName: activated
+        tableName: users
+- changeSet:
+    id: 1587579177133-2
+    author: jo (generated)
+    changes:
+    - dropDefaultValue:
+        columnDataType: varchar(255)
+        columnName: token
+        tableName: confirmation_token

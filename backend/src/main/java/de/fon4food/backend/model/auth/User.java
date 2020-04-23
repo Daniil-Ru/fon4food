@@ -38,6 +38,9 @@ public class User {
 	@Type(type="yes_no")
 	private Boolean enabled = true;
 	
+	@Type(type="yes_no")
+	private Boolean activated = false;
+	
 	private String firstName;
 	private String lastName;
 	private String company;
@@ -79,12 +82,20 @@ public class User {
 		this.password = password;
 	}
 
-	public Boolean isEnabled() {
+	public Boolean getEnabled() {
 		return enabled;
 	}
 
 	public void setEnabled(Boolean enabled) {
 		this.enabled = enabled;
+	}
+
+	public Boolean getActivated() {
+		return activated;
+	}
+
+	public void setActivated(Boolean activated) {
+		this.activated = activated;
 	}
 
 	public Set<Role> getRoles() {
@@ -149,6 +160,14 @@ public class User {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public Set<PrivacyPolicyConsent> getPrivacyPolicyConsents() {
+		return privacyPolicyConsents;
+	}
+
+	public void setPrivacyPolicyConsents(Set<PrivacyPolicyConsent> privacyPolicyConsents) {
+		this.privacyPolicyConsents = privacyPolicyConsents;
 	}
 
 }

@@ -46,13 +46,17 @@ public class ApplicationInitialization {
 		this.privacyPolicyRepository = privacyPolicyRepository;
 	}
 
-	private void createTestUser(String email, String passwordHash, Role role) {
+	private void createTestUser(String firstName, String passwordHash, Role role) {
+		String email = firstName + "@mail.fon4food";
 		User user = userRepository.findByEmail(email);
 		if (user == null) {
 			user = new User();
+			user.setFirstName(firstName);
+			user.setLastName("Test-User");
 			user.setEmail(email);
 			user.setPassword(passwordHash);
 			user.getRoles().add(role);
+			user.setActivated(true);
 			userRepository.save(user);
 		}
 	}
