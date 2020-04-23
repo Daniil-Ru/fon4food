@@ -20,6 +20,5 @@ public class ConfirmationTokenValidityChecker {
 		ConfirmationToken confirmationToken = confirmationTokenRepository.findByToken(token);
 		return confirmationToken != null && confirmationToken.getExpireDate().compareTo(OffsetDateTime.now()) > 0;
 	}
-
 	
 }
